@@ -1,0 +1,2583 @@
+=------------------------------------------------------------------------------=
+
+     CP: variable-cell Car-Parrinello molecular dynamics
+     using norm-conserving and ultrasoft Vanderbilt pseudopotentials
+
+     Version: 4.1 - Fr 25 Nov 2022 17:36:04 CET                           
+     Authors: Alfredo Pasquarello, Kari Laasonen, Andrea Trave, Roberto Car,
+       Paolo Giannozzi, Nicola Marzari, Carlo Cavazzoni, Guido Chiarotti,
+       Sandro Scandolo, Paolo Focher, Gerardo Ballabio, and others
+
+=------------------------------------------------------------------------------=
+
+   This run was started on:  17: 4:46  15Dec2022               
+
+   MPI Parallel Build
+   Tasks =   16  This task id =    0
+
+   Job Title: MD Simulation
+
+
+   Atomic Pseudopotentials Parameters
+   ----------------------------------
+
+   Reading pseudopotential for specie #  1 from file :
+   /home/elinscott/code/koopmans/src/koopmans/pseudopotentials/sg15_v1.2/pbe/O_ONCV_PBE-1.2.upf
+   file type is 20: UPF
+ read_nonlocal
+
+
+   Main Simulation Parameters (from input)
+   ---------------------------------------
+   ion_nstepe or cell_nstepe have no effects 
+   Restart Mode       =       1   restart        
+   Number of MD Steps =      50
+   Print out every            1 MD Steps
+   Reads from unit    =      98
+   Writes to unit     =      98
+   MD Simulation time step            =       1.00
+   Electronic fictitious mass (emass) =     400.00
+   emass cut-off                      =       2.50
+
+   Simulation Cell Parameters (from input)
+   external pressure       =            0.00 [GPa]
+   wmass (calculated)      =         6648.68 [AU]
+   initial cell from CELL_PARAMETERS card
+      14.17380000    0.00000000    0.00000000
+       0.00000000   12.00000000    0.00000000
+       0.00000000    0.00000000   12.66000000
+   ibrav =    0
+   alat  =    26.78460015
+   a1    =    26.78460015    0.00000000    0.00000000
+   a2    =     0.00000000   22.67671350    0.00000000
+   a3    =     0.00000000    0.00000000   23.92393274
+ 
+   b1    =     0.03733489    0.00000000    0.00000000
+   b2    =     0.00000000    0.04409810    0.00000000
+   b3    =     0.00000000    0.00000000    0.04179915
+   omega = 14531.07864238
+ nbeg           1
+
+    ========================================
+    |  CONJUGATE GRADIENT                  |
+    ========================================
+    | iterations   =           100         |
+    | conv_thr     = 0.00000001800 a.u.    |
+    | passop       =       2.00000 a.u.    |
+    | niter_cg_restart =  20      |
+    ========================================
+
+   Energy Cut-offs
+   ---------------
+   Ecutwfc =   65.0 Ry,      Ecutrho =  260.0 Ry,      Ecuts =  260.0 Ry
+   Gcutwfc =   34.4     ,    Gcutrho =   68.7          Gcuts =   68.7
+   NOTA BENE: refg, mmx =   0.050000 10400
+   Orthog. with Gram-Schmidt
+   Electron dynamics with conjugate gradient
+   Electron dynamics : the temperature is not controlled
+
+   Electronic states
+   -----------------
+   Number of Electron =    18, of States =    10
+   Occupation numbers :
+   2.00 2.00 2.00 2.00 2.00 2.00 2.00 2.00 2.00 0.00
+
+
+   Empty states minimization
+   --------------------------
+      states =        1
+     maxiter =      500
+        ethr =   0.1000D-05
+
+
+   Exchange and correlations functionals
+   -------------------------------------
+   Using Local Density Approximation with
+     Exchange functional: SLATER                                                      
+     Correlation functional: PERDEW AND WANG                                             
+   Using Generalized Gradient Corrections with
+     Exchange functional: PERDEW BURKE ERNZERHOF                                      
+     Correlation functional: PERDEW BURKE ERNZERHOF                                      
+     Exchange-correlation      = PBE (1434)
+   Wavefunctions will be written to file as Kohn-Sham states
+
+
+   Ions Simulation Parameters
+   --------------------------
+   Ions are not allowed to move
+   Ionic position (from input)
+   sorted by specie, and converted to real a.u. coordinates
+   Species   1 atoms =    3 mass =     29164.39 (a.u.),        16.00 (amu) rcmax =   1.00 (a.u.)
+       13.392300    11.338357    11.130487
+       15.446243    11.338357    12.377706
+       11.338357    11.338357    12.377706
+   Ionic position will be re-read from restart file
+
+
+   Cell Dynamics Parameters (from STDIN)
+   -------------------------------------
+   Starting cell generated from CELLDM
+   Cell parameters will be re-read from restart file
+   Constant VOLUME Molecular dynamics
+   cell parameters are not allowed to move
+
+   Verbosity: iprsta =  1
+
+ nbeg           1
+
+
+   Simulation dimensions initialization
+   ------------------------------------
+
+   unit vectors of full simulation cell
+   in real space:                         in reciprocal space (units 2pi/alat):
+   1    26.7846    0.0000    0.0000              1.0000    0.0000    0.0000
+   2     0.0000   22.6767    0.0000              0.0000    1.1811    0.0000
+   3     0.0000    0.0000   23.9239              0.0000    0.0000    1.1196
+ 
+   Stick Mesh
+   ----------
+   nst =  6287,  nstw =  1574, nsts =  6287
+        PEs    n.st   n.stw   n.sts    n.g    n.gw   n.gs
+          1     786     196     786   64302    8044   64302
+          2     786     196     786   64298    8044   64298
+          3     786     196     786   64298    8044   64298
+          4     786     196     786   64294    8044   64294
+          5     786     196     786   64294    8044   64294
+          6     786     198     786   64294    8046   64294
+          7     786     198     786   64294    8046   64294
+          8     784     198     784   64292    8046   64292
+          9     786     198     786   64298    8046   64298
+         10     786     198     786   64298    8042   64298
+         11     786     198     786   64298    8042   64298
+         12     786     196     786   64298    8044   64298
+         13     786     196     786   64298    8044   64298
+         14     785     195     785   64299    8043   64299
+         15     786     196     786   64298    8040   64298
+         16     786     196     786   64298    8040   64298
+          0   12573    3147   12573 1028751  128699 1028751
+ 
+ 
+   Real Mesh
+   ---------
+   Global Dimensions   Local  Dimensions   Processor Grid
+   .X.   .Y.   .Z.     .X.   .Y.   .Z.     .X.   .Y.   .Z.
+   144   120   125     144   120     8       1     1    16
+   Array leading dimensions ( nr1x, nr2x, nr3x )   =    144   120   125
+   Local number of cell to store the grid ( nnrx ) =     138240
+   Number of x-y planes for each processors: 
+   nr3l =     8    8    8    8    8    8    8    8    8    8
+   nr3l =     8    8    8    7    7    7
+ 
+   Smooth Real Mesh
+   ----------------
+   Global Dimensions   Local  Dimensions   Processor Grid
+   .X.   .Y.   .Z.     .X.   .Y.   .Z.     .X.   .Y.   .Z.
+   144   120   125     144   120     8       1     1    16
+   Array leading dimensions ( nr1x, nr2x, nr3x )   =    144   120   125
+   Local number of cell to store the grid ( nnrx ) =     138240
+   Number of x-y planes for each processors: 
+   nr3sl =     8    8    8    8    8    8    8    8    8    8
+   nr3sl =     8    8    8    7    7    7
+ 
+   Reciprocal Space Mesh
+   ---------------------
+                Large Mesh
+   PE   Global(ngmt)     Local(ngm) MaxLocal(ngmx)
+    1        1028751          64302          64302
+    2        1028751          64298          64302
+    3        1028751          64298          64302
+    4        1028751          64294          64302
+    5        1028751          64294          64302
+    6        1028751          64294          64302
+    7        1028751          64294          64302
+    8        1028751          64292          64302
+    9        1028751          64298          64302
+   10        1028751          64298          64302
+   11        1028751          64298          64302
+   12        1028751          64298          64302
+   13        1028751          64298          64302
+   14        1028751          64299          64302
+   15        1028751          64298          64302
+   16        1028751          64298          64302
+                Smooth Mesh
+   PE   Global(ngst)     Local(ngs) MaxLocal(ngsx)
+    1        1028751          64302          64302
+    2        1028751          64298          64302
+    3        1028751          64298          64302
+    4        1028751          64294          64302
+    5        1028751          64294          64302
+    6        1028751          64294          64302
+    7        1028751          64294          64302
+    8        1028751          64292          64302
+    9        1028751          64298          64302
+   10        1028751          64298          64302
+   11        1028751          64298          64302
+   12        1028751          64298          64302
+   13        1028751          64298          64302
+   14        1028751          64299          64302
+   15        1028751          64298          64302
+   16        1028751          64298          64302
+                Wave function Mesh
+   PE   Global(ngwt)     Local(ngw) MaxLocal(ngwx)
+    1         128699           8044           8046
+    2         128699           8044           8046
+    3         128699           8044           8046
+    4         128699           8044           8046
+    5         128699           8044           8046
+    6         128699           8046           8046
+    7         128699           8046           8046
+    8         128699           8046           8046
+    9         128699           8046           8046
+   10         128699           8042           8046
+   11         128699           8042           8046
+   12         128699           8044           8046
+   13         128699           8044           8046
+   14         128699           8043           8046
+   15         128699           8040           8046
+   16         128699           8040           8046
+
+
+   System geometry initialization
+   ------------------------------
+ 
+   Scaled positions from standard input
+   O    5.000000E-01  5.000000E-01  4.652449E-01
+   O    5.766837E-01  5.000000E-01  5.173776E-01
+   O    4.233163E-01  5.000000E-01  5.173776E-01
+   ibrav =    0       cell parameters 
+
+      26.78460       0.00000       0.00000
+       0.00000      22.67671       0.00000
+       0.00000       0.00000      23.92393
+ 
+
+   Matrix Multiplication Performances
+   ortho mmul, time for parallel driver      =   0.00000 with    1 procs
+
+   Constraints matrixes will be distributed block like on
+   ortho sub-group =    1*   1 procs
+
+
+
+   Pseudopotentials initialization
+   -------------------------------
+
+
+   Common initialization
+
+   Specie:     1
+   1  indv=  1   ang. mom=  0
+   2  indv=  2   ang. mom=  0
+   3  indv=  3   ang. mom=  1
+   4  indv=  3   ang. mom=  1
+   5  indv=  3   ang. mom=  1
+   6  indv=  4   ang. mom=  1
+   7  indv=  4   ang. mom=  1
+   8  indv=  4   ang. mom=  1
+ 
+                        dion 
+      9.757151948500      0.000000000000      0.000000000000      0.000000000000
+      0.000000000000      1.376126720650      0.000000000000      0.000000000000
+      0.000000000000      0.000000000000     -4.806858824850      0.000000000000
+      0.000000000000      0.000000000000      0.000000000000     -1.616239702250
+ 
+   Short Legend and Physical Units in the Output
+   ---------------------------------------------
+   NFI    [int]          - step index
+   EKINC  [HARTREE A.U.] - kinetic energy of the fictitious electronic dynamics
+   TEMPH  [K]            - Temperature of the fictitious cell dynamics
+   TEMP   [K]            - Ionic temperature
+   ETOT   [HARTREE A.U.] - Scf total energy (Kohn-Sham hamiltonian)
+   ENTHAL [HARTREE A.U.] - Enthalpy ( ETOT + P * V )
+   ECONS  [HARTREE A.U.] - Enthalpy + kinetic energy of ions and cell
+   ECONT  [HARTREE A.U.] - Constant of motion for the CP lagrangian
+ 
+   NK sic with integral ref =    T
+
+   NK background density factor =  1.0000
+   NK scaling factor =  1.0000
+   rhothr =  0.1E-11
+   NK memusage =     31.239 MB
+
+
+   f_cutoff =  0.0100
+   do_spinsym   =    F
+   EE with periodic-image correction method = tcc                 
+ USING TCC FOR ODD T
+
+   reading restart file: /scratch/elinscott/materials_cloud_archive/ozone/ki_pz/TMP-CP//kc_98.save
+ here should be iotk first error
+   restart file read in    0.653 sec.
+
+ nprint_nfi=           -2
+ nprint_nfi=            1
+
+   formf: eself=  43.08577
+   formf:     vps(g=0)=  -0.0010501     rhops(g=0)=  -0.0004073
+   formf:     vps(g=0)=  -0.0010501     rhops(g=0)=  -0.0004073
+   formf: sum_g vps(g)=  -8.7417284 sum_g rhops(g)=  -1.0775227
+   Delta V(G=0):   0.003891Ry,    0.105874eV
+
+ * Physical Quantities at step:     2
+
+PERFORMING CONJUGATE GRADIENT MINIMIZATION OF EL. STATES
+
+     CP           :     2.57s CPU time,    3.22s wall time
+
+     iteration =   1  eff iteration =   1   Etot (Ha) =    -47.64162605103993
+
+   Empty-states: WFCs read from file
+   Empty-states: Going to re-orthogonalize to occ manifold
+
+   Empty states minimization starting 
+   nfi         dekinc         ekinc
+
+PERFORMING CONJUGATE GRADIENT MINIMIZATION OF EMPTY STATES
+
+     CP           :     3.06s CPU time,    3.76s wall time
+
+     iteration =   1  eff iteration =   1   Etot (Ha) =     -0.13540265790692
+     Ekin (Ha) =       4.52850116537436 Enl (Ha) =      -0.81899105657615 Eloc (Ha) =     -4.12019774006608
+ Fake EODD (Ha) =       0.27528497336095
+     CP           :     3.76s CPU time,    4.50s wall time
+
+     iteration =   2  eff iteration =   2   Etot (Ha) =     -0.13541354633435
+     Ekin (Ha) =       4.50888917755332 Enl (Ha) =      -0.81538118935084 Eloc (Ha) =     -4.10296395540181
+ Fake EODD (Ha) =       0.27404242086498
+     CP           :     4.48s CPU time,    5.24s wall time
+
+     iteration =   3  eff iteration =   3   Etot (Ha) =     -0.13542187659805 delta_E=  0.10888427424804E-04
+     Ekin (Ha) =       4.49345380546528 Enl (Ha) =      -0.81210625255428 Eloc (Ha) =     -4.08978702381887
+ Fake EODD (Ha) =       0.27301759430983
+     CP           :     5.19s CPU time,    5.98s wall time
+
+     iteration =   4  eff iteration =   4   Etot (Ha) =     -0.13543003042052 delta_E=  0.83302636968430E-05
+     Ekin (Ha) =       4.48124240045104 Enl (Ha) =      -0.80963101599952 Eloc (Ha) =     -4.07903260122340
+ Fake EODD (Ha) =       0.27199118635136
+     CP           :     5.89s CPU time,    6.72s wall time
+
+     iteration =   5  eff iteration =   5   Etot (Ha) =     -0.13543650089198 delta_E=  0.81538224706024E-05
+     Ekin (Ha) =       4.47471006390134 Enl (Ha) =      -0.80882846277638 Eloc (Ha) =     -4.07244347099355
+ Fake EODD (Ha) =       0.27112536897660
+     CP           :     6.58s CPU time,    7.46s wall time
+
+     iteration =   6  eff iteration =   6   Etot (Ha) =     -0.13544089047841 delta_E=  0.64704714670683E-05
+     Ekin (Ha) =       4.47179770201461 Enl (Ha) =      -0.80860796797798 Eloc (Ha) =     -4.06918992045403
+ Fake EODD (Ha) =       0.27055929593899
+     CP           :     7.29s CPU time,    8.20s wall time
+
+     iteration =   7  eff iteration =   7   Etot (Ha) =     -0.13544376920079 delta_E=  0.43895864296206E-05
+     Ekin (Ha) =       4.46953348739656 Enl (Ha) =      -0.80819028676210 Eloc (Ha) =     -4.06700671690712
+ Fake EODD (Ha) =       0.27021974707187
+     CP           :     7.98s CPU time,    8.94s wall time
+
+     iteration =   8  eff iteration =   8   Etot (Ha) =     -0.13544635939915 delta_E=  0.28787223764759E-05
+     Ekin (Ha) =       4.46690975333005 Enl (Ha) =      -0.80759595920885 Eloc (Ha) =     -4.06468962389282
+ Fake EODD (Ha) =       0.26992947037246
+     CP           :     8.69s CPU time,    9.68s wall time
+
+     iteration =   9  eff iteration =   9   Etot (Ha) =     -0.13544814902104 delta_E=  0.25901983648491E-05
+     Ekin (Ha) =       4.46522911046009 Enl (Ha) =      -0.80724043826065 Eloc (Ha) =     -4.06317330261623
+ Fake EODD (Ha) =       0.26973648139574
+     CP           :     9.40s CPU time,   10.43s wall time
+
+     iteration =  10  eff iteration =  10   Etot (Ha) =     -0.13545010524498 delta_E=  0.17896218842406E-05
+     Ekin (Ha) =       4.46401644351216 Enl (Ha) =      -0.80705087203948 Eloc (Ha) =     -4.06194854849982
+ Fake EODD (Ha) =       0.26953287178216
+
+     CP           :    10.11s CPU time,   11.17s wall time
+
+     iteration =  11  eff iteration =  11   Etot (Ha) =     -0.13545153408012 delta_E=  0.19562239445547E-05
+     Ekin (Ha) =       4.46365336070410 Enl (Ha) =      -0.80707073186343 Eloc (Ha) =     -4.06142037129776
+ Fake EODD (Ha) =       0.26938620837697
+     CP           :    10.83s CPU time,   11.90s wall time
+
+     iteration =  12  eff iteration =  12   Etot (Ha) =     -0.13545287530822 delta_E=  0.14288351386504E-05
+     Ekin (Ha) =       4.46312064916792 Enl (Ha) =      -0.80703419636324 Eloc (Ha) =     -4.06078402666765
+ Fake EODD (Ha) =       0.26924469855475
+     CP           :    11.54s CPU time,   12.64s wall time
+
+     iteration =  13  eff iteration =  13   Etot (Ha) =     -0.13545386246864 delta_E=  0.13412280981395E-05
+     Ekin (Ha) =       4.46200862906168 Enl (Ha) =      -0.80677059354602 Eloc (Ha) =     -4.05982938589412
+ Fake EODD (Ha) =       0.26913748790983
+     CP           :    12.23s CPU time,   13.38s wall time
+
+     iteration =  14  eff iteration =  14   Etot (Ha) =     -0.13545448949734 delta_E=  0.98716041940783E-06
+     Ekin (Ha) =       4.46105920598516 Enl (Ha) =      -0.80652426606888 Eloc (Ha) =     -4.05905698708532
+ Fake EODD (Ha) =       0.26906755767169
+     CP           :    12.93s CPU time,   14.11s wall time
+
+     iteration =  15  eff iteration =  15   Etot (Ha) =     -0.13545489112967 delta_E=  0.62702870029518E-06
+     Ekin (Ha) =       4.46084832275931 Enl (Ha) =      -0.80650646526130 Eloc (Ha) =     -4.05881909675742
+ Fake EODD (Ha) =       0.26902234812973
+     CP           :    13.64s CPU time,   14.86s wall time
+
+     iteration =  16  eff iteration =  16   Etot (Ha) =     -0.13545517815900 delta_E=  0.40163233205881E-06
+     Ekin (Ha) =       4.46100351438427 Enl (Ha) =      -0.80658978826668 Eloc (Ha) =     -4.05886140905446
+ Fake EODD (Ha) =       0.26899250477788
+     CP           :    14.34s CPU time,   15.60s wall time
+
+     iteration =  17  eff iteration =  17   Etot (Ha) =     -0.13545539580678 delta_E=  0.28702932358682E-06
+     Ekin (Ha) =       4.46091035810167 Enl (Ha) =      -0.80657864534611 Eloc (Ha) =     -4.05875762135572
+ Fake EODD (Ha) =       0.26897051279339
+     CP           :    15.03s CPU time,   16.34s wall time
+
+     iteration =  18  eff iteration =  18   Etot (Ha) =     -0.13545559286419 delta_E=  0.21764777979882E-06
+     Ekin (Ha) =       4.46057102578819 Enl (Ha) =      -0.80648134452493 Eloc (Ha) =     -4.05849559423966
+ Fake EODD (Ha) =       0.26895032011221
+     CP           :    15.73s CPU time,   17.07s wall time
+
+     iteration =  19  eff iteration =  19   Etot (Ha) =     -0.13545574173856 delta_E=  0.19705741033382E-06
+     Ekin (Ha) =       4.46039441384418 Enl (Ha) =      -0.80643515352367 Eloc (Ha) =     -4.05834956235374
+ Fake EODD (Ha) =       0.26893456029467
+     CP           :    16.45s CPU time,   17.81s wall time
+
+     iteration =  20  eff iteration =  20   Etot (Ha) =     -0.13545584252517 delta_E=  0.14887437516098E-06
+     Ekin (Ha) =       4.46042986090928 Enl (Ha) =      -0.80645822354361 Eloc (Ha) =     -4.05835046018600
+ Fake EODD (Ha) =       0.26892298029516
+
+     CP           :    17.16s CPU time,   18.54s wall time
+
+     iteration =  21  eff iteration =  21   Etot (Ha) =     -0.13545587862118 delta_E=  0.10078660661605E-06
+     Ekin (Ha) =       4.46044582363923 Enl (Ha) =      -0.80646259801658 Eloc (Ha) =     -4.05836218975098
+ Fake EODD (Ha) =       0.26892308550714
+     CP           :    17.86s CPU time,   19.28s wall time
+
+     iteration =  22  eff iteration =  22   Etot (Ha) =     -0.13545590907911 delta_E=  0.36096014566223E-07
+     Ekin (Ha) =       4.46048438732404 Enl (Ha) =      -0.80647511362284 Eloc (Ha) =     -4.05838835821728
+ Fake EODD (Ha) =       0.26892317543698
+     CP           :    18.55s CPU time,   20.01s wall time
+
+     iteration =  23  eff iteration =  23   Etot (Ha) =     -0.13545594203334 delta_E=  0.30457925181970E-07
+     Ekin (Ha) =       4.46051271004608 Enl (Ha) =      -0.80648610184406 Eloc (Ha) =     -4.05840560953365
+ Fake EODD (Ha) =       0.26892305929829
+     WARNING cg_sub: missed minimum, case 1, iteration   23      1.993907848932
+     CP           :    19.60s CPU time,   21.11s wall time
+
+     iteration =  24  eff iteration =  24   Etot (Ha) =     -0.13545598197513 delta_E=  0.32954235673621E-07
+     Ekin (Ha) =       4.46045600448931 Enl (Ha) =      -0.80646875216878 Eloc (Ha) =     -4.05836628027616
+ Fake EODD (Ha) =       0.26892304598050
+     CP           :    20.29s CPU time,   21.84s wall time
+
+     iteration =  25  eff iteration =  25   Etot (Ha) =     -0.13545601053142 delta_E=  0.39941783047670E-07
+     Ekin (Ha) =       4.46044300409135 Enl (Ha) =      -0.80646387025312 Eloc (Ha) =     -4.05835841070875
+ Fake EODD (Ha) =       0.26892326633909
+     CP           :    20.98s CPU time,   22.57s wall time
+
+     iteration =  26  eff iteration =  26   Etot (Ha) =     -0.13545604873357 delta_E=  0.28556298548033E-07
+     Ekin (Ha) =       4.46044913621789 Enl (Ha) =      -0.80646387419051 Eloc (Ha) =     -4.05836544003779
+ Fake EODD (Ha) =       0.26892412927685
+     CP           :    21.67s CPU time,   23.31s wall time
+
+     iteration =  27  eff iteration =  27   Etot (Ha) =     -0.13545611141887 delta_E=  0.38202140784094E-07
+     Ekin (Ha) =       4.46051264127273 Enl (Ha) =      -0.80648481965599 Eloc (Ha) =     -4.05840896635628
+ Fake EODD (Ha) =       0.26892503332066
+     CP           :    22.38s CPU time,   24.04s wall time
+
+     iteration =  28  eff iteration =  28   Etot (Ha) =     -0.13545626000686 delta_E=  0.62685304225152E-07
+     Ekin (Ha) =       4.46052577827101 Enl (Ha) =      -0.80649103185422 Eloc (Ha) =     -4.05841648391105
+ Fake EODD (Ha) =       0.26892547748739
+     WARNING cg_sub: missed minimum, case 1, iteration   28      2.946548426845
+     CP           :    23.41s CPU time,   25.13s wall time
+
+     iteration =  29  eff iteration =  29   Etot (Ha) =     -0.13545786961575 delta_E=  0.14858799179951E-06
+     Ekin (Ha) =       4.46018685851086 Enl (Ha) =      -0.80640561014073 Eloc (Ha) =     -4.05815004390270
+ Fake EODD (Ha) =       0.26891092591682
+     CP           :    24.13s CPU time,   25.86s wall time
+
+     iteration =  30  eff iteration =  30   Etot (Ha) =     -0.13545888231206 delta_E=  0.16096088921169E-05
+     Ekin (Ha) =       4.46026273287152 Enl (Ha) =      -0.80642879468146 Eloc (Ha) =     -4.05820336155444
+ Fake EODD (Ha) =       0.26891054105232
+
+     CP           :    24.82s CPU time,   26.60s wall time
+
+     iteration =  31  eff iteration =  31   Etot (Ha) =     -0.13545983624075 delta_E=  0.10126963071455E-05
+     Ekin (Ha) =       4.46039318428686 Enl (Ha) =      -0.80646862027723 Eloc (Ha) =     -4.05829247288581
+ Fake EODD (Ha) =       0.26890807263543
+     CP           :    25.51s CPU time,   27.34s wall time
+
+     iteration =  32  eff iteration =  32   Etot (Ha) =     -0.13546072635755 delta_E=  0.95392868876276E-06
+     Ekin (Ha) =       4.46038995560886 Enl (Ha) =      -0.80647354191368 Eloc (Ha) =     -4.05827901191450
+ Fake EODD (Ha) =       0.26890187186177
+     CP           :    26.21s CPU time,   28.07s wall time
+
+     iteration =  33  eff iteration =  33   Etot (Ha) =     -0.13546149577654 delta_E=  0.89011680431961E-06
+     Ekin (Ha) =       4.46018456267574 Enl (Ha) =      -0.80642067217484 Eloc (Ha) =     -4.05811999430471
+ Fake EODD (Ha) =       0.26889460802726
+     CP           :    26.91s CPU time,   28.80s wall time
+
+     iteration =  34  eff iteration =  34   Etot (Ha) =     -0.13547355831638 delta_E=  0.76941898408123E-06
+     Ekin (Ha) =       4.45398211162263 Enl (Ha) =      -0.80500307018254 Eloc (Ha) =     -4.05296837172361
+ Fake EODD (Ha) =       0.26851577196715
+     CP           :    27.61s CPU time,   29.53s wall time
+
+     iteration =  35  eff iteration =  35   Etot (Ha) =     -0.13548601170197 delta_E=  0.12062539842317E-04
+     Ekin (Ha) =       4.44996497403756 Enl (Ha) =      -0.80418386431921 Eloc (Ha) =     -4.04943524390792
+ Fake EODD (Ha) =       0.26816812248760
+     WARNING cg_sub: missed minimum, case 1, iteration   35      0.223402171581
+     CP           :    28.65s CPU time,   30.63s wall time
+
+     iteration =  36  eff iteration =  36   Etot (Ha) =     -0.13552773497701 delta_E=  0.12453385589917E-04
+     Ekin (Ha) =       4.44270469166918 Enl (Ha) =      -0.80279331154279 Eloc (Ha) =     -4.04288912748261
+ Fake EODD (Ha) =       0.26745001237920
+     CP           :    29.36s CPU time,   31.36s wall time
+
+     iteration =  37  eff iteration =  37   Etot (Ha) =     -0.13558695881626 delta_E=  0.41723275039873E-04
+     Ekin (Ha) =       4.44817957214258 Enl (Ha) =      -0.80424854086917 Eloc (Ha) =     -4.04700632743167
+ Fake EODD (Ha) =       0.26748833734199
+     CP           :    30.06s CPU time,   32.10s wall time
+
+     iteration =  38  eff iteration =  38   Etot (Ha) =     -0.13563428023723 delta_E=  0.59223839248335E-04
+     Ekin (Ha) =       4.45146010100260 Enl (Ha) =      -0.80524774270188 Eloc (Ha) =     -4.04925177700254
+ Fake EODD (Ha) =       0.26740513846459
+     CP           :    30.77s CPU time,   32.83s wall time
+
+     iteration =  39  eff iteration =  39   Etot (Ha) =     -0.13568476540576 delta_E=  0.47321420971580E-04
+     Ekin (Ha) =       4.44895007891746 Enl (Ha) =      -0.80481618233648 Eloc (Ha) =     -4.04690819087607
+ Fake EODD (Ha) =       0.26708952888933
+     CP           :    31.47s CPU time,   33.56s wall time
+
+     iteration =  40  eff iteration =  40   Etot (Ha) =     -0.13572725901606 delta_E=  0.50485168526737E-04
+     Ekin (Ha) =       4.44333665182071 Enl (Ha) =      -0.80342194113976 Eloc (Ha) =     -4.04224275178017
+ Fake EODD (Ha) =       0.26660078208316
+
+     CP           :    32.18s CPU time,   34.30s wall time
+
+     iteration =  41  eff iteration =  41   Etot (Ha) =     -0.13575853423596 delta_E=  0.42493610304672E-04
+     Ekin (Ha) =       4.44265873203377 Enl (Ha) =      -0.80343998010610 Eloc (Ha) =     -4.04145063015867
+ Fake EODD (Ha) =       0.26647334399504
+     CP           :    32.87s CPU time,   35.03s wall time
+
+     iteration =  42  eff iteration =  42   Etot (Ha) =     -0.13581900644113 delta_E=  0.31275219899096E-04
+     Ekin (Ha) =       4.43467968034469 Enl (Ha) =      -0.80240724460921 Eloc (Ha) =     -4.03381277878212
+ Fake EODD (Ha) =       0.26572133660551
+     CP           :    33.56s CPU time,   35.76s wall time
+
+     iteration =  43  eff iteration =  43   Etot (Ha) =     -0.13591538343308 delta_E=  0.60472205171636E-04
+     Ekin (Ha) =       4.41242698183998 Enl (Ha) =      -0.79796871148939 Eloc (Ha) =     -4.01453083199339
+ Fake EODD (Ha) =       0.26415717820971
+     CP           :    34.26s CPU time,   36.50s wall time
+
+     iteration =  44  eff iteration =  44   Etot (Ha) =     -0.13616538383781 delta_E=  0.96376991949754E-04
+     Ekin (Ha) =       4.34498787799265 Enl (Ha) =      -0.78364820166134 Eloc (Ha) =     -3.95605908585693
+ Fake EODD (Ha) =       0.25855402568781
+     CP           :    34.95s CPU time,   37.24s wall time
+
+     iteration =  45  eff iteration =  45   Etot (Ha) =     -0.13696868968375 delta_E=  0.25000040472994E-03
+     Ekin (Ha) =       3.99216867747970 Enl (Ha) =      -0.71790328298102 Eloc (Ha) =     -3.63437772347069
+ Fake EODD (Ha) =       0.22314363928826
+     CP           :    35.65s CPU time,   37.98s wall time
+
+     iteration =  46  eff iteration =  46   Etot (Ha) =     -0.13701364326920 delta_E=  0.80330584594118E-03
+     Ekin (Ha) =       3.95242325683607 Enl (Ha) =      -0.71075383973981 Eloc (Ha) =     -3.59781457987090
+ Fake EODD (Ha) =       0.21913151950544
+     CP           :    36.34s CPU time,   38.71s wall time
+
+     iteration =  47  eff iteration =  47   Etot (Ha) =     -0.13730139107591 delta_E=  0.44953585449148E-04
+     Ekin (Ha) =       3.78880116492582 Enl (Ha) =      -0.68207774695530 Eloc (Ha) =     -3.44641403704277
+ Fake EODD (Ha) =       0.20238922799634
+     CP           :    37.05s CPU time,   39.45s wall time
+
+     iteration =  48  eff iteration =  48   Etot (Ha) =     -0.13738279175604 delta_E=  0.28774780670907E-03
+     Ekin (Ha) =       3.72610300097745 Enl (Ha) =      -0.67131277946519 Eloc (Ha) =     -3.38809866364031
+ Fake EODD (Ha) =       0.19592565037201
+     CP           :    37.74s CPU time,   40.18s wall time
+
+     iteration =  49  eff iteration =  49   Etot (Ha) =     -0.13750246409668 delta_E=  0.81400680127769E-04
+     Ekin (Ha) =       3.65615544743090 Enl (Ha) =      -0.65954769703045 Eloc (Ha) =     -3.32266935691241
+ Fake EODD (Ha) =       0.18855914241527
+     CP           :    38.45s CPU time,   40.92s wall time
+
+     iteration =  50  eff iteration =  50   Etot (Ha) =     -0.13759660407997 delta_E=  0.11967234064356E-03
+     Ekin (Ha) =       3.60173588540381 Enl (Ha) =      -0.65054198461401 Eloc (Ha) =     -3.27150899723236
+ Fake EODD (Ha) =       0.18271849236258
+
+     CP           :    39.17s CPU time,   41.65s wall time
+
+     iteration =  51  eff iteration =  51   Etot (Ha) =     -0.13768423888417 delta_E=  0.94139983292135E-04
+     Ekin (Ha) =       3.55486150324176 Enl (Ha) =      -0.64287861349774 Eloc (Ha) =     -3.22726015201850
+ Fake EODD (Ha) =       0.17759302339031
+     CP           :    39.86s CPU time,   42.38s wall time
+
+     iteration =  52  eff iteration =  52   Etot (Ha) =     -0.13776366263012 delta_E=  0.87634804196518E-04
+     Ekin (Ha) =       3.51543514842245 Enl (Ha) =      -0.63647799550866 Eloc (Ha) =     -3.18993067662488
+ Fake EODD (Ha) =       0.17320986108098
+     CP           :    40.56s CPU time,   43.12s wall time
+
+     iteration =  53  eff iteration =  53   Etot (Ha) =     -0.13783563016549 delta_E=  0.79423745944940E-04
+     Ekin (Ha) =       3.48286607038870 Enl (Ha) =      -0.63120026926324 Eloc (Ha) =     -3.15903169038655
+ Fake EODD (Ha) =       0.16953025909560
+     CP           :    41.26s CPU time,   43.85s wall time
+
+     iteration =  54  eff iteration =  54   Etot (Ha) =     -0.13790034886757 delta_E=  0.71967535378581E-04
+     Ekin (Ha) =       3.45675586148644 Enl (Ha) =      -0.62695439858108 Eloc (Ha) =     -3.13422783241607
+ Fake EODD (Ha) =       0.16652602064313
+     CP           :    41.93s CPU time,   44.59s wall time
+
+     iteration =  55  eff iteration =  55   Etot (Ha) =     -0.13795848168224 delta_E=  0.64718702074418E-04
+     Ekin (Ha) =       3.43655386156212 Enl (Ha) =      -0.62363855379845 Eloc (Ha) =     -3.11501765187089
+ Fake EODD (Ha) =       0.16414386242498
+     CP           :    42.63s CPU time,   45.32s wall time
+
+     iteration =  56  eff iteration =  56   Etot (Ha) =     -0.13801086818220 delta_E=  0.58132814673068E-04
+     Ekin (Ha) =       3.42167982732260 Enl (Ha) =      -0.62115617186626 Eloc (Ha) =     -3.10085623820720
+ Fake EODD (Ha) =       0.16232171456866
+     CP           :    43.34s CPU time,   46.06s wall time
+
+     iteration =  57  eff iteration =  57   Etot (Ha) =     -0.13805831995318 delta_E=  0.52386499958618E-04
+     Ekin (Ha) =       3.41161703824274 Enl (Ha) =      -0.61942808666029 Eloc (Ha) =     -3.09124820643284
+ Fake EODD (Ha) =       0.16100093489722
+     CP           :    44.03s CPU time,   46.79s wall time
+
+     iteration =  58  eff iteration =  58   Etot (Ha) =     -0.13810158176744 delta_E=  0.47451770977092E-04
+     Ekin (Ha) =       3.40593145769185 Enl (Ha) =      -0.61839343266016 Eloc (Ha) =     -3.08576903127588
+ Fake EODD (Ha) =       0.16012942447674
+     CP           :    44.73s CPU time,   47.53s wall time
+
+     iteration =  59  eff iteration =  59   Etot (Ha) =     -0.13814145634956 delta_E=  0.43261814262952E-04
+     Ekin (Ha) =       3.40426087390776 Enl (Ha) =      -0.61800584787954 Eloc (Ha) =     -3.08405688898397
+ Fake EODD (Ha) =       0.15966040660619
+     CP           :    45.44s CPU time,   48.26s wall time
+
+     iteration =  60  eff iteration =  60   Etot (Ha) =     -0.13817895372022 delta_E=  0.39874582122068E-04
+     Ekin (Ha) =       3.40634202775388 Enl (Ha) =      -0.61823614085592 Eloc (Ha) =     -3.08583929397961
+ Fake EODD (Ha) =       0.15955445336143
+
+     CP           :    46.15s CPU time,   48.99s wall time
+
+     iteration =  61  eff iteration =  61   Etot (Ha) =     -0.13962238132672 delta_E=  0.37497370660500E-04
+     Ekin (Ha) =       3.56957875571540 Enl (Ha) =      -0.64609655017971 Eloc (Ha) =     -3.23750307634476
+ Fake EODD (Ha) =       0.17439848948235
+     CP           :    46.85s CPU time,   49.74s wall time
+
+     iteration =  62  eff iteration =  62   Etot (Ha) =     -0.14095496061776 delta_E=  0.14434276065010E-02
+     Ekin (Ha) =       3.75902319779861 Enl (Ha) =      -0.67999579223138 Eloc (Ha) =     -3.41190319870261
+ Fake EODD (Ha) =       0.19192083251763
+     CP           :    47.56s CPU time,   50.47s wall time
+
+     iteration =  63  eff iteration =  63   Etot (Ha) =     -0.14133053084991 delta_E=  0.13325792910355E-02
+     Ekin (Ha) =       3.83283148617456 Enl (Ha) =      -0.69449262723785 Eloc (Ha) =     -3.47764122994191
+ Fake EODD (Ha) =       0.19797184015529
+     CP           :    48.24s CPU time,   51.20s wall time
+
+     iteration =  64  eff iteration =  64   Etot (Ha) =     -0.14152375292322 delta_E=  0.37557023215368E-03
+     Ekin (Ha) =       3.88587548306976 Enl (Ha) =      -0.70511437685852 Eloc (Ha) =     -3.52404521456321
+ Fake EODD (Ha) =       0.20176035542875
+     CP           :    48.94s CPU time,   51.93s wall time
+
+     iteration =  65  eff iteration =  65   Etot (Ha) =     -0.14161003409089 delta_E=  0.19322207330702E-03
+     Ekin (Ha) =       3.91359505442304 Enl (Ha) =      -0.71034917752954 Eloc (Ha) =     -3.54860347294975
+ Fake EODD (Ha) =       0.20374756196537
+     CP           :    49.64s CPU time,   52.67s wall time
+
+     iteration =  66  eff iteration =  66   Etot (Ha) =     -0.14164496815709 delta_E=  0.86281167670094E-04
+     Ekin (Ha) =       3.92092592881174 Enl (Ha) =      -0.71153602951584 Eloc (Ha) =     -3.55551275892463
+ Fake EODD (Ha) =       0.20447789147163
+     CP           :    50.34s CPU time,   53.40s wall time
+
+     iteration =  67  eff iteration =  67   Etot (Ha) =     -0.14167573993785 delta_E=  0.34934066200448E-04
+     Ekin (Ha) =       3.92246995712845 Enl (Ha) =      -0.71157995409454 Eloc (Ha) =     -3.55744844230081
+ Fake EODD (Ha) =       0.20488269932905
+     CP           :    51.04s CPU time,   54.13s wall time
+
+     iteration =  68  eff iteration =  68   Etot (Ha) =     -0.14170774374056 delta_E=  0.30771780754030E-04
+     Ekin (Ha) =       3.92204924033438 Enl (Ha) =      -0.71142916942292 Eloc (Ha) =     -3.55737294823853
+ Fake EODD (Ha) =       0.20504513358651
+     CP           :    51.73s CPU time,   54.86s wall time
+
+     iteration =  69  eff iteration =  69   Etot (Ha) =     -0.14172807343511 delta_E=  0.32003802719061E-04
+     Ekin (Ha) =       3.92114658644290 Enl (Ha) =      -0.71135262129475 Eloc (Ha) =     -3.55653327495585
+ Fake EODD (Ha) =       0.20501123637260
+     CP           :    52.44s CPU time,   55.60s wall time
+
+     iteration =  70  eff iteration =  70   Etot (Ha) =     -0.14174061764067 delta_E=  0.20329694540994E-04
+     Ekin (Ha) =       3.92055534206579 Enl (Ha) =      -0.71118896098835 Eloc (Ha) =     -3.55606470081429
+ Fake EODD (Ha) =       0.20495770209618
+
+     CP           :    53.13s CPU time,   56.33s wall time
+
+     iteration =  71  eff iteration =  71   Etot (Ha) =     -0.14174974188595 delta_E=  0.12544205562515E-04
+     Ekin (Ha) =       3.92039925836269 Enl (Ha) =      -0.71104481683600 Eloc (Ha) =     -3.55601012057077
+ Fake EODD (Ha) =       0.20490593715813
+     CP           :    53.82s CPU time,   57.06s wall time
+
+     iteration =  72  eff iteration =  72   Etot (Ha) =     -0.14175718114679 delta_E=  0.91242452813500E-05
+     Ekin (Ha) =       3.92105905229573 Enl (Ha) =      -0.71116546953917 Eloc (Ha) =     -3.55647977666372
+ Fake EODD (Ha) =       0.20482901276037
+     CP           :    54.53s CPU time,   57.79s wall time
+
+     iteration =  73  eff iteration =  73   Etot (Ha) =     -0.14176535690430 delta_E=  0.74392608437057E-05
+     Ekin (Ha) =       3.92270286054044 Enl (Ha) =      -0.71156136460027 Eloc (Ha) =     -3.55761064348354
+ Fake EODD (Ha) =       0.20470379063907
+     WARNING cg_sub: missed minimum, case 1, iteration   73      1.748563090623
+     CP           :    55.57s CPU time,   58.88s wall time
+
+     iteration =  74  eff iteration =  74   Etot (Ha) =     -0.14177336521544 delta_E=  0.81757575033370E-05
+     Ekin (Ha) =       3.92393991001849 Enl (Ha) =      -0.71180557159577 Eloc (Ha) =     -3.55845808541306
+ Fake EODD (Ha) =       0.20455038177490
+     CP           :    56.26s CPU time,   59.62s wall time
+
+     iteration =  75  eff iteration =  75   Etot (Ha) =     -0.14177678115225 delta_E=  0.80083111431151E-05
+     Ekin (Ha) =       3.92357145841892 Enl (Ha) =      -0.71169225515898 Eloc (Ha) =     -3.55820387787864
+ Fake EODD (Ha) =       0.20454789346646
+     CP           :  0m56.96s CPU time,     1m 0.35s wall time
+
+     iteration =  76  eff iteration =  76   Etot (Ha) =     -0.14177892267357 delta_E=  0.34159368089148E-05
+     Ekin (Ha) =       3.92320983279896 Enl (Ha) =      -0.71155824205602 Eloc (Ha) =     -3.55796690798552
+ Fake EODD (Ha) =       0.20453639456901
+     CP           :  0m57.67s CPU time,     1m 1.08s wall time
+
+     iteration =  77  eff iteration =  77   Etot (Ha) =     -0.14178031282575 delta_E=  0.21415213247444E-05
+     Ekin (Ha) =       3.92327146768908 Enl (Ha) =      -0.71156734918788 Eloc (Ha) =     -3.55799066531904
+ Fake EODD (Ha) =       0.20450623399209
+     CP           :  0m58.35s CPU time,     1m 1.81s wall time
+
+     iteration =  78  eff iteration =  78   Etot (Ha) =     -0.14178175310258 delta_E=  0.13901521806747E-05
+     Ekin (Ha) =       3.92341699181259 Enl (Ha) =      -0.71164928163978 Eloc (Ha) =     -3.55798516149504
+ Fake EODD (Ha) =       0.20443569821965
+     CP           :  0m59.06s CPU time,     1m 2.55s wall time
+
+     iteration =  79  eff iteration =  79   Etot (Ha) =     -0.14178300989440 delta_E=  0.14402768220845E-05
+     Ekin (Ha) =       3.92332158682241 Enl (Ha) =      -0.71164775368228 Eloc (Ha) =     -3.55780904421807
+ Fake EODD (Ha) =       0.20435220118354
+     CP           :  0m59.75s CPU time,     1m 3.29s wall time
+
+     iteration =  80  eff iteration =  80   Etot (Ha) =     -0.14178406592846 delta_E=  0.12567918255268E-05
+     Ekin (Ha) =       3.92305622763748 Enl (Ha) =      -0.71156329770478 Eloc (Ha) =     -3.55754050390065
+ Fake EODD (Ha) =       0.20426350803950
+
+     CP           :  1m 0.44s CPU time,     1m 4.02s wall time
+
+     iteration =  81  eff iteration =  81   Etot (Ha) =     -0.14178450112878 delta_E=  0.10560340554244E-05
+     Ekin (Ha) =       3.92297459904001 Enl (Ha) =      -0.71156034460383 Eloc (Ha) =     -3.55744648266112
+ Fake EODD (Ha) =       0.20424772709617
+     CP           :  1m 1.13s CPU time,     1m 4.75s wall time
+
+     iteration =  82  eff iteration =  82   Etot (Ha) =     -0.14178482325881 delta_E=  0.43520032153022E-06
+     Ekin (Ha) =       3.92273194482946 Enl (Ha) =      -0.71152159701024 Eloc (Ha) =     -3.55720700738534
+ Fake EODD (Ha) =       0.20421183630732
+     CP           :  1m 1.83s CPU time,     1m 5.49s wall time
+
+     iteration =  83  eff iteration =  83   Etot (Ha) =     -0.14178508205958 delta_E=  0.32213002854053E-06
+     Ekin (Ha) =       3.92223816832054 Enl (Ha) =      -0.71142274217436 Eloc (Ha) =     -3.55676217858128
+ Fake EODD (Ha) =       0.20416167037552
+     CP           :  1m 2.53s CPU time,     1m 6.23s wall time
+
+     iteration =  84  eff iteration =  84   Etot (Ha) =     -0.14178530497995 delta_E=  0.25880077228480E-06
+     Ekin (Ha) =       3.92157154955132 Enl (Ha) =      -0.71129485836036 Eloc (Ha) =     -3.55616243850389
+ Fake EODD (Ha) =       0.20410044233297
+     CP           :  1m 3.23s CPU time,     1m 6.96s wall time
+
+     iteration =  85  eff iteration =  85   Etot (Ha) =     -0.14178555633726 delta_E=  0.22292036810923E-06
+     Ekin (Ha) =       3.92089729076756 Enl (Ha) =      -0.71116829253100 Eloc (Ha) =     -3.55554180166422
+ Fake EODD (Ha) =       0.20402724709040
+     CP           :  1m 3.92s CPU time,     1m 7.70s wall time
+
+     iteration =  86  eff iteration =  86   Etot (Ha) =     -0.14178579135665 delta_E=  0.25135731426817E-06
+     Ekin (Ha) =       3.92051627982747 Enl (Ha) =      -0.71108984314141 Eloc (Ha) =     -3.55518180581979
+ Fake EODD (Ha) =       0.20396957777707
+     CP           :  1m 4.60s CPU time,     1m 8.43s wall time
+
+     iteration =  87  eff iteration =  87   Etot (Ha) =     -0.14178622192081 delta_E=  0.23501939375170E-06
+     Ekin (Ha) =       3.92006458917107 Enl (Ha) =      -0.71099072241542 Eloc (Ha) =     -3.55474408578574
+ Fake EODD (Ha) =       0.20388399710928
+     CP           :  1m 5.31s CPU time,     1m 9.16s wall time
+
+     iteration =  88  eff iteration =  88   Etot (Ha) =     -0.14178637628411 delta_E=  0.43056415735543E-06
+     Ekin (Ha) =       3.92007340375709 Enl (Ha) =      -0.71099813455912 Eloc (Ha) =     -3.55472679541730
+ Fake EODD (Ha) =       0.20386514993522
+     CP           :  1m 6.00s CPU time,     1m 9.90s wall time
+
+     iteration =  89  eff iteration =  89   Etot (Ha) =     -0.14178644779662 delta_E=  0.15436329303675E-06
+     Ekin (Ha) =       3.92034301075627 Enl (Ha) =      -0.71105742033195 Eloc (Ha) =     -3.55494646306215
+ Fake EODD (Ha) =       0.20387442484121
+     CP           :  1m 6.71s CPU time,     1m10.63s wall time
+
+     iteration =  90  eff iteration =  90   Etot (Ha) =     -0.14178652904018 delta_E=  0.71512514632222E-07
+     Ekin (Ha) =       3.92094917053642 Enl (Ha) =      -0.71117324862995 Eloc (Ha) =     -3.55547341354704
+ Fake EODD (Ha) =       0.20391096260039
+
+     CP           :  1m 7.42s CPU time,     1m11.36s wall time
+
+     iteration =  91  eff iteration =  91   Etot (Ha) =     -0.14178656718662 delta_E=  0.81243561461664E-07
+     Ekin (Ha) =       3.92131154616284 Enl (Ha) =      -0.71123285267253 Eloc (Ha) =     -3.55580547253883
+ Fake EODD (Ha) =       0.20394021186191
+     CP           :  1m 8.13s CPU time,     1m12.10s wall time
+
+     iteration =  92  eff iteration =  92   Etot (Ha) =     -0.14178658976914 delta_E=  0.38146434289121E-07
+     Ekin (Ha) =       3.92161556752572 Enl (Ha) =      -0.71127994359911 Eloc (Ha) =     -3.55609190493739
+ Fake EODD (Ha) =       0.20396969124164
+     CP           :  1m 8.83s CPU time,     1m12.83s wall time
+
+     iteration =  93  eff iteration =  93   Etot (Ha) =     -0.14178660736689 delta_E=  0.22582520048386E-07
+     Ekin (Ha) =       3.92194869210389 Enl (Ha) =      -0.71133867711076 Eloc (Ha) =     -3.55639616144414
+ Fake EODD (Ha) =       0.20399953908412
+     CP           :  1m 9.51s CPU time,     1m13.56s wall time
+
+     iteration =  94  eff iteration =  94   Etot (Ha) =     -0.14178663117235 delta_E=  0.17597754892185E-07
+     Ekin (Ha) =       3.92250749754536 Enl (Ha) =      -0.71144516342651 Eloc (Ha) =     -3.55689451620603
+ Fake EODD (Ha) =       0.20404555091484
+     CP           :  1m10.21s CPU time,     1m14.30s wall time
+
+     iteration =  95  eff iteration =  95   Etot (Ha) =     -0.14178665104682 delta_E=  0.23805455051651E-07
+     Ekin (Ha) =       3.92296626093339 Enl (Ha) =      -0.71153159315624 Eloc (Ha) =     -3.55730493264962
+ Fake EODD (Ha) =       0.20408361382565
+     CP           :  1m10.91s CPU time,     1m15.03s wall time
+
+     iteration =  96  eff iteration =  96   Etot (Ha) =     -0.14178667050366 delta_E=  0.19874471679504E-07
+     Ekin (Ha) =       3.92333035717817 Enl (Ha) =      -0.71159709807750 Eloc (Ha) =     -3.55763544577597
+ Fake EODD (Ha) =       0.20411551617164
+     CP           :  1m11.61s CPU time,     1m15.76s wall time
+
+     iteration =  97  eff iteration =  97   Etot (Ha) =     -0.14178670069633 delta_E=  0.19456846134247E-07
+     Ekin (Ha) =       3.92369580457376 Enl (Ha) =      -0.71166081273381 Eloc (Ha) =     -3.55797190528409
+ Fake EODD (Ha) =       0.20415021274782
+     CP           :  1m12.33s CPU time,     1m16.50s wall time
+
+     iteration =  98  eff iteration =  98   Etot (Ha) =     -0.14178675257843 delta_E=  0.30192664784989E-07
+     Ekin (Ha) =       3.92406784250794 Enl (Ha) =      -0.71172771655930 Eloc (Ha) =     -3.55831521944747
+ Fake EODD (Ha) =       0.20418834092040
+     CP           :  1m13.02s CPU time,     1m17.23s wall time
+
+     iteration =  99  eff iteration =  99   Etot (Ha) =     -0.14178686555118 delta_E=  0.51882105167600E-07
+     Ekin (Ha) =       3.92450202978710 Enl (Ha) =      -0.71181181374235 Eloc (Ha) =     -3.55871560233210
+ Fake EODD (Ha) =       0.20423852073617
+     CP           :  1m13.70s CPU time,     1m17.97s wall time
+
+     iteration = 100  eff iteration = 100   Etot (Ha) =     -0.14178704195395 delta_E=  0.11297274934985E-06
+     Ekin (Ha) =       3.92473611384066 Enl (Ha) =      -0.71186061291575 Eloc (Ha) =     -3.55894478518506
+ Fake EODD (Ha) =       0.20428224230619
+
+     CP           :  1m14.40s CPU time,     1m18.71s wall time
+
+     iteration = 101  eff iteration = 101   Etot (Ha) =     -0.14178715142560 delta_E=  0.17640277122366E-06
+     Ekin (Ha) =       3.92455306793825 Enl (Ha) =      -0.71181899393021 Eloc (Ha) =     -3.55879183919253
+ Fake EODD (Ha) =       0.20427061375890
+     CP           :  1m15.10s CPU time,     1m19.44s wall time
+
+     iteration = 102  eff iteration = 102   Etot (Ha) =     -0.14178724622267 delta_E=  0.10947164388875E-06
+     Ekin (Ha) =       3.92417283279467 Enl (Ha) =      -0.71173667008330 Eloc (Ha) =     -3.55846479357386
+ Fake EODD (Ha) =       0.20424138463982
+     CP           :  1m15.80s CPU time,     1m20.18s wall time
+
+     iteration = 103  eff iteration = 103   Etot (Ha) =     -0.14178730952515 delta_E=  0.94797075883557E-07
+     Ekin (Ha) =       3.92383449586671 Enl (Ha) =      -0.71167415622301 Eloc (Ha) =     -3.55815368357913
+ Fake EODD (Ha) =       0.20420603441028
+     CP           :  1m16.50s CPU time,     1m20.91s wall time
+
+     iteration = 104  eff iteration = 104   Etot (Ha) =     -0.14178736210519 delta_E=  0.63302478592320E-07
+     Ekin (Ha) =       3.92347601918236 Enl (Ha) =      -0.71161961704027 Eloc (Ha) =     -3.55780403039219
+ Fake EODD (Ha) =       0.20416026614492
+     CP           :  1m17.20s CPU time,     1m21.64s wall time
+
+     iteration = 105  eff iteration = 105   Etot (Ha) =     -0.14178740129928 delta_E=  0.52580037462890E-07
+     Ekin (Ha) =       3.92311370127834 Enl (Ha) =      -0.71156189652848 Eloc (Ha) =     -3.55745489533275
+ Fake EODD (Ha) =       0.20411568928362
+     CP           :  1m17.91s CPU time,     1m22.38s wall time
+
+     iteration = 106  eff iteration = 106   Etot (Ha) =     -0.14178743653846 delta_E=  0.39194086948191E-07
+     Ekin (Ha) =       3.92268050294561 Enl (Ha) =      -0.71148280970113 Eloc (Ha) =     -3.55705403853342
+ Fake EODD (Ha) =       0.20406890875049
+     CP           :  1m18.60s CPU time,     1m23.11s wall time
+
+     iteration = 107  eff iteration = 107   Etot (Ha) =     -0.14178747195158 delta_E=  0.35239181822577E-07
+     Ekin (Ha) =       3.92216969052624 Enl (Ha) =      -0.71138506778189 Eloc (Ha) =     -3.55659080305756
+ Fake EODD (Ha) =       0.20401870836163
+     CP           :  1m19.30s CPU time,     1m23.84s wall time
+
+     iteration = 108  eff iteration = 108   Etot (Ha) =     -0.14178749906079 delta_E=  0.35413123017358E-07
+     Ekin (Ha) =       3.92176248734805 Enl (Ha) =      -0.71131181499282 Eloc (Ha) =     -3.55621800794778
+ Fake EODD (Ha) =       0.20397983653176
+     CP           :  1m20.00s CPU time,     1m24.58s wall time
+
+     iteration = 109  eff iteration = 109   Etot (Ha) =     -0.14178753252817 delta_E=  0.27109209460585E-07
+     Ekin (Ha) =       3.92128508610991 Enl (Ha) =      -0.71123081998641 Eloc (Ha) =     -3.55577773042788
+ Fake EODD (Ha) =       0.20393593177620
+     CP           :  1m20.71s CPU time,     1m25.31s wall time
+
+     iteration = 110  eff iteration = 110   Etot (Ha) =     -0.14178757017539 delta_E=  0.33467382448693E-07
+     Ekin (Ha) =       3.92082317796469 Enl (Ha) =      -0.71114687994023 Eloc (Ha) =     -3.55536322941011
+ Fake EODD (Ha) =       0.20389936121027
+
+     CP           :  1m21.42s CPU time,     1m26.05s wall time
+
+     iteration = 111  eff iteration = 111   Etot (Ha) =     -0.14178762030894 delta_E=  0.37647211570402E-07
+     Ekin (Ha) =       3.92040721691895 Enl (Ha) =      -0.71106054717078 Eloc (Ha) =     -3.55500679223183
+ Fake EODD (Ha) =       0.20387250217473
+     CP           :  1m22.12s CPU time,     1m26.78s wall time
+
+     iteration = 112  eff iteration = 112   Etot (Ha) =     -0.14178768240793 delta_E=  0.50133554946319E-07
+     Ekin (Ha) =       3.92026997037527 Enl (Ha) =      -0.71102656364321 Eloc (Ha) =     -3.55489613177386
+ Fake EODD (Ha) =       0.20386504263387
+     CP           :  1m22.82s CPU time,     1m27.51s wall time
+
+     iteration = 113  eff iteration = 113   Etot (Ha) =     -0.14178779504111 delta_E=  0.62098986453041E-07
+     Ekin (Ha) =       3.92047792297014 Enl (Ha) =      -0.71106943886368 Eloc (Ha) =     -3.55507435689891
+ Fake EODD (Ha) =       0.20387807775135
+     CP           :  1m23.53s CPU time,     1m28.25s wall time
+
+     iteration = 114  eff iteration = 114   Etot (Ha) =     -0.14178795539020 delta_E=  0.11263318505650E-06
+     Ekin (Ha) =       3.92098024252457 Enl (Ha) =      -0.71118174083864 Eloc (Ha) =     -3.55549933431806
+ Fake EODD (Ha) =       0.20391287724192
+     CP           :  1m24.22s CPU time,     1m28.98s wall time
+
+     iteration = 115  eff iteration = 115   Etot (Ha) =     -0.14178807788363 delta_E=  0.16034909086637E-06
+     Ekin (Ha) =       3.92139103415305 Enl (Ha) =      -0.71126372906986 Eloc (Ha) =     -3.55586576412604
+ Fake EODD (Ha) =       0.20395038115923
+     CP           :  1m24.91s CPU time,     1m29.72s wall time
+
+     iteration = 116  eff iteration = 116   Etot (Ha) =     -0.14178826751849 delta_E=  0.12249342715154E-06
+     Ekin (Ha) =       3.92201651613318 Enl (Ha) =      -0.71137010841944 Eloc (Ha) =     -3.55645213491534
+ Fake EODD (Ha) =       0.20401745968310
+     CP           :  1m25.61s CPU time,     1m30.45s wall time
+
+     iteration = 117  eff iteration = 117   Etot (Ha) =     -0.14178850886619 delta_E=  0.18963486081436E-06
+     Ekin (Ha) =       3.92263936264422 Enl (Ha) =      -0.71147470319767 Eloc (Ha) =     -3.55704571426840
+ Fake EODD (Ha) =       0.20409254595565
+     CP           :  1m26.31s CPU time,     1m31.18s wall time
+
+     iteration = 118  eff iteration = 118   Etot (Ha) =     -0.14178877211736 delta_E=  0.24134770434947E-06
+     Ekin (Ha) =       3.92299475245963 Enl (Ha) =      -0.71154147046395 Eloc (Ha) =     -3.55739093341422
+ Fake EODD (Ha) =       0.20414887930119
+     CP           :  1m27.00s CPU time,     1m31.92s wall time
+
+     iteration = 119  eff iteration = 119   Etot (Ha) =     -0.14178910512731 delta_E=  0.26325116389558E-06
+     Ekin (Ha) =       3.92312195505750 Enl (Ha) =      -0.71156945354105 Eloc (Ha) =     -3.55752835322298
+ Fake EODD (Ha) =       0.20418674657922
+     CP           :  1m27.70s CPU time,     1m32.65s wall time
+
+     iteration = 120  eff iteration = 120   Etot (Ha) =     -0.14178958250575 delta_E=  0.33300994906060E-06
+     Ekin (Ha) =       3.92295009453834 Enl (Ha) =      -0.71153761934354 Eloc (Ha) =     -3.55739991861880
+ Fake EODD (Ha) =       0.20419786091825
+
+     CP           :  1m28.40s CPU time,     1m33.38s wall time
+
+     iteration = 121  eff iteration = 121   Etot (Ha) =     -0.14178994621677 delta_E=  0.47737844063866E-06
+     Ekin (Ha) =       3.92294025494955 Enl (Ha) =      -0.71153425661163 Eloc (Ha) =     -3.55738976638519
+ Fake EODD (Ha) =       0.20419382183050
+     CP           :  1m29.11s CPU time,     1m34.12s wall time
+
+     iteration = 122  eff iteration = 122   Etot (Ha) =     -0.14179023345462 delta_E=  0.36371102013488E-06
+     Ekin (Ha) =       3.92291308024996 Enl (Ha) =      -0.71152402306150 Eloc (Ha) =     -3.55735990298446
+ Fake EODD (Ha) =       0.20418061234138
+     CP           :  1m29.81s CPU time,     1m34.85s wall time
+
+     iteration = 123  eff iteration = 123   Etot (Ha) =     -0.14179049073033 delta_E=  0.28723785400198E-06
+     Ekin (Ha) =       3.92277780799866 Enl (Ha) =      -0.71149966422345 Eloc (Ha) =     -3.55722099262083
+ Fake EODD (Ha) =       0.20415235811529
+     CP           :  1m30.51s CPU time,     1m35.58s wall time
+
+     iteration = 124  eff iteration = 124   Etot (Ha) =     -0.14179081388087 delta_E=  0.25727570648892E-06
+     Ekin (Ha) =       3.92239161029574 Enl (Ha) =      -0.71144597817043 Eloc (Ha) =     -3.55683261115471
+ Fake EODD (Ha) =       0.20409616514853
+     CP           :  1m31.21s CPU time,     1m36.32s wall time
+
+     iteration = 125  eff iteration = 125   Etot (Ha) =     -0.14179115928048 delta_E=  0.32315053813403E-06
+     Ekin (Ha) =       3.92184599137520 Enl (Ha) =      -0.71136016470100 Eloc (Ha) =     -3.55630559531616
+ Fake EODD (Ha) =       0.20402860936148
+     CP           :  1m31.91s CPU time,     1m37.05s wall time
+
+     iteration = 126  eff iteration = 126   Etot (Ha) =     -0.14179146314810 delta_E=  0.34539961188407E-06
+     Ekin (Ha) =       3.92125431691587 Enl (Ha) =      -0.71123679285065 Eloc (Ha) =     -3.55578261758089
+ Fake EODD (Ha) =       0.20397363036758
+     CP           :  1m32.61s CPU time,     1m37.79s wall time
+
+     iteration = 127  eff iteration = 127   Etot (Ha) =     -0.14179189749886 delta_E=  0.30386761731838E-06
+     Ekin (Ha) =       3.92031623975354 Enl (Ha) =      -0.71102793192271 Eloc (Ha) =     -3.55498472513376
+ Fake EODD (Ha) =       0.20390451980408
+     CP           :  1m33.32s CPU time,     1m38.52s wall time
+
+     iteration = 128  eff iteration = 128   Etot (Ha) =     -0.14179221392142 delta_E=  0.43435076296783E-06
+     Ekin (Ha) =       3.91987257809952 Enl (Ha) =      -0.71094534743450 Eloc (Ha) =     -3.55458435444637
+ Fake EODD (Ha) =       0.20386490985993
+     CP           :  1m34.02s CPU time,     1m39.25s wall time
+
+     iteration = 129  eff iteration = 129   Etot (Ha) =     -0.14179239499278 delta_E=  0.31642255918229E-06
+     Ekin (Ha) =       3.92002683352445 Enl (Ha) =      -0.71099479527613 Eloc (Ha) =     -3.55468402801856
+ Fake EODD (Ha) =       0.20385959477746
+     CP           :  1m34.71s CPU time,     1m39.99s wall time
+
+     iteration = 130  eff iteration = 130   Etot (Ha) =     -0.14179251258101 delta_E=  0.18107135654755E-06
+     Ekin (Ha) =       3.92044213033082 Enl (Ha) =      -0.71108404307569 Eloc (Ha) =     -3.55502856584741
+ Fake EODD (Ha) =       0.20387796601126
+
+     CP           :  1m35.42s CPU time,     1m40.72s wall time
+
+     iteration = 131  eff iteration = 131   Etot (Ha) =     -0.14179259116873 delta_E=  0.11758823897923E-06
+     Ekin (Ha) =       3.92085082162458 Enl (Ha) =      -0.71115448115705 Eloc (Ha) =     -3.55539820801044
+ Fake EODD (Ha) =       0.20390927637418
+     CP           :  1m36.11s CPU time,     1m41.45s wall time
+
+     iteration = 132  eff iteration = 132   Etot (Ha) =     -0.14179265250749 delta_E=  0.78587717167178E-07
+     Ekin (Ha) =       3.92125395162858 Enl (Ha) =      -0.71122055530026 Eloc (Ha) =     -3.55577304237587
+ Fake EODD (Ha) =       0.20394699354007
+     CP           :  1m36.80s CPU time,     1m42.19s wall time
+
+     iteration = 133  eff iteration = 133   Etot (Ha) =     -0.14179270040255 delta_E=  0.61338755158458E-07
+     Ekin (Ha) =       3.92164235290041 Enl (Ha) =      -0.71129254853349 Eloc (Ha) =     -3.55612585236888
+ Fake EODD (Ha) =       0.20398334759941
+     CP           :  1m37.50s CPU time,     1m42.92s wall time
+
+     iteration = 134  eff iteration = 134   Etot (Ha) =     -0.14179276216257 delta_E=  0.47895062665892E-07
+     Ekin (Ha) =       3.92217586639872 Enl (Ha) =      -0.71139427529954 Eloc (Ha) =     -3.55660949692371
+ Fake EODD (Ha) =       0.20403514366195
+     CP           :  1m38.21s CPU time,     1m43.66s wall time
+
+     iteration = 135  eff iteration = 135   Etot (Ha) =     -0.14179285282802 delta_E=  0.61760024233637E-07
+     Ekin (Ha) =       3.92289476783302 Enl (Ha) =      -0.71152182174539 Eloc (Ha) =     -3.55727716054145
+ Fake EODD (Ha) =       0.20411136162580
+     CP           :  1m38.92s CPU time,     1m44.39s wall time
+
+     iteration = 136  eff iteration = 136   Etot (Ha) =     -0.14179298643014 delta_E=  0.90665443375215E-07
+     Ekin (Ha) =       3.92381172527856 Enl (Ha) =      -0.71167743471901 Eloc (Ha) =     -3.55813939724821
+ Fake EODD (Ha) =       0.20421212025852
+     CP           :  1m39.61s CPU time,     1m45.12s wall time
+
+     iteration = 137  eff iteration = 137   Etot (Ha) =     -0.14179316727239 delta_E=  0.13360211914559E-06
+     Ekin (Ha) =       3.92487543504119 Enl (Ha) =      -0.71186473322292 Eloc (Ha) =     -3.55912586689865
+ Fake EODD (Ha) =       0.20432199780799
+     CP           :  1m40.30s CPU time,     1m45.86s wall time
+
+     iteration = 138  eff iteration = 138   Etot (Ha) =     -0.14179341185940 delta_E=  0.18084225114623E-06
+     Ekin (Ha) =       3.92602305114772 Enl (Ha) =      -0.71208079531675 Eloc (Ha) =     -3.56016533203616
+ Fake EODD (Ha) =       0.20442966434580
+     CP           :  1m41.01s CPU time,     1m46.59s wall time
+
+     iteration = 139  eff iteration = 139   Etot (Ha) =     -0.14179371091426 delta_E=  0.24458701050611E-06
+     Ekin (Ha) =       3.92689817278769 Enl (Ha) =      -0.71225670080201 Eloc (Ha) =     -3.56094480095690
+ Fake EODD (Ha) =       0.20450961805696
+     CP           :  1m41.72s CPU time,     1m47.32s wall time
+
+     iteration = 140  eff iteration = 140   Etot (Ha) =     -0.14179428132961 delta_E=  0.29905485762760E-06
+     Ekin (Ha) =       3.92689425960588 Enl (Ha) =      -0.71226737577676 Eloc (Ha) =     -3.56095325120383
+ Fake EODD (Ha) =       0.20453208604509
+
+     CP           :  1m42.43s CPU time,     1m48.05s wall time
+
+     iteration = 141  eff iteration = 141   Etot (Ha) =     -0.14179472301073 delta_E=  0.57041535714286E-06
+     Ekin (Ha) =       3.92662435464644 Enl (Ha) =      -0.71220379393981 Eloc (Ha) =     -3.56072719285997
+ Fake EODD (Ha) =       0.20451190914261
+     CP           :  1m43.13s CPU time,     1m48.79s wall time
+
+     iteration = 142  eff iteration = 142   Etot (Ha) =     -0.14179500839074 delta_E=  0.44168111684728E-06
+     Ekin (Ha) =       3.92593232388195 Enl (Ha) =      -0.71205781173830 Eloc (Ha) =     -3.56012350870113
+ Fake EODD (Ha) =       0.20445398816675
+     CP           :  1m43.83s CPU time,     1m49.53s wall time
+
+     iteration = 143  eff iteration = 143   Etot (Ha) =     -0.14179527991827 delta_E=  0.28538001384248E-06
+     Ekin (Ha) =       3.92487949669463 Enl (Ha) =      -0.71186332470689 Eloc (Ha) =     -3.55916560616269
+ Fake EODD (Ha) =       0.20435415425667
+     CP           :  1m44.54s CPU time,     1m50.27s wall time
+
+     iteration = 144  eff iteration = 144   Etot (Ha) =     -0.14179551545969 delta_E=  0.27152752959947E-06
+     Ekin (Ha) =       3.92375939281529 Enl (Ha) =      -0.71167320021953 Eloc (Ha) =     -3.55811833045986
+ Fake EODD (Ha) =       0.20423662240441
+     CP           :  1m45.24s CPU time,     1m51.00s wall time
+
+     iteration = 145  eff iteration = 145   Etot (Ha) =     -0.14179570094461 delta_E=  0.23554141570514E-06
+     Ekin (Ha) =       3.92276218839729 Enl (Ha) =      -0.71150333601641 Eloc (Ha) =     -3.55718149843207
+ Fake EODD (Ha) =       0.20412694510658
+     CP           :  1m45.94s CPU time,     1m51.74s wall time
+
+     iteration = 146  eff iteration = 146   Etot (Ha) =     -0.14179585939296 delta_E=  0.18548491770298E-06
+     Ekin (Ha) =       3.92182614371969 Enl (Ha) =      -0.71133443749485 Eloc (Ha) =     -3.55631430177375
+ Fake EODD (Ha) =       0.20402673615595
+     CP           :  1m46.65s CPU time,     1m52.47s wall time
+
+     iteration = 147  eff iteration = 147   Etot (Ha) =     -0.14179596683749 delta_E=  0.15844835371537E-06
+     Ekin (Ha) =       3.92117122924587 Enl (Ha) =      -0.71120958897355 Eloc (Ha) =     -3.55571834113802
+ Fake EODD (Ha) =       0.20396073402822
+     CP           :  1m47.34s CPU time,     1m53.20s wall time
+
+     iteration = 148  eff iteration = 148   Etot (Ha) =     -0.14179606163517 delta_E=  0.10744452821898E-06
+     Ekin (Ha) =       3.92064780729348 Enl (Ha) =      -0.71111231361410 Eloc (Ha) =     -3.55524058509594
+ Fake EODD (Ha) =       0.20390902978138
+     CP           :  1m48.05s CPU time,     1m53.94s wall time
+
+     iteration = 149  eff iteration = 149   Etot (Ha) =     -0.14179615852373 delta_E=  0.94797679484060E-07
+     Ekin (Ha) =       3.92023651184418 Enl (Ha) =      -0.71104576765046 Eloc (Ha) =     -3.55485380775964
+ Fake EODD (Ha) =       0.20386690504219
+     CP           :  1m48.75s CPU time,     1m54.67s wall time
+
+     iteration = 150  eff iteration = 150   Etot (Ha) =     -0.14179626401897 delta_E=  0.96888567224784E-07
+     Ekin (Ha) =       3.91994071332727 Enl (Ha) =      -0.71099899121031 Eloc (Ha) =     -3.55457781596725
+ Fake EODD (Ha) =       0.20383982983132
+
+     CP           :  1m49.47s CPU time,     1m55.42s wall time
+
+     iteration = 151  eff iteration = 151   Etot (Ha) =     -0.14179638546490 delta_E=  0.10549523449255E-06
+     Ekin (Ha) =       3.91976558446473 Enl (Ha) =      -0.71095863525271 Eloc (Ha) =     -3.55443761682290
+ Fake EODD (Ha) =       0.20383428214597
+     CP           :  1m50.18s CPU time,     1m56.15s wall time
+
+     iteration = 152  eff iteration = 152   Etot (Ha) =     -0.14179654366162 delta_E=  0.12144592656527E-06
+     Ekin (Ha) =       3.91983659901785 Enl (Ha) =      -0.71095084863592 Eloc (Ha) =     -3.55453919672595
+ Fake EODD (Ha) =       0.20385690268240
+     CP           :  1m50.89s CPU time,     1m56.88s wall time
+
+     iteration = 153  eff iteration = 153   Etot (Ha) =     -0.14179675878635 delta_E=  0.15819672752326E-06
+     Ekin (Ha) =       3.92039691198080 Enl (Ha) =      -0.71104394109989 Eloc (Ha) =     -3.55506098108027
+ Fake EODD (Ha) =       0.20391125141301
+     CP           :  1m51.59s CPU time,     1m57.62s wall time
+
+     iteration = 154  eff iteration = 154   Etot (Ha) =     -0.14179703662093 delta_E=  0.21512472392349E-06
+     Ekin (Ha) =       3.92149043339528 Enl (Ha) =      -0.71126635077784 Eloc (Ha) =     -3.55601288716901
+ Fake EODD (Ha) =       0.20399176793064
+     CP           :  1m52.30s CPU time,     1m58.35s wall time
+
+     iteration = 155  eff iteration = 155   Etot (Ha) =     -0.14179730078996 delta_E=  0.27783458605990E-06
+     Ekin (Ha) =       3.92248540147899 Enl (Ha) =      -0.71147460671953 Eloc (Ha) =     -3.55687427538037
+ Fake EODD (Ha) =       0.20406617983095
+     CP           :  1m53.00s CPU time,     1m59.09s wall time
+
+     iteration = 156  eff iteration = 156   Etot (Ha) =     -0.14179760594806 delta_E=  0.26416902762505E-06
+     Ekin (Ha) =       3.92328037043011 Enl (Ha) =      -0.71162156679310 Eloc (Ha) =     -3.55759810903123
+ Fake EODD (Ha) =       0.20414169944616
+     CP           :  1m53.69s CPU time,     1m59.82s wall time
+
+     iteration = 157  eff iteration = 157   Etot (Ha) =     -0.14179804207695 delta_E=  0.30515810031662E-06
+     Ekin (Ha) =       3.92388084583368 Enl (Ha) =      -0.71170757446427 Eloc (Ha) =     -3.55819436626603
+ Fake EODD (Ha) =       0.20422305281966
+     CP           :  1m54.39s CPU time,     2m 0.56s wall time
+
+     iteration = 158  eff iteration = 158   Etot (Ha) =     -0.14179852210825 delta_E=  0.43612888997457E-06
+     Ekin (Ha) =       3.92399578811527 Enl (Ha) =      -0.71171321203295 Eloc (Ha) =     -3.55835146030160
+ Fake EODD (Ha) =       0.20427036211103
+     CP           :  1m55.10s CPU time,     2m 1.29s wall time
+
+     iteration = 159  eff iteration = 159   Etot (Ha) =     -0.14179911371941 delta_E=  0.48003129543561E-06
+     Ekin (Ha) =       3.92363327784338 Enl (Ha) =      -0.71165233382712 Eloc (Ha) =     -3.55805395431671
+ Fake EODD (Ha) =       0.20427389658103
+     CP           :  1m55.80s CPU time,     2m 2.03s wall time
+
+     iteration = 160  eff iteration = 160   Etot (Ha) =     -0.14179976261484 delta_E=  0.59161116683359E-06
+     Ekin (Ha) =       3.92295656519049 Enl (Ha) =      -0.71153474653507 Eloc (Ha) =     -3.55745887411726
+ Fake EODD (Ha) =       0.20423729284702
+
+     CP           :  1m56.50s CPU time,     2m 2.76s wall time
+
+     iteration = 161  eff iteration = 161   Etot (Ha) =     -0.14180025705544 delta_E=  0.64889542425450E-06
+     Ekin (Ha) =       3.92299440838048 Enl (Ha) =      -0.71153619519866 Eloc (Ha) =     -3.55749323054455
+ Fake EODD (Ha) =       0.20423476030729
+     CP           :  1m57.19s CPU time,     2m 3.49s wall time
+
+     iteration = 162  eff iteration = 162   Etot (Ha) =     -0.14180076922083 delta_E=  0.49444060742920E-06
+     Ekin (Ha) =       3.92308407872598 Enl (Ha) =      -0.71154751034499 Eloc (Ha) =     -3.55755915678016
+ Fake EODD (Ha) =       0.20422181917834
+     CP           :  1m57.90s CPU time,     2m 4.22s wall time
+
+     iteration = 163  eff iteration = 163   Etot (Ha) =     -0.14180116286559 delta_E=  0.51216538501930E-06
+     Ekin (Ha) =       3.92305196462749 Enl (Ha) =      -0.71155636266313 Eloc (Ha) =     -3.55748824692009
+ Fake EODD (Ha) =       0.20419148209015
+     CP           :  1m58.60s CPU time,     2m 4.96s wall time
+
+     iteration = 164  eff iteration = 164   Etot (Ha) =     -0.14180160233893 delta_E=  0.39364475587500E-06
+     Ekin (Ha) =       3.92269427940644 Enl (Ha) =      -0.71151894146461 Eloc (Ha) =     -3.55711033988344
+ Fake EODD (Ha) =       0.20413339960268
+     CP           :  1m59.30s CPU time,     2m 5.69s wall time
+
+     iteration = 165  eff iteration = 165   Etot (Ha) =     -0.14180199664406 delta_E=  0.43947334127381E-06
+     Ekin (Ha) =       3.92206325101888 Enl (Ha) =      -0.71140540790816 Eloc (Ha) =     -3.55653116187309
+ Fake EODD (Ha) =       0.20407132211831
+     CP           :  2m 0.01s CPU time,     2m 6.42s wall time
+
+     iteration = 166  eff iteration = 166   Etot (Ha) =     -0.14180243420828 delta_E=  0.39430513334993E-06
+     Ekin (Ha) =       3.92109589339699 Enl (Ha) =      -0.71119596554621 Eloc (Ha) =     -3.55570212641730
+ Fake EODD (Ha) =       0.20399976435824
+     CP           :  2m 0.72s CPU time,     2m 7.16s wall time
+
+     iteration = 167  eff iteration = 167   Etot (Ha) =     -0.14180298128312 delta_E=  0.43756421688745E-06
+     Ekin (Ha) =       3.91989797255632 Enl (Ha) =      -0.71094729219187 Eloc (Ha) =     -3.55466391564300
+ Fake EODD (Ha) =       0.20391025399543
+     CP           :  2m 1.43s CPU time,     2m 7.89s wall time
+
+     iteration = 168  eff iteration = 168   Etot (Ha) =     -0.14180341172130 delta_E=  0.54707484586913E-06
+     Ekin (Ha) =       3.91930697397374 Enl (Ha) =      -0.71085565635190 Eloc (Ha) =     -3.55410149959091
+ Fake EODD (Ha) =       0.20384677024777
+     CP           :  2m 2.12s CPU time,     2m 8.63s wall time
+
+     iteration = 169  eff iteration = 169   Etot (Ha) =     -0.14180372295892 delta_E=  0.43043817826716E-06
+     Ekin (Ha) =       3.91926680300411 Enl (Ha) =      -0.71087910002295 Eloc (Ha) =     -3.55400950338986
+ Fake EODD (Ha) =       0.20381807744978
+     CP           :  2m 2.80s CPU time,     2m 9.36s wall time
+
+     iteration = 170  eff iteration = 170   Etot (Ha) =     -0.14180394632435 delta_E=  0.31123761459750E-06
+     Ekin (Ha) =       3.91947532862162 Enl (Ha) =      -0.71092592935514 Eloc (Ha) =     -3.55417562380423
+ Fake EODD (Ha) =       0.20382227821339
+
+     CP           :  2m 3.50s CPU time,     2m10.09s wall time
+
+     iteration = 171  eff iteration = 171   Etot (Ha) =     -0.14180412166258 delta_E=  0.22336543811785E-06
+     Ekin (Ha) =       3.91974684051576 Enl (Ha) =      -0.71096282404224 Eloc (Ha) =     -3.55443605793013
+ Fake EODD (Ha) =       0.20384791979404
+     CP           :  2m 4.20s CPU time,     2m10.83s wall time
+
+     iteration = 172  eff iteration = 172   Etot (Ha) =     -0.14180427190545 delta_E=  0.17533822765925E-06
+     Ekin (Ha) =       3.92007940539946 Enl (Ha) =      -0.71101301731775 Eloc (Ha) =     -3.55475569364984
+ Fake EODD (Ha) =       0.20388503366269
+     CP           :  2m 4.89s CPU time,     2m11.56s wall time
+
+     iteration = 173  eff iteration = 173   Etot (Ha) =     -0.14180441331423 delta_E=  0.15024286686982E-06
+     Ekin (Ha) =       3.92051137326548 Enl (Ha) =      -0.71109509160057 Eloc (Ha) =     -3.55515035894349
+ Fake EODD (Ha) =       0.20392966396435
+     CP           :  2m 5.59s CPU time,     2m12.29s wall time
+
+     iteration = 174  eff iteration = 174   Etot (Ha) =     -0.14180458182114 delta_E=  0.14140878337732E-06
+     Ekin (Ha) =       3.92113509191831 Enl (Ha) =      -0.71121621990351 Eloc (Ha) =     -3.55571595770971
+ Fake EODD (Ha) =       0.20399250387376
+     CP           :  2m 6.29s CPU time,     2m13.03s wall time
+
+     iteration = 175  eff iteration = 175   Etot (Ha) =     -0.14180481601870 delta_E=  0.16850690923165E-06
+     Ekin (Ha) =       3.92201070528299 Enl (Ha) =      -0.71137300445336 Eloc (Ha) =     -3.55652802520328
+ Fake EODD (Ha) =       0.20408550835496
+     CP           :  2m 7.00s CPU time,     2m13.76s wall time
+
+     iteration = 176  eff iteration = 176   Etot (Ha) =     -0.14180509179261 delta_E=  0.23419755473819E-06
+     Ekin (Ha) =       3.92295015961594 Enl (Ha) =      -0.71152947538279 Eloc (Ha) =     -3.55741548184353
+ Fake EODD (Ha) =       0.20418970581776
+     WARNING cg_sub: missed minimum, case 1, iteration  176      1.722757205964
+     CP           :  2m 8.03s CPU time,     2m14.85s wall time
+
+     iteration = 177  eff iteration = 177   Etot (Ha) =     -0.14180538776259 delta_E=  0.27577391303879E-06
+     Ekin (Ha) =       3.92383891701384 Enl (Ha) =      -0.71168051513805 Eloc (Ha) =     -3.55824756008696
+ Fake EODD (Ha) =       0.20428377044858
+     CP           :  2m 8.74s CPU time,     2m15.58s wall time
+
+     iteration = 178  eff iteration = 178   Etot (Ha) =     -0.14180554398099 delta_E=  0.29596998007975E-06
+     Ekin (Ha) =       3.92376835547464 Enl (Ha) =      -0.71167690131481 Eloc (Ha) =     -3.55816812390221
+ Fake EODD (Ha) =       0.20427112576139
+     CP           :  2m 9.43s CPU time,     2m16.32s wall time
+
+     iteration = 179  eff iteration = 179   Etot (Ha) =     -0.14180569236610 delta_E=  0.15621840354640E-06
+     Ekin (Ha) =       3.92350391957494 Enl (Ha) =      -0.71164512930911 Eloc (Ha) =     -3.55789932894150
+ Fake EODD (Ha) =       0.20423484630957
+     CP           :  2m10.14s CPU time,     2m17.05s wall time
+
+     iteration = 180  eff iteration = 180   Etot (Ha) =     -0.14180587986150 delta_E=  0.14838510287163E-06
+     Ekin (Ha) =       3.92283834151962 Enl (Ha) =      -0.71152781900375 Eloc (Ha) =     -3.55728193246236
+ Fake EODD (Ha) =       0.20416553008499
+
+     CP           :  2m10.85s CPU time,     2m17.79s wall time
+
+     iteration = 181  eff iteration = 181   Etot (Ha) =     -0.14180599214326 delta_E=  0.18749540353635E-06
+     Ekin (Ha) =       3.92274942509609 Enl (Ha) =      -0.71150424163981 Eloc (Ha) =     -3.55721179914326
+ Fake EODD (Ha) =       0.20416062354372
+     CP           :  2m11.57s CPU time,     2m18.53s wall time
+
+     iteration = 182  eff iteration = 182   Etot (Ha) =     -0.14180608287786 delta_E=  0.11228175827993E-06
+     Ekin (Ha) =       3.92252513363022 Enl (Ha) =      -0.71145211481282 Eloc (Ha) =     -3.55702405776694
+ Fake EODD (Ha) =       0.20414495607168
+     CP           :  2m12.27s CPU time,     2m19.26s wall time
+
+     iteration = 183  eff iteration = 183   Etot (Ha) =     -0.14180616583720 delta_E=  0.90734601748688E-07
+     Ekin (Ha) =       3.92224518820721 Enl (Ha) =      -0.71140137148335 Eloc (Ha) =     -3.55676873884897
+ Fake EODD (Ha) =       0.20411875628791
+     CP           :  2m12.97s CPU time,     2m19.99s wall time
+
+     iteration = 184  eff iteration = 184   Etot (Ha) =     -0.14180647119601 delta_E=  0.82959341812794E-07
+     Ekin (Ha) =       3.92111282003748 Enl (Ha) =      -0.71122029163316 Eloc (Ha) =     -3.55569830679262
+ Fake EODD (Ha) =       0.20399930719230
+     CP           :  2m13.65s CPU time,     2m20.72s wall time
+
+     iteration = 185  eff iteration = 185   Etot (Ha) =     -0.14180681372787 delta_E=  0.30535880818361E-06
+     Ekin (Ha) =       3.91981757414041 Enl (Ha) =      -0.71098701150389 Eloc (Ha) =     -3.55450988967020
+ Fake EODD (Ha) =       0.20387251330581
+     CP           :  2m14.35s CPU time,     2m21.46s wall time
+
+     iteration = 186  eff iteration = 186   Etot (Ha) =     -0.14180716712759 delta_E=  0.34253185826616E-06
+     Ekin (Ha) =       3.91861049279724 Enl (Ha) =      -0.71074459202827 Eloc (Ha) =     -3.55343565924394
+ Fake EODD (Ha) =       0.20376259134738
+     CP           :  2m15.07s CPU time,     2m22.19s wall time
+
+     iteration = 187  eff iteration = 187   Etot (Ha) =     -0.14180735466163 delta_E=  0.35339972020987E-06
+     Ekin (Ha) =       3.91822682422570 Enl (Ha) =      -0.71067035793497 Eloc (Ha) =     -3.55308606953763
+ Fake EODD (Ha) =       0.20372224858527
+     CP           :  2m15.78s CPU time,     2m22.92s wall time
+
+     iteration = 188  eff iteration = 188   Etot (Ha) =     -0.14180757545603 delta_E=  0.18753403949190E-06
+     Ekin (Ha) =       3.91827346119394 Enl (Ha) =      -0.71070133905528 Eloc (Ha) =     -3.55308845682455
+ Fake EODD (Ha) =       0.20370875922985
+     CP           :  2m16.48s CPU time,     2m23.66s wall time
+
+     iteration = 189  eff iteration = 189   Etot (Ha) =     -0.14180788195863 delta_E=  0.22079440559208E-06
+     Ekin (Ha) =       3.91856942681131 Enl (Ha) =      -0.71078545726524 Eloc (Ha) =     -3.55331477069750
+ Fake EODD (Ha) =       0.20372291919281
+     CP           :  2m17.18s CPU time,     2m24.39s wall time
+
+     iteration = 190  eff iteration = 190   Etot (Ha) =     -0.14180857023258 delta_E=  0.30650259297271E-06
+     Ekin (Ha) =       3.91919333605680 Enl (Ha) =      -0.71089449795298 Eloc (Ha) =     -3.55391494060166
+ Fake EODD (Ha) =       0.20380753226526
+
+     CP           :  2m17.88s CPU time,     2m25.13s wall time
+
+     iteration = 191  eff iteration = 191   Etot (Ha) =     -0.14180946829402 delta_E=  0.68827395166560E-06
+     Ekin (Ha) =       3.91983611726425 Enl (Ha) =      -0.71096743473818 Eloc (Ha) =     -3.55460655719155
+ Fake EODD (Ha) =       0.20392840637146
+     CP           :  2m18.58s CPU time,     2m25.86s wall time
+
+     iteration = 192  eff iteration = 192   Etot (Ha) =     -0.14181017018526 delta_E=  0.89806144609739E-06
+     Ekin (Ha) =       3.92040530079460 Enl (Ha) =      -0.71105109110653 Eloc (Ha) =     -3.55518491432002
+ Fake EODD (Ha) =       0.20402053444669
+     CP           :  2m19.27s CPU time,     2m26.60s wall time
+
+     iteration = 193  eff iteration = 193   Etot (Ha) =     -0.14181072041690 delta_E=  0.70189123632658E-06
+     Ekin (Ha) =       3.92106475264034 Enl (Ha) =      -0.71118202107723 Eloc (Ha) =     -3.55578260904573
+ Fake EODD (Ha) =       0.20408915706573
+     CP           :  2m19.97s CPU time,     2m27.33s wall time
+
+     iteration = 194  eff iteration = 194   Etot (Ha) =     -0.14181121924660 delta_E=  0.55023164236001E-06
+     Ekin (Ha) =       3.92180725550497 Enl (Ha) =      -0.71133991326306 Eloc (Ha) =     -3.55642580962749
+ Fake EODD (Ha) =       0.20414724813898
+     CP           :  2m20.67s CPU time,     2m28.06s wall time
+
+     iteration = 195  eff iteration = 195   Etot (Ha) =     -0.14181250218895 delta_E=  0.49882969771486E-06
+     Ekin (Ha) =       3.92341496457015 Enl (Ha) =      -0.71167097760958 Eloc (Ha) =     -3.55781807257029
+ Fake EODD (Ha) =       0.20426158342078
+     CP           :  2m21.37s CPU time,     2m28.80s wall time
+
+     iteration = 196  eff iteration = 196   Etot (Ha) =     -0.14181480851768 delta_E=  0.12829423511884E-05
+     Ekin (Ha) =       3.92435317249759 Enl (Ha) =      -0.71184417324711 Eloc (Ha) =     -3.55863872610155
+ Fake EODD (Ha) =       0.20431491833339
+     CP           :  2m22.08s CPU time,     2m29.53s wall time
+
+     iteration = 197  eff iteration = 197   Etot (Ha) =     -0.14181815756126 delta_E=  0.23063287276359E-05
+     Ekin (Ha) =       3.92113582450950 Enl (Ha) =      -0.71124337563191 Eloc (Ha) =     -3.55574293744031
+ Fake EODD (Ha) =       0.20403233100146
+     CP           :  2m22.78s CPU time,     2m30.26s wall time
+
+     iteration = 198  eff iteration = 198   Etot (Ha) =     -0.14182510953144 delta_E=  0.33490435771832E-05
+     Ekin (Ha) =       3.90322093934970 Enl (Ha) =      -0.70798328220931 Eloc (Ha) =     -3.53952164004649
+ Fake EODD (Ha) =       0.20245887337467
+     CP           :  2m23.49s CPU time,     2m31.00s wall time
+
+     iteration = 199  eff iteration = 199   Etot (Ha) =     -0.14182715106761 delta_E=  0.69519701815790E-05
+     Ekin (Ha) =       3.89563453475843 Enl (Ha) =      -0.70660637506938 Eloc (Ha) =     -3.53264086462070
+ Fake EODD (Ha) =       0.20178555386404
+     CP           :  2m24.19s CPU time,     2m31.73s wall time
+
+     iteration = 200  eff iteration = 200   Etot (Ha) =     -0.14182872670945 delta_E=  0.20415361770831E-05
+     Ekin (Ha) =       3.89057167005923 Enl (Ha) =      -0.70568705435033 Eloc (Ha) =     -3.52804779360233
+ Fake EODD (Ha) =       0.20133445118399
+
+     CP           :  2m24.89s CPU time,     2m32.46s wall time
+
+     iteration = 201  eff iteration = 201   Etot (Ha) =     -0.14183359962992 delta_E=  0.15756418333124E-05
+     Ekin (Ha) =       3.89674081730625 Enl (Ha) =      -0.70679864640680 Eloc (Ha) =     -3.53366186955926
+ Fake EODD (Ha) =       0.20188609902990
+     CP           :  2m25.60s CPU time,     2m33.19s wall time
+
+     iteration = 202  eff iteration = 202   Etot (Ha) =     -0.14184278652749 delta_E=  0.48729204768505E-05
+     Ekin (Ha) =       3.91148669016109 Enl (Ha) =      -0.70949389284603 Eloc (Ha) =     -3.54704074286617
+ Fake EODD (Ha) =       0.20320515902361
+     CP           :  2m26.30s CPU time,     2m33.93s wall time
+
+     iteration = 203  eff iteration = 203   Etot (Ha) =     -0.14184535940461 delta_E=  0.91868975698461E-05
+     Ekin (Ha) =       3.91583101091693 Enl (Ha) =      -0.71031878326319 Eloc (Ha) =     -3.55096425018270
+ Fake EODD (Ha) =       0.20360666312435
+     CP           :  2m27.00s CPU time,     2m34.66s wall time
+
+     iteration = 204  eff iteration = 204   Etot (Ha) =     -0.14184763230226 delta_E=  0.25728771104461E-05
+     Ekin (Ha) =       3.91947513947131 Enl (Ha) =      -0.71099533648902 Eloc (Ha) =     -3.55430883926164
+ Fake EODD (Ha) =       0.20398140397708
+     CP           :  2m27.70s CPU time,     2m35.40s wall time
+
+     iteration = 205  eff iteration = 205   Etot (Ha) =     -0.14184926060427 delta_E=  0.22728976596109E-05
+     Ekin (Ha) =       3.92186452629925 Enl (Ha) =      -0.71138936194983 Eloc (Ha) =     -3.55657410958632
+ Fake EODD (Ha) =       0.20424968463264
+     CP           :  2m28.40s CPU time,     2m36.13s wall time
+
+     iteration = 206  eff iteration = 206   Etot (Ha) =     -0.14185050059963 delta_E=  0.16283020015384E-05
+     Ekin (Ha) =       3.92339569711394 Enl (Ha) =      -0.71161849035961 Eloc (Ha) =     -3.55805094051938
+ Fake EODD (Ha) =       0.20442323316542
+     CP           :  2m29.09s CPU time,     2m36.86s wall time
+
+     iteration = 207  eff iteration = 207   Etot (Ha) =     -0.14185163943835 delta_E=  0.12399953666364E-05
+     Ekin (Ha) =       3.92431766544537 Enl (Ha) =      -0.71178999452839 Eloc (Ha) =     -3.55889679067739
+ Fake EODD (Ha) =       0.20451748032206
+     CP           :  2m29.81s CPU time,     2m37.60s wall time
+
+     iteration = 208  eff iteration = 208   Etot (Ha) =     -0.14185272497650 delta_E=  0.11388387183564E-05
+     Ekin (Ha) =       3.92442860888499 Enl (Ha) =      -0.71186460068724 Eloc (Ha) =     -3.55893916865143
+ Fake EODD (Ha) =       0.20452243547718
+     CP           :  2m30.51s CPU time,     2m38.33s wall time
+
+     iteration = 209  eff iteration = 209   Etot (Ha) =     -0.14185375099533 delta_E=  0.10855381481212E-05
+     Ekin (Ha) =       3.92365490689776 Enl (Ha) =      -0.71174771741473 Eloc (Ha) =     -3.55821991128993
+ Fake EODD (Ha) =       0.20445897081157
+     CP           :  2m31.21s CPU time,     2m39.07s wall time
+
+     iteration = 210  eff iteration = 210   Etot (Ha) =     -0.14185468159696 delta_E=  0.10260188285927E-05
+     Ekin (Ha) =       3.92220322299308 Enl (Ha) =      -0.71144285650511 Eloc (Ha) =     -3.55697293096002
+ Fake EODD (Ha) =       0.20435788287508
+
+     CP           :  2m31.91s CPU time,     2m39.80s wall time
+
+     iteration = 211  eff iteration = 211   Etot (Ha) =     -0.14185534535006 delta_E=  0.93060163658398E-06
+     Ekin (Ha) =       3.92077297401173 Enl (Ha) =      -0.71113824125184 Eloc (Ha) =     -3.55574587788945
+ Fake EODD (Ha) =       0.20425579977950
+     CP           :  2m32.61s CPU time,     2m40.53s wall time
+
+     iteration = 212  eff iteration = 212   Etot (Ha) =     -0.14185587238162 delta_E=  0.66375309823452E-06
+     Ekin (Ha) =       3.91962598430135 Enl (Ha) =      -0.71092676231517 Eloc (Ha) =     -3.55470942493707
+ Fake EODD (Ha) =       0.20415433056928
+     CP           :  2m33.32s CPU time,     2m41.27s wall time
+
+     iteration = 213  eff iteration = 213   Etot (Ha) =     -0.14185625025428 delta_E=  0.52703155500877E-06
+     Ekin (Ha) =       3.91905845025698 Enl (Ha) =      -0.71085299357385 Eloc (Ha) =     -3.55414025917820
+ Fake EODD (Ha) =       0.20407855224079
+     CP           :  2m34.02s CPU time,     2m42.00s wall time
+
+     iteration = 214  eff iteration = 214   Etot (Ha) =     -0.14185656636784 delta_E=  0.37787265752542E-06
+     Ekin (Ha) =       3.91884352282865 Enl (Ha) =      -0.71083263131220 Eloc (Ha) =     -3.55389470783251
+ Fake EODD (Ha) =       0.20402724994822
+     CP           :  2m34.71s CPU time,     2m42.74s wall time
+
+     iteration = 215  eff iteration = 215   Etot (Ha) =     -0.14185686600707 delta_E=  0.31611356962613E-06
+     Ekin (Ha) =       3.91875169546774 Enl (Ha) =      -0.71080543944200 Eloc (Ha) =     -3.55379735730553
+ Fake EODD (Ha) =       0.20399423527272
+     CP           :  2m35.42s CPU time,     2m43.47s wall time
+
+     iteration = 216  eff iteration = 216   Etot (Ha) =     -0.14185716930347 delta_E=  0.29963922065779E-06
+     Ekin (Ha) =       3.91869454813313 Enl (Ha) =      -0.71077923310131 Eloc (Ha) =     -3.55374013999504
+ Fake EODD (Ha) =       0.20396765565975
+     CP           :  2m36.12s CPU time,     2m44.20s wall time
+
+     iteration = 217  eff iteration = 217   Etot (Ha) =     -0.14185746063851 delta_E=  0.30329640895999E-06
+     Ekin (Ha) =       3.91872441715794 Enl (Ha) =      -0.71079251392882 Eloc (Ha) =     -3.55373251260397
+ Fake EODD (Ha) =       0.20394314873634
+     CP           :  2m36.81s CPU time,     2m44.94s wall time
+
+     iteration = 218  eff iteration = 218   Etot (Ha) =     -0.14185776154402 delta_E=  0.29133504000911E-06
+     Ekin (Ha) =       3.91883482810022 Enl (Ha) =      -0.71083485028808 Eloc (Ha) =     -3.55377833852611
+ Fake EODD (Ha) =       0.20392059916995
+     CP           :  2m37.49s CPU time,     2m45.67s wall time
+
+     iteration = 219  eff iteration = 219   Etot (Ha) =     -0.14185814210020 delta_E=  0.30090550839912E-06
+     Ekin (Ha) =       3.91890364203075 Enl (Ha) =      -0.71085622622359 Eloc (Ha) =     -3.55380474269004
+ Fake EODD (Ha) =       0.20389918478268
+     CP           :  2m38.17s CPU time,     2m46.40s wall time
+
+     iteration = 220  eff iteration = 220   Etot (Ha) =     -0.14185874280074 delta_E=  0.38055617435084E-06
+     Ekin (Ha) =       3.91868402071912 Enl (Ha) =      -0.71080096374231 Eloc (Ha) =     -3.55360599476194
+ Fake EODD (Ha) =       0.20386419498439
+
+     CP           :  2m38.88s CPU time,     2m47.14s wall time
+
+     iteration = 221  eff iteration = 221   Etot (Ha) =     -0.14185902481345 delta_E=  0.60070054219707E-06
+     Ekin (Ha) =       3.91856265021558 Enl (Ha) =      -0.71077997604226 Eloc (Ha) =     -3.55350384963527
+ Fake EODD (Ha) =       0.20386215064850
+     CP           :  2m39.57s CPU time,     2m47.87s wall time
+
+     iteration = 222  eff iteration = 222   Etot (Ha) =     -0.14185928993169 delta_E=  0.28201271093375E-06
+     Ekin (Ha) =       3.91833631002913 Enl (Ha) =      -0.71073747856881 Eloc (Ha) =     -3.55331980646146
+ Fake EODD (Ha) =       0.20386168506945
+     CP           :  2m40.27s CPU time,     2m48.60s wall time
+
+     iteration = 223  eff iteration = 223   Etot (Ha) =     -0.14185958389389 delta_E=  0.26511824147146E-06
+     Ekin (Ha) =       3.91816344448355 Enl (Ha) =      -0.71069856676537 Eloc (Ha) =     -3.55319615443285
+ Fake EODD (Ha) =       0.20387169282078
+     CP           :  2m40.98s CPU time,     2m49.34s wall time
+
+     iteration = 224  eff iteration = 224   Etot (Ha) =     -0.14185986715430 delta_E=  0.29396219577982E-06
+     Ekin (Ha) =       3.91811547164476 Enl (Ha) =      -0.71068385678734 Eloc (Ha) =     -3.55318459770068
+ Fake EODD (Ha) =       0.20389311568896
+     CP           :  2m41.68s CPU time,     2m50.07s wall time
+
+     iteration = 225  eff iteration = 225   Etot (Ha) =     -0.14186017629382 delta_E=  0.28326041601190E-06
+     Ekin (Ha) =       3.91815918475442 Enl (Ha) =      -0.71069424051138 Eloc (Ha) =     -3.55325153953301
+ Fake EODD (Ha) =       0.20392641899616
+     CP           :  2m42.38s CPU time,     2m50.80s wall time
+
+     iteration = 226  eff iteration = 226   Etot (Ha) =     -0.14186047165656 delta_E=  0.30913951201694E-06
+     Ekin (Ha) =       3.91830001077464 Enl (Ha) =      -0.71072527194076 Eloc (Ha) =     -3.55340337689839
+ Fake EODD (Ha) =       0.20396816640795
+     CP           :  2m43.08s CPU time,     2m51.54s wall time
+
+     iteration = 227  eff iteration = 227   Etot (Ha) =     -0.14186080953561 delta_E=  0.29536274662179E-06
+     Ekin (Ha) =       3.91866366320660 Enl (Ha) =      -0.71078600519860 Eloc (Ha) =     -3.55377104287640
+ Fake EODD (Ha) =       0.20403257533279
+     CP           :  2m43.79s CPU time,     2m52.27s wall time
+
+     iteration = 228  eff iteration = 228   Etot (Ha) =     -0.14186121746020 delta_E=  0.33787904282767E-06
+     Ekin (Ha) =       3.91938417951422 Enl (Ha) =      -0.71090081109347 Eloc (Ha) =     -3.55446883977902
+ Fake EODD (Ha) =       0.20412425389807
+     CP           :  2m44.48s CPU time,     2m53.00s wall time
+
+     iteration = 229  eff iteration = 229   Etot (Ha) =     -0.14186169221955 delta_E=  0.40792459515826E-06
+     Ekin (Ha) =       3.92040774731924 Enl (Ha) =      -0.71108596411302 Eloc (Ha) =     -3.55541042704881
+ Fake EODD (Ha) =       0.20422695162305
+     CP           :  2m45.18s CPU time,     2m53.74s wall time
+
+     iteration = 230  eff iteration = 230   Etot (Ha) =     -0.14186219891164 delta_E=  0.47475934600305E-06
+     Ekin (Ha) =       3.92140994337267 Enl (Ha) =      -0.71129370154257 Eloc (Ha) =     -3.55629134306553
+ Fake EODD (Ha) =       0.20431290232378
+
+     CP           :  2m45.89s CPU time,     2m54.47s wall time
+
+     iteration = 231  eff iteration = 231   Etot (Ha) =     -0.14186281602859 delta_E=  0.50669209678000E-06
+     Ekin (Ha) =       3.92220857624315 Enl (Ha) =      -0.71146479100125 Eloc (Ha) =     -3.55698648644468
+ Fake EODD (Ha) =       0.20437988517419
+     CP           :  2m46.59s CPU time,     2m55.21s wall time
+
+     iteration = 232  eff iteration = 232   Etot (Ha) =     -0.14186351549313 delta_E=  0.61711694418487E-06
+     Ekin (Ha) =       3.92248858285026 Enl (Ha) =      -0.71150458663638 Eloc (Ha) =     -3.55726044332772
+ Fake EODD (Ha) =       0.20441293162070
+     CP           :  2m47.30s CPU time,     2m55.94s wall time
+
+     iteration = 233  eff iteration = 233   Etot (Ha) =     -0.14186430136282 delta_E=  0.69946454681058E-06
+     Ekin (Ha) =       3.92211514162990 Enl (Ha) =      -0.71140241403671 Eloc (Ha) =     -3.55697000343237
+ Fake EODD (Ha) =       0.20439297447637
+     CP           :  2m48.00s CPU time,     2m56.68s wall time
+
+     iteration = 234  eff iteration = 234   Etot (Ha) =     -0.14186526004609 delta_E=  0.78586968574323E-06
+     Ekin (Ha) =       3.92107464340866 Enl (Ha) =      -0.71120179376561 Eloc (Ha) =     -3.55603658821348
+ Fake EODD (Ha) =       0.20429847852434
+     CP           :  2m48.70s CPU time,     2m57.41s wall time
+
+     iteration = 235  eff iteration = 235   Etot (Ha) =     -0.14186630982860 delta_E=  0.95868327179560E-06
+     Ekin (Ha) =       3.91963553444127 Enl (Ha) =      -0.71096569761160 Eloc (Ha) =     -3.55467797149919
+ Fake EODD (Ha) =       0.20414182484093
+     CP           :  2m49.40s CPU time,     2m58.14s wall time
+
+     iteration = 236  eff iteration = 236   Etot (Ha) =     -0.14186743015800 delta_E=  0.10497825073952E-05
+     Ekin (Ha) =       3.91801581850055 Enl (Ha) =      -0.71070266256399 Eloc (Ha) =     -3.55312575793448
+ Fake EODD (Ha) =       0.20394517183991
+     CP           :  2m50.11s CPU time,     2m58.88s wall time
+
+     iteration = 237  eff iteration = 237   Etot (Ha) =     -0.14186866332445 delta_E=  0.11203294036644E-05
+     Ekin (Ha) =       3.91602826051161 Enl (Ha) =      -0.71035407942782 Eloc (Ha) =     -3.55125351089210
+ Fake EODD (Ha) =       0.20371066648386
+     CP           :  2m50.79s CPU time,     2m59.61s wall time
+
+     iteration = 238  eff iteration = 238   Etot (Ha) =     -0.14187013026858 delta_E=  0.12331664467902E-05
+     Ekin (Ha) =       3.91305083402107 Enl (Ha) =      -0.70982192121982 Eloc (Ha) =     -3.54850565858346
+ Fake EODD (Ha) =       0.20340661551363
+     CP           :  2m51.49s CPU time,     3m 0.34s wall time
+
+     iteration = 239  eff iteration = 239   Etot (Ha) =     -0.14187240630179 delta_E=  0.14669441331938E-05
+     Ekin (Ha) =       3.90731621328074 Enl (Ha) =      -0.70880014726250 Eloc (Ha) =     -3.54327721473971
+ Fake EODD (Ha) =       0.20288874241968
+     CP           :  2m52.19s CPU time,     3m 1.07s wall time
+
+     iteration = 240  eff iteration = 240   Etot (Ha) =     -0.14187443057015 delta_E=  0.22760332058780E-05
+     Ekin (Ha) =       3.90191101254954 Enl (Ha) =      -0.70780250574807 Eloc (Ha) =     -3.53842692358657
+ Fake EODD (Ha) =       0.20244398621495
+
+     CP           :  2m52.90s CPU time,     3m 1.81s wall time
+
+     iteration = 241  eff iteration = 241   Etot (Ha) =     -0.14187589610871 delta_E=  0.20242683601845E-05
+     Ekin (Ha) =       3.90327936048399 Enl (Ha) =      -0.70802053914965 Eloc (Ha) =     -3.53971874081159
+ Fake EODD (Ha) =       0.20258402336854
+     CP           :  2m53.60s CPU time,     3m 2.54s wall time
+
+     iteration = 242  eff iteration = 242   Etot (Ha) =     -0.14187803501232 delta_E=  0.14655385588147E-05
+     Ekin (Ha) =       3.90755618676876 Enl (Ha) =      -0.70875640006477 Eloc (Ha) =     -3.54367863178593
+ Fake EODD (Ha) =       0.20300081006962
+     CP           :  2m54.30s CPU time,     3m 3.28s wall time
+
+     iteration = 243  eff iteration = 243   Etot (Ha) =     -0.14188002130010 delta_E=  0.21389036125585E-05
+     Ekin (Ha) =       3.91276439949619 Enl (Ha) =      -0.70972463506663 Eloc (Ha) =     -3.54840413479085
+ Fake EODD (Ha) =       0.20348434906119
+     CP           :  2m54.99s CPU time,     3m 4.01s wall time
+
+     iteration = 244  eff iteration = 244   Etot (Ha) =     -0.14188159348201 delta_E=  0.19862877830845E-05
+     Ekin (Ha) =       3.91744665794343 Enl (Ha) =      -0.71061788153954 Eloc (Ha) =     -3.55262227588773
+ Fake EODD (Ha) =       0.20391190600182
+     CP           :  2m55.69s CPU time,     3m 4.74s wall time
+
+     iteration = 245  eff iteration = 245   Etot (Ha) =     -0.14188257663058 delta_E=  0.15721819115189E-05
+     Ekin (Ha) =       3.92032049419337 Enl (Ha) =      -0.71113925548397 Eloc (Ha) =     -3.55524900166426
+ Fake EODD (Ha) =       0.20418518632429
+     CP           :  2m56.38s CPU time,     3m 5.48s wall time
+
+     iteration = 246  eff iteration = 246   Etot (Ha) =     -0.14188335499954 delta_E=  0.98314856039616E-06
+     Ekin (Ha) =       3.92207903879866 Enl (Ha) =      -0.71143032453467 Eloc (Ha) =     -3.55690330023529
+ Fake EODD (Ha) =       0.20437123097176
+     CP           :  2m57.07s CPU time,     3m 6.21s wall time
+
+     iteration = 247  eff iteration = 247   Etot (Ha) =     -0.14188398588419 delta_E=  0.77836896128503E-06
+     Ekin (Ha) =       3.92279342553005 Enl (Ha) =      -0.71154684826266 Eloc (Ha) =     -3.55759344214487
+ Fake EODD (Ha) =       0.20446287899329
+     CP           :  2m57.77s CPU time,     3m 6.94s wall time
+
+     iteration = 248  eff iteration = 248   Etot (Ha) =     -0.14188461911901 delta_E=  0.63088465548922E-06
+     Ekin (Ha) =       3.92272835744912 Enl (Ha) =      -0.71154715290186 Eloc (Ha) =     -3.55754381237775
+ Fake EODD (Ha) =       0.20447798871148
+     CP           :  2m58.47s CPU time,     3m 7.68s wall time
+
+     iteration = 249  eff iteration = 249   Etot (Ha) =     -0.14188523503662 delta_E=  0.63323481980238E-06
+     Ekin (Ha) =       3.92205139894691 Enl (Ha) =      -0.71143388267389 Eloc (Ha) =     -3.55693423988666
+ Fake EODD (Ha) =       0.20443148857702
+     CP           :  2m59.16s CPU time,     3m 8.41s wall time
+
+     iteration = 250  eff iteration = 250   Etot (Ha) =     -0.14188576246992 delta_E=  0.61591761110757E-06
+     Ekin (Ha) =       3.92101637791964 Enl (Ha) =      -0.71123008925827 Eloc (Ha) =     -3.55602333233377
+ Fake EODD (Ha) =       0.20435128120249
+
+     CP           :  2m59.86s CPU time,     3m 9.14s wall time
+
+     iteration = 251  eff iteration = 251   Etot (Ha) =     -0.14188618345245 delta_E=  0.52743329279070E-06
+     Ekin (Ha) =       3.91987773820629 Enl (Ha) =      -0.71100222203917 Eloc (Ha) =     -3.55501784283631
+ Fake EODD (Ha) =       0.20425614321673
+     CP           :  3m 0.58s CPU time,     3m 9.88s wall time
+
+     iteration = 252  eff iteration = 252   Etot (Ha) =     -0.14188654021223 delta_E=  0.42098253882905E-06
+     Ekin (Ha) =       3.91883771759224 Enl (Ha) =      -0.71081281797350 Eloc (Ha) =     -3.55406551089368
+ Fake EODD (Ha) =       0.20415407106271
+     CP           :  3m 1.27s CPU time,     3m10.61s wall time
+
+     iteration = 253  eff iteration = 253   Etot (Ha) =     -0.14188685540038 delta_E=  0.35675977178018E-06
+     Ekin (Ha) =       3.91805115560853 Enl (Ha) =      -0.71068750212893 Eloc (Ha) =     -3.55330696197718
+ Fake EODD (Ha) =       0.20405645309720
+     CP           :  3m 1.96s CPU time,     3m11.35s wall time
+
+     iteration = 254  eff iteration = 254   Etot (Ha) =     -0.14188712696878 delta_E=  0.31518815868381E-06
+     Ekin (Ha) =       3.91752566358721 Enl (Ha) =      -0.71060254969382 Eloc (Ha) =     -3.55278885187882
+ Fake EODD (Ha) =       0.20397861101665
+     CP           :  3m 2.65s CPU time,     3m12.08s wall time
+
+     iteration = 255  eff iteration = 255   Etot (Ha) =     -0.14188739143431 delta_E=  0.27156839577103E-06
+     Ekin (Ha) =       3.91709609485715 Enl (Ha) =      -0.71051882272984 Eloc (Ha) =     -3.55237999703339
+ Fake EODD (Ha) =       0.20391533347178
+     CP           :  3m 3.35s CPU time,     3m12.82s wall time
+
+     iteration = 256  eff iteration = 256   Etot (Ha) =     -0.14188765091513 delta_E=  0.26446552542359E-06
+     Ekin (Ha) =       3.91674092950794 Enl (Ha) =      -0.71044665164021 Eloc (Ha) =     -3.55204626601889
+ Fake EODD (Ha) =       0.20386433723602
+     CP           :  3m 4.04s CPU time,     3m13.55s wall time
+
+     iteration = 257  eff iteration = 257   Etot (Ha) =     -0.14188788099640 delta_E=  0.25948082799099E-06
+     Ekin (Ha) =       3.91658766511126 Enl (Ha) =      -0.71042154193647 Eloc (Ha) =     -3.55188642378903
+ Fake EODD (Ha) =       0.20383241961783
+     CP           :  3m 4.74s CPU time,     3m14.28s wall time
+
+     iteration = 258  eff iteration = 258   Etot (Ha) =     -0.14188813651603 delta_E=  0.23008126456836E-06
+     Ekin (Ha) =       3.91665938997321 Enl (Ha) =      -0.71044351398391 Eloc (Ha) =     -3.55191859403767
+ Fake EODD (Ha) =       0.20381458153234
+     CP           :  3m 5.43s CPU time,     3m15.01s wall time
+
+     iteration = 259  eff iteration = 259   Etot (Ha) =     -0.14188840158838 delta_E=  0.25551962751225E-06
+     Ekin (Ha) =       3.91688784910253 Enl (Ha) =      -0.71049073234550 Eloc (Ha) =     -3.55209716620057
+ Fake EODD (Ha) =       0.20381164785516
+     CP           :  3m 6.14s CPU time,     3m15.75s wall time
+
+     iteration = 260  eff iteration = 260   Etot (Ha) =     -0.14188881709923 delta_E=  0.26507235839635E-06
+     Ekin (Ha) =       3.91712767028846 Enl (Ha) =      -0.71053603772120 Eloc (Ha) =     -3.55229730249791
+ Fake EODD (Ha) =       0.20381685283142
+
+     CP           :  3m 6.84s CPU time,     3m16.48s wall time
+
+     iteration = 261  eff iteration = 261   Etot (Ha) =     -0.14188909604420 delta_E=  0.41551084170588E-06
+     Ekin (Ha) =       3.91705484802137 Enl (Ha) =      -0.71052211347546 Eloc (Ha) =     -3.55223959472955
+ Fake EODD (Ha) =       0.20381776413944
+     CP           :  3m 7.53s CPU time,     3m17.22s wall time
+
+     iteration = 262  eff iteration = 262   Etot (Ha) =     -0.14188934427493 delta_E=  0.27894497853231E-06
+     Ekin (Ha) =       3.91688357240953 Enl (Ha) =      -0.71048667630397 Eloc (Ha) =     -3.55211082628470
+ Fake EODD (Ha) =       0.20382458590420
+     CP           :  3m 8.23s CPU time,     3m17.95s wall time
+
+     iteration = 263  eff iteration = 263   Etot (Ha) =     -0.14188959099324 delta_E=  0.24823072902747E-06
+     Ekin (Ha) =       3.91681422016744 Enl (Ha) =      -0.71046598410459 Eloc (Ha) =     -3.55208060461107
+ Fake EODD (Ha) =       0.20384277755499
+     CP           :  3m 8.93s CPU time,     3m18.68s wall time
+
+     iteration = 264  eff iteration = 264   Etot (Ha) =     -0.14188981703052 delta_E=  0.24671830275991E-06
+     Ekin (Ha) =       3.91691731689890 Enl (Ha) =      -0.71048057360220 Eloc (Ha) =     -3.55219812701859
+ Fake EODD (Ha) =       0.20387156669137
+     CP           :  3m 9.65s CPU time,     3m19.42s wall time
+
+     iteration = 265  eff iteration = 265   Etot (Ha) =     -0.14189005913873 delta_E=  0.22603727881099E-06
+     Ekin (Ha) =       3.91713203856186 Enl (Ha) =      -0.71052563898113 Eloc (Ha) =     -3.55240747959002
+ Fake EODD (Ha) =       0.20391102087056
+     CP           :  3m10.35s CPU time,     3m20.15s wall time
+
+     iteration = 266  eff iteration = 266   Etot (Ha) =     -0.14189030249396 delta_E=  0.24210821700232E-06
+     Ekin (Ha) =       3.91737923013857 Enl (Ha) =      -0.71057798053322 Eloc (Ha) =     -3.55264977565656
+ Fake EODD (Ha) =       0.20395822355724
+     CP           :  3m11.05s CPU time,     3m20.89s wall time
+
+     iteration = 267  eff iteration = 267   Etot (Ha) =     -0.14189057107002 delta_E=  0.24335523227115E-06
+     Ekin (Ha) =       3.91773086702911 Enl (Ha) =      -0.71063390618165 Eloc (Ha) =     -3.55301033722078
+ Fake EODD (Ha) =       0.20402280530331
+     CP           :  3m11.74s CPU time,     3m21.62s wall time
+
+     iteration = 268  eff iteration = 268   Etot (Ha) =     -0.14189087297316 delta_E=  0.26857605367470E-06
+     Ekin (Ha) =       3.91831298657574 Enl (Ha) =      -0.71072136506822 Eloc (Ha) =     -3.55358754562687
+ Fake EODD (Ha) =       0.20410505114620
+     CP           :  3m12.45s CPU time,     3m22.35s wall time
+
+     iteration = 269  eff iteration = 269   Etot (Ha) =     -0.14189121097043 delta_E=  0.30190314120881E-06
+     Ekin (Ha) =       3.91913605813400 Enl (Ha) =      -0.71086964058563 Eloc (Ha) =     -3.55434986553478
+ Fake EODD (Ha) =       0.20419223701597
+     CP           :  3m13.14s CPU time,     3m23.09s wall time
+
+     iteration = 270  eff iteration = 270   Etot (Ha) =     -0.14189159424730 delta_E=  0.33799727153228E-06
+     Ekin (Ha) =       3.92001076866558 Enl (Ha) =      -0.71105155767582 Eloc (Ha) =     -3.55512068951927
+ Fake EODD (Ha) =       0.20426988428220
+
+     CP           :  3m13.83s CPU time,     3m23.82s wall time
+
+     iteration = 271  eff iteration = 271   Etot (Ha) =     -0.14189202781015 delta_E=  0.38327687132411E-06
+     Ekin (Ha) =       3.92067059941802 Enl (Ha) =      -0.71118938711626 Eloc (Ha) =     -3.55570031383218
+ Fake EODD (Ha) =       0.20432707372026
+     CP           :  3m14.55s CPU time,     3m24.55s wall time
+
+     iteration = 272  eff iteration = 272   Etot (Ha) =     -0.14189252422697 delta_E=  0.43356284826213E-06
+     Ekin (Ha) =       3.92098578174267 Enl (Ha) =      -0.71123314930196 Eloc (Ha) =     -3.55600292974715
+ Fake EODD (Ha) =       0.20435777307947
+     CP           :  3m15.26s CPU time,     3m25.30s wall time
+
+     iteration = 273  eff iteration = 273   Etot (Ha) =     -0.14189305540934 delta_E=  0.49641681629242E-06
+     Ekin (Ha) =       3.92090458692693 Enl (Ha) =      -0.71119504659439 Eloc (Ha) =     -3.55594829693751
+ Fake EODD (Ha) =       0.20434570119563
+     CP           :  3m15.97s CPU time,     3m26.03s wall time
+
+     iteration = 274  eff iteration = 274   Etot (Ha) =     -0.14189358030060 delta_E=  0.53118237791638E-06
+     Ekin (Ha) =       3.92039871726486 Enl (Ha) =      -0.71111022020247 Eloc (Ha) =     -3.55546049802008
+ Fake EODD (Ha) =       0.20427842065708
+     CP           :  3m16.68s CPU time,     3m26.77s wall time
+
+     iteration = 275  eff iteration = 275   Etot (Ha) =     -0.14189418510113 delta_E=  0.52489125967892E-06
+     Ekin (Ha) =       3.91931813146437 Enl (Ha) =      -0.71094957499930 Eloc (Ha) =     -3.55440923920310
+ Fake EODD (Ha) =       0.20414649763690
+     WARNING cg_sub: missed minimum, case 1, iteration  275      1.822926131066
+     CP           :  3m17.71s CPU time,     3m27.87s wall time
+
+     iteration = 276  eff iteration = 276   Etot (Ha) =     -0.14189483931248 delta_E=  0.60480052876954E-06
+     Ekin (Ha) =       3.91767040948747 Enl (Ha) =      -0.71066965695890 Eloc (Ha) =     -3.55286591822447
+ Fake EODD (Ha) =       0.20397032638342
+     CP           :  3m18.41s CPU time,     3m28.60s wall time
+
+     iteration = 277  eff iteration = 277   Etot (Ha) =     -0.14189523344926 delta_E=  0.65421134443078E-06
+     Ekin (Ha) =       3.91754431006596 Enl (Ha) =      -0.71062644090695 Eloc (Ha) =     -3.55278311158692
+ Fake EODD (Ha) =       0.20397000897864
+     CP           :  3m19.12s CPU time,     3m29.33s wall time
+
+     iteration = 278  eff iteration = 278   Etot (Ha) =     -0.14189566119177 delta_E=  0.39413678645794E-06
+     Ekin (Ha) =       3.91718977916982 Enl (Ha) =      -0.71052947339907 Eloc (Ha) =     -3.55251870208908
+ Fake EODD (Ha) =       0.20396273512657
+     CP           :  3m19.83s CPU time,     3m30.07s wall time
+
+     iteration = 279  eff iteration = 279   Etot (Ha) =     -0.14189606674373 delta_E=  0.42774250300082E-06
+     Ekin (Ha) =       3.91680568884584 Enl (Ha) =      -0.71045978794776 Eloc (Ha) =     -3.55218738469729
+ Fake EODD (Ha) =       0.20394541705547
+     CP           :  3m20.54s CPU time,     3m30.80s wall time
+
+     iteration = 280  eff iteration = 280   Etot (Ha) =     -0.14189642229421 delta_E=  0.40555196514913E-06
+     Ekin (Ha) =       3.91658435986470 Enl (Ha) =      -0.71044283289431 Eloc (Ha) =     -3.55196765891209
+ Fake EODD (Ha) =       0.20392970964749
+
+     CP           :  3m21.24s CPU time,     3m31.54s wall time
+
+     iteration = 281  eff iteration = 281   Etot (Ha) =     -0.14189663656011 delta_E=  0.35555047744884E-06
+     Ekin (Ha) =       3.91668309997260 Enl (Ha) =      -0.71045249016522 Eloc (Ha) =     -3.55206535331983
+ Fake EODD (Ha) =       0.20393810695236
+     CP           :  3m21.93s CPU time,     3m32.27s wall time
+
+     iteration = 282  eff iteration = 282   Etot (Ha) =     -0.14189686355535 delta_E=  0.21426589552620E-06
+     Ekin (Ha) =       3.91692624357253 Enl (Ha) =      -0.71048682515413 Eloc (Ha) =     -3.55229260387501
+ Fake EODD (Ha) =       0.20395632190125
+     CP           :  3m22.63s CPU time,     3m33.00s wall time
+
+     iteration = 283  eff iteration = 283   Etot (Ha) =     -0.14189708526650 delta_E=  0.22699524582226E-06
+     Ekin (Ha) =       3.91719712786562 Enl (Ha) =      -0.71054357712002 Eloc (Ha) =     -3.55252382187681
+ Fake EODD (Ha) =       0.20397318586471
+     CP           :  3m23.33s CPU time,     3m33.73s wall time
+
+     iteration = 284  eff iteration = 284   Etot (Ha) =     -0.14189728873483 delta_E=  0.22171115238168E-06
+     Ekin (Ha) =       3.91742670024437 Enl (Ha) =      -0.71059997481078 Eloc (Ha) =     -3.55271071450649
+ Fake EODD (Ha) =       0.20398670033807
+     CP           :  3m24.03s CPU time,     3m34.47s wall time
+
+     iteration = 285  eff iteration = 285   Etot (Ha) =     -0.14189798418472 delta_E=  0.20346832321771E-06
+     Ekin (Ha) =       3.91813411115348 Enl (Ha) =      -0.71074274098366 Eloc (Ha) =     -3.55332477446055
+ Fake EODD (Ha) =       0.20403542010600
+     CP           :  3m24.72s CPU time,     3m35.20s wall time
+
+     iteration = 286  eff iteration = 286   Etot (Ha) =     -0.14189852859618 delta_E=  0.69544989411696E-06
+     Ekin (Ha) =       3.91856644514615 Enl (Ha) =      -0.71079538309061 Eloc (Ha) =     -3.55374118474400
+ Fake EODD (Ha) =       0.20407159409227
+     CP           :  3m25.43s CPU time,     3m35.93s wall time
+
+     iteration = 287  eff iteration = 287   Etot (Ha) =     -0.14189893374426 delta_E=  0.54441146077333E-06
+     Ekin (Ha) =       3.91869392835526 Enl (Ha) =      -0.71079620673176 Eloc (Ha) =     -3.55388077815058
+ Fake EODD (Ha) =       0.20408412278281
+     CP           :  3m26.12s CPU time,     3m36.67s wall time
+
+     iteration = 288  eff iteration = 288   Etot (Ha) =     -0.14189930919758 delta_E=  0.40514808280490E-06
+     Ekin (Ha) =       3.91860326141548 Enl (Ha) =      -0.71078773523193 Eloc (Ha) =     -3.55378585109725
+ Fake EODD (Ha) =       0.20407101571612
+     CP           :  3m26.82s CPU time,     3m37.40s wall time
+
+     iteration = 289  eff iteration = 289   Etot (Ha) =     -0.14189945062881 delta_E=  0.37545331424416E-06
+     Ekin (Ha) =       3.91847477865074 Enl (Ha) =      -0.71077752459586 Eloc (Ha) =     -3.55365112453187
+ Fake EODD (Ha) =       0.20405441984818
+     CP           :  3m27.53s CPU time,     3m38.14s wall time
+
+     iteration = 290  eff iteration = 290   Etot (Ha) =     -0.14189958663713 delta_E=  0.14143123241994E-06
+     Ekin (Ha) =       3.91822143940124 Enl (Ha) =      -0.71073810478765 Eloc (Ha) =     -3.55341127334595
+ Fake EODD (Ha) =       0.20402835209523
+
+     CP           :  3m28.22s CPU time,     3m38.87s wall time
+
+     iteration = 291  eff iteration = 291   Etot (Ha) =     -0.14189972143515 delta_E=  0.13600831924587E-06
+     Ekin (Ha) =       3.91784774699637 Enl (Ha) =      -0.71065984594040 Eloc (Ha) =     -3.55308544937996
+ Fake EODD (Ha) =       0.20399782688883
+     CP           :  3m28.93s CPU time,     3m39.60s wall time
+
+     iteration = 292  eff iteration = 292   Etot (Ha) =     -0.14189985959409 delta_E=  0.13479801885818E-06
+     Ekin (Ha) =       3.91738580941891 Enl (Ha) =      -0.71056432132982 Eloc (Ha) =     -3.55268335996399
+ Fake EODD (Ha) =       0.20396201228082
+     CP           :  3m29.61s CPU time,     3m40.33s wall time
+
+     iteration = 293  eff iteration = 293   Etot (Ha) =     -0.14190071315389 delta_E=  0.13815893912250E-06
+     Ekin (Ha) =       3.91453931249449 Enl (Ha) =      -0.71002633580803 Eloc (Ha) =     -3.55013801860240
+ Fake EODD (Ha) =       0.20372432876205
+     CP           :  3m30.31s CPU time,     3m41.07s wall time
+
+     iteration = 294  eff iteration = 294   Etot (Ha) =     -0.14190203952078 delta_E=  0.85355979911883E-06
+     Ekin (Ha) =       3.91067848314918 Enl (Ha) =      -0.70933755818415 Eloc (Ha) =     -3.54661051930440
+ Fake EODD (Ha) =       0.20336755481858
+     CP           :  3m31.00s CPU time,     3m41.80s wall time
+
+     iteration = 295  eff iteration = 295   Etot (Ha) =     -0.14190343807209 delta_E=  0.13263668900698E-05
+     Ekin (Ha) =       3.90728500994924 Enl (Ha) =      -0.70875117379123 Eloc (Ha) =     -3.54346579169573
+ Fake EODD (Ha) =       0.20302851746562
+     CP           :  3m31.70s CPU time,     3m42.54s wall time
+
+     iteration = 296  eff iteration = 296   Etot (Ha) =     -0.14190456001390 delta_E=  0.13985513134529E-05
+     Ekin (Ha) =       3.90533401679411 Enl (Ha) =      -0.70840383773571 Eloc (Ha) =     -3.54166998466412
+ Fake EODD (Ha) =       0.20283524559182
+     CP           :  3m32.41s CPU time,     3m43.27s wall time
+
+     iteration = 297  eff iteration = 297   Etot (Ha) =     -0.14190666344192 delta_E=  0.11219418061259E-05
+     Ekin (Ha) =       3.90251925788656 Enl (Ha) =      -0.70787568564627 Eloc (Ha) =     -3.53912385473865
+ Fake EODD (Ha) =       0.20257361905643
+     CP           :  3m33.11s CPU time,     3m44.00s wall time
+
+     iteration = 298  eff iteration = 298   Etot (Ha) =     -0.14190895698828 delta_E=  0.21034280233145E-05
+     Ekin (Ha) =       3.89988573904321 Enl (Ha) =      -0.70738576523079 Eloc (Ha) =     -3.53673350627044
+ Fake EODD (Ha) =       0.20232457546974
+     CP           :  3m33.81s CPU time,     3m44.73s wall time
+
+     iteration = 299  eff iteration = 299   Etot (Ha) =     -0.14191140235130 delta_E=  0.22935463593887E-05
+     Ekin (Ha) =       3.89752466019083 Enl (Ha) =      -0.70696747034769 Eloc (Ha) =     -3.53455053367893
+ Fake EODD (Ha) =       0.20208194148448
+     CP           :  3m34.51s CPU time,     3m45.47s wall time
+
+     iteration = 300  eff iteration = 300   Etot (Ha) =     -0.14191366169600 delta_E=  0.24453630238508E-05
+     Ekin (Ha) =       3.89591174427838 Enl (Ha) =      -0.70669729936182 Eloc (Ha) =     -3.53302857918618
+ Fake EODD (Ha) =       0.20190047257362
+
+     CP           :  3m35.21s CPU time,     3m46.20s wall time
+
+     iteration = 301  eff iteration = 301   Etot (Ha) =     -0.14191555779825 delta_E=  0.22593447002173E-05
+     Ekin (Ha) =       3.89802183979044 Enl (Ha) =      -0.70707736210194 Eloc (Ha) =     -3.53496260280926
+ Fake EODD (Ha) =       0.20210256732250
+     CP           :  3m35.91s CPU time,     3m46.93s wall time
+
+     iteration = 302  eff iteration = 302   Etot (Ha) =     -0.14191799042241 delta_E=  0.18961022505981E-05
+     Ekin (Ha) =       3.90323075668161 Enl (Ha) =      -0.70802513644481 Eloc (Ha) =     -3.53972157076067
+ Fake EODD (Ha) =       0.20259796010147
+     CP           :  3m36.60s CPU time,     3m47.66s wall time
+
+     iteration = 303  eff iteration = 303   Etot (Ha) =     -0.14191987373448 delta_E=  0.24326241533923E-05
+     Ekin (Ha) =       3.90857180210681 Enl (Ha) =      -0.70900698097010 Eloc (Ha) =     -3.54459096527065
+ Fake EODD (Ha) =       0.20310627039945
+     CP           :  3m37.29s CPU time,     3m48.40s wall time
+
+     iteration = 304  eff iteration = 304   Etot (Ha) =     -0.14192122875922 delta_E=  0.18833120763728E-05
+     Ekin (Ha) =       3.91303361137596 Enl (Ha) =      -0.70982457209789 Eloc (Ha) =     -3.54867412446850
+ Fake EODD (Ha) =       0.20354385643121
+     CP           :  3m37.99s CPU time,     3m49.13s wall time
+
+     iteration = 305  eff iteration = 305   Etot (Ha) =     -0.14192178215712 delta_E=  0.13550247404959E-05
+     Ekin (Ha) =       3.91490677517866 Enl (Ha) =      -0.71015680955958 Eloc (Ha) =     -3.55041663210129
+ Fake EODD (Ha) =       0.20374488432508
+     CP           :  3m38.69s CPU time,     3m49.86s wall time
+
+     iteration = 306  eff iteration = 306   Etot (Ha) =     -0.14192215281428 delta_E=  0.55339790028253E-06
+     Ekin (Ha) =       3.91614596028278 Enl (Ha) =      -0.71036626383780 Eloc (Ha) =     -3.55159312591338
+ Fake EODD (Ha) =       0.20389127665413
+     CP           :  3m39.38s CPU time,     3m50.59s wall time
+
+     iteration = 307  eff iteration = 307   Etot (Ha) =     -0.14192238186243 delta_E=  0.37065715013940E-06
+     Ekin (Ha) =       3.91693350937466 Enl (Ha) =      -0.71050040632109 Eloc (Ha) =     -3.55233878861090
+ Fake EODD (Ha) =       0.20398330369490
+     CP           :  3m40.08s CPU time,     3m51.33s wall time
+
+     iteration = 308  eff iteration = 308   Etot (Ha) =     -0.14192250914004 delta_E=  0.22904815236147E-06
+     Ekin (Ha) =       3.91736210461130 Enl (Ha) =      -0.71058005511275 Eloc (Ha) =     -3.55273348144197
+ Fake EODD (Ha) =       0.20402892280338
+     CP           :  3m40.76s CPU time,     3m52.06s wall time
+
+     iteration = 309  eff iteration = 309   Etot (Ha) =     -0.14192257886550 delta_E=  0.12727761100617E-06
+     Ekin (Ha) =       3.91748898415387 Enl (Ha) =      -0.71061031717280 Eloc (Ha) =     -3.55284187097781
+ Fake EODD (Ha) =       0.20404062513124
+     CP           :  3m41.45s CPU time,     3m52.79s wall time
+
+     iteration = 310  eff iteration = 310   Etot (Ha) =     -0.14192265783189 delta_E=  0.69725463458514E-07
+     Ekin (Ha) =       3.91747753500397 Enl (Ha) =      -0.71061206385761 Eloc (Ha) =     -3.55282945597935
+ Fake EODD (Ha) =       0.20404132700110
+
+     CP           :  3m42.14s CPU time,     3m53.52s wall time
+
+     iteration = 311  eff iteration = 311   Etot (Ha) =     -0.14192275018331 delta_E=  0.78966383210144E-07
+     Ekin (Ha) =       3.91728465355020 Enl (Ha) =      -0.71057092052982 Eloc (Ha) =     -3.55266634046220
+ Fake EODD (Ha) =       0.20402985725851
+     CP           :  3m42.85s CPU time,     3m54.26s wall time
+
+     iteration = 312  eff iteration = 312   Etot (Ha) =     -0.14192287520519 delta_E=  0.92351428032655E-07
+     Ekin (Ha) =       3.91689344242580 Enl (Ha) =      -0.71049157483966 Eloc (Ha) =     -3.55232726732969
+ Fake EODD (Ha) =       0.20400252453836
+     CP           :  3m43.56s CPU time,     3m55.00s wall time
+
+     iteration = 313  eff iteration = 313   Etot (Ha) =     -0.14192297832261 delta_E=  0.12502187657359E-06
+     Ekin (Ha) =       3.91654486706292 Enl (Ha) =      -0.71043133546554 Eloc (Ha) =     -3.55201049365046
+ Fake EODD (Ha) =       0.20397398373048
+     CP           :  3m44.26s CPU time,     3m55.73s wall time
+
+     iteration = 314  eff iteration = 314   Etot (Ha) =     -0.14192306931961 delta_E=  0.10311741852065E-06
+     Ekin (Ha) =       3.91626433143761 Enl (Ha) =      -0.71038683823177 Eloc (Ha) =     -3.55175000884574
+ Fake EODD (Ha) =       0.20394944632029
+     CP           :  3m44.96s CPU time,     3m56.46s wall time
+
+     iteration = 315  eff iteration = 315   Etot (Ha) =     -0.14192315546468 delta_E=  0.90996998075576E-07
+     Ekin (Ha) =       3.91607990743489 Enl (Ha) =      -0.71035116303450 Eloc (Ha) =     -3.55158666813241
+ Fake EODD (Ha) =       0.20393476826735
+     CP           :  3m45.65s CPU time,     3m57.20s wall time
+
+     iteration = 316  eff iteration = 316   Etot (Ha) =     -0.14192323942401 delta_E=  0.86145070105070E-07
+     Ekin (Ha) =       3.91602798553131 Enl (Ha) =      -0.71033311707929 Eloc (Ha) =     -3.55154928619896
+ Fake EODD (Ha) =       0.20393117832293
+     CP           :  3m46.35s CPU time,     3m57.93s wall time
+
+     iteration = 317  eff iteration = 317   Etot (Ha) =     -0.14192333441870 delta_E=  0.83959332569661E-07
+     Ekin (Ha) =       3.91615448418863 Enl (Ha) =      -0.71035298324563 Eloc (Ha) =     -3.55166209357074
+ Fake EODD (Ha) =       0.20393725820904
+     CP           :  3m47.04s CPU time,     3m58.66s wall time
+
+     iteration = 318  eff iteration = 318   Etot (Ha) =     -0.14192345434760 delta_E=  0.94994693194961E-07
+     Ekin (Ha) =       3.91645123677713 Enl (Ha) =      -0.71041651574504 Eloc (Ha) =     -3.55190777135452
+ Fake EODD (Ha) =       0.20394959597484
+     CP           :  3m47.74s CPU time,     3m59.40s wall time
+
+     iteration = 319  eff iteration = 319   Etot (Ha) =     -0.14192356882118 delta_E=  0.11992889561996E-06
+     Ekin (Ha) =       3.91675375348757 Enl (Ha) =      -0.71048200994272 Eloc (Ha) =     -3.55215767900061
+ Fake EODD (Ha) =       0.20396236663457
+     CP           :  3m48.43s CPU time,     4m 0.13s wall time
+
+     iteration = 320  eff iteration = 320   Etot (Ha) =     -0.14192368561666 delta_E=  0.11447358658212E-06
+     Ekin (Ha) =       3.91695910366808 Enl (Ha) =      -0.71051793839846 Eloc (Ha) =     -3.55233879638359
+ Fake EODD (Ha) =       0.20397394549731
+
+     CP           :  3m49.13s CPU time,     4m 0.86s wall time
+
+     iteration = 321  eff iteration = 321   Etot (Ha) =     -0.14192375495438 delta_E=  0.11679548006516E-06
+     Ekin (Ha) =       3.91689116925967 Enl (Ha) =      -0.71050265764759 Eloc (Ha) =     -3.55228378052836
+ Fake EODD (Ha) =       0.20397151396190
+     CP           :  3m49.84s CPU time,     4m 1.60s wall time
+
+     iteration = 322  eff iteration = 322   Etot (Ha) =     -0.14192383356264 delta_E=  0.69337718427986E-07
+     Ekin (Ha) =       3.91668545578078 Enl (Ha) =      -0.71045850905452 Eloc (Ha) =     -3.55211407527417
+ Fake EODD (Ha) =       0.20396329498526
+     CP           :  3m50.54s CPU time,     4m 2.33s wall time
+
+     iteration = 323  eff iteration = 323   Etot (Ha) =     -0.14192391812951 delta_E=  0.78608258707868E-07
+     Ekin (Ha) =       3.91644379306571 Enl (Ha) =      -0.71041161952204 Eloc (Ha) =     -3.55190787846045
+ Fake EODD (Ha) =       0.20395178678726
+     CP           :  3m51.25s CPU time,     4m 3.07s wall time
+
+     iteration = 324  eff iteration = 324   Etot (Ha) =     -0.14192399431642 delta_E=  0.84566872643466E-07
+     Ekin (Ha) =       3.91628556886166 Enl (Ha) =      -0.71038602215683 Eloc (Ha) =     -3.55176621061743
+ Fake EODD (Ha) =       0.20394266959618
+     CP           :  3m51.95s CPU time,     4m 3.80s wall time
+
+     iteration = 325  eff iteration = 325   Etot (Ha) =     -0.14192407353591 delta_E=  0.76186908198883E-07
+     Ekin (Ha) =       3.91620005534727 Enl (Ha) =      -0.71037437683979 Eloc (Ha) =     -3.55168799119389
+ Fake EODD (Ha) =       0.20393823915050
+     CP           :  3m52.65s CPU time,     4m 4.53s wall time
+
+     iteration = 326  eff iteration = 326   Etot (Ha) =     -0.14192415748512 delta_E=  0.79219483306581E-07
+     Ekin (Ha) =       3.91617342371471 Enl (Ha) =      -0.71036842906525 Eloc (Ha) =     -3.55167000858887
+ Fake EODD (Ha) =       0.20394085645430
+     CP           :  3m53.35s CPU time,     4m 5.26s wall time
+
+     iteration = 327  eff iteration = 327   Etot (Ha) =     -0.14192423434558 delta_E=  0.83949209306322E-07
+     Ekin (Ha) =       3.91622149232734 Enl (Ha) =      -0.71037288709061 Eloc (Ha) =     -3.55172310347254
+ Fake EODD (Ha) =       0.20395026389023
+     CP           :  3m54.05s CPU time,     4m 6.00s wall time
+
+     iteration = 328  eff iteration = 328   Etot (Ha) =     -0.14192432681039 delta_E=  0.76860466324824E-07
+     Ekin (Ha) =       3.91639968321942 Enl (Ha) =      -0.71040419937283 Eloc (Ha) =     -3.55188784583168
+ Fake EODD (Ha) =       0.20396803517470
+     CP           :  3m54.75s CPU time,     4m 6.73s wall time
+
+     iteration = 329  eff iteration = 329   Etot (Ha) =     -0.14192443880287 delta_E=  0.92464812195825E-07
+     Ekin (Ha) =       3.91668851282556 Enl (Ha) =      -0.71046133059809 Eloc (Ha) =     -3.55214278188341
+ Fake EODD (Ha) =       0.20399116085307
+     CP           :  3m55.45s CPU time,     4m 7.47s wall time
+
+     iteration = 330  eff iteration = 330   Etot (Ha) =     -0.14192453637135 delta_E=  0.11199247543225E-06
+     Ekin (Ha) =       3.91693091100495 Enl (Ha) =      -0.71050953095014 Eloc (Ha) =     -3.55235507357178
+ Fake EODD (Ha) =       0.20400915714561
+
+     CP           :  3m56.15s CPU time,     4m 8.20s wall time
+
+     iteration = 331  eff iteration = 331   Etot (Ha) =     -0.14192462998412 delta_E=  0.97568484819233E-07
+     Ekin (Ha) =       3.91709118432672 Enl (Ha) =      -0.71053709103100 Eloc (Ha) =     -3.55250018712281
+ Fake EODD (Ha) =       0.20402146384298
+     CP           :  3m56.84s CPU time,     4m 8.93s wall time
+
+     iteration = 332  eff iteration = 332   Etot (Ha) =     -0.14192470116355 delta_E=  0.93612766705053E-07
+     Ekin (Ha) =       3.91714738583138 Enl (Ha) =      -0.71054325193576 Eloc (Ha) =     -3.55255332536636
+ Fake EODD (Ha) =       0.20402449030719
+     CP           :  3m57.54s CPU time,     4m 9.67s wall time
+
+     iteration = 333  eff iteration = 333   Etot (Ha) =     -0.14192478505531 delta_E=  0.71179430294332E-07
+     Ekin (Ha) =       3.91713058442906 Enl (Ha) =      -0.71053937654853 Eloc (Ha) =     -3.55253146392318
+ Fake EODD (Ha) =       0.20401547098733
+     CP           :  3m58.22s CPU time,     4m10.40s wall time
+
+     iteration = 334  eff iteration = 334   Etot (Ha) =     -0.14192488236123 delta_E=  0.83891763924537E-07
+     Ekin (Ha) =       3.91701824445270 Enl (Ha) =      -0.71052547284720 Eloc (Ha) =     -3.55241000467226
+ Fake EODD (Ha) =       0.20399235070553
+     CP           :  3m58.91s CPU time,     4m11.13s wall time
+
+     iteration = 335  eff iteration = 335   Etot (Ha) =     -0.14192499913339 delta_E=  0.97305911078704E-07
+     Ekin (Ha) =       3.91672185671944 Enl (Ha) =      -0.71048016178580 Eloc (Ha) =     -3.55211876318365
+ Fake EODD (Ha) =       0.20395206911661
+     CP           :  3m59.62s CPU time,     4m11.86s wall time
+
+     iteration = 336  eff iteration = 336   Etot (Ha) =     -0.14192516633253 delta_E=  0.11677216837924E-06
+     Ekin (Ha) =       3.91606731333490 Enl (Ha) =      -0.71036267395678 Eloc (Ha) =     -3.55151414192342
+ Fake EODD (Ha) =       0.20388433621278
+     CP           :  4m 0.32s CPU time,     4m12.60s wall time
+
+     iteration = 337  eff iteration = 337   Etot (Ha) =     -0.14192546821567 delta_E=  0.16719913786822E-06
+     Ekin (Ha) =       3.91469293742947 Enl (Ha) =      -0.71010423286027 Eloc (Ha) =     -3.55027035255266
+ Fake EODD (Ha) =       0.20375617976779
+     CP           :  4m 1.02s CPU time,     4m13.33s wall time
+
+     iteration = 338  eff iteration = 338   Etot (Ha) =     -0.14192582085258 delta_E=  0.30188313773771E-06
+     Ekin (Ha) =       3.91311793978890 Enl (Ha) =      -0.70981318643111 Eloc (Ha) =     -3.54884156840738
+ Fake EODD (Ha) =       0.20361099419702
+     CP           :  4m 1.72s CPU time,     4m14.07s wall time
+
+     iteration = 339  eff iteration = 339   Etot (Ha) =     -0.14192621356805 delta_E=  0.35263691056109E-06
+     Ekin (Ha) =       3.91156971308009 Enl (Ha) =      -0.70953701121908 Eloc (Ha) =     -3.54742789127784
+ Fake EODD (Ha) =       0.20346897584878
+     CP           :  4m 2.41s CPU time,     4m14.80s wall time
+
+     iteration = 340  eff iteration = 340   Etot (Ha) =     -0.14192651025282 delta_E=  0.39271546611874E-06
+     Ekin (Ha) =       3.91078700927464 Enl (Ha) =      -0.70939770463295 Eloc (Ha) =     -3.54671733275296
+ Fake EODD (Ha) =       0.20340151785845
+
+     CP           :  4m 3.10s CPU time,     4m15.54s wall time
+
+     iteration = 341  eff iteration = 341   Etot (Ha) =     -0.14192674078699 delta_E=  0.29668477513622E-06
+     Ekin (Ha) =       3.91124146716028 Enl (Ha) =      -0.70947485842726 Eloc (Ha) =     -3.54713880896364
+ Fake EODD (Ha) =       0.20344545944362
+     CP           :  4m 3.82s CPU time,     4m16.27s wall time
+
+     iteration = 342  eff iteration = 342   Etot (Ha) =     -0.14192703850964 delta_E=  0.23053417236296E-06
+     Ekin (Ha) =       3.91258201268666 Enl (Ha) =      -0.70971143026731 Eloc (Ha) =     -3.54837006879311
+ Fake EODD (Ha) =       0.20357244786413
+     CP           :  4m 4.51s CPU time,     4m17.00s wall time
+
+     iteration = 343  eff iteration = 343   Etot (Ha) =     -0.14192729224038 delta_E=  0.29772264112382E-06
+     Ekin (Ha) =       3.91416034648499 Enl (Ha) =      -0.71000477887474 Eloc (Ha) =     -3.54980009078534
+ Fake EODD (Ha) =       0.20371723093471
+     CP           :  4m 5.22s CPU time,     4m17.74s wall time
+
+     iteration = 344  eff iteration = 344   Etot (Ha) =     -0.14192751534498 delta_E=  0.25373074472035E-06
+     Ekin (Ha) =       3.91576587575135 Enl (Ha) =      -0.71030912203068 Eloc (Ha) =     -3.55124909230926
+ Fake EODD (Ha) =       0.20386482324360
+     CP           :  4m 5.92s CPU time,     4m18.47s wall time
+
+     iteration = 345  eff iteration = 345   Etot (Ha) =     -0.14192765491421 delta_E=  0.22310460134900E-06
+     Ekin (Ha) =       3.91672088173456 Enl (Ha) =      -0.71048164569133 Eloc (Ha) =     -3.55212793236130
+ Fake EODD (Ha) =       0.20396104140385
+     CP           :  4m 6.61s CPU time,     4m19.20s wall time
+
+     iteration = 346  eff iteration = 346   Etot (Ha) =     -0.14192775691664 delta_E=  0.13956922931269E-06
+     Ekin (Ha) =       3.91727134008079 Enl (Ha) =      -0.71056989407430 Eloc (Ha) =     -3.55265609288484
+ Fake EODD (Ha) =       0.20402688996172
+     CP           :  4m 7.31s CPU time,     4m19.93s wall time
+
+     iteration = 347  eff iteration = 347   Etot (Ha) =     -0.14192783753176 delta_E=  0.10200242558933E-06
+     Ekin (Ha) =       3.91757956970165 Enl (Ha) =      -0.71061756113148 Eloc (Ha) =     -3.55295751898191
+ Fake EODD (Ha) =       0.20406767287998
+     CP           :  4m 8.00s CPU time,     4m20.67s wall time
+
+     iteration = 348  eff iteration = 348   Etot (Ha) =     -0.14192790254653 delta_E=  0.80615119218974E-07
+     Ekin (Ha) =       3.91772324852522 Enl (Ha) =      -0.71064634177654 Eloc (Ha) =     -3.55308990666815
+ Fake EODD (Ha) =       0.20408509737294
+     CP           :  4m 8.70s CPU time,     4m21.40s wall time
+
+     iteration = 349  eff iteration = 349   Etot (Ha) =     -0.14192795260239 delta_E=  0.65014774203176E-07
+     Ekin (Ha) =       3.91769483029344 Enl (Ha) =      -0.71064835169342 Eloc (Ha) =     -3.55305574178739
+ Fake EODD (Ha) =       0.20408131058498
+     CP           :  4m 9.39s CPU time,     4m22.13s wall time
+
+     iteration = 350  eff iteration = 350   Etot (Ha) =     -0.14192801115106 delta_E=  0.50055856570808E-07
+     Ekin (Ha) =       3.91747515411795 Enl (Ha) =      -0.71061180519888 Eloc (Ha) =     -3.55285221706902
+ Fake EODD (Ha) =       0.20406085699889
+
+     CP           :  4m10.07s CPU time,     4m22.87s wall time
+
+     iteration = 351  eff iteration = 351   Etot (Ha) =     -0.14192807191878 delta_E=  0.58548675296866E-07
+     Ekin (Ha) =       3.91706978238083 Enl (Ha) =      -0.71053217947200 Eloc (Ha) =     -3.55249310606157
+ Fake EODD (Ha) =       0.20402743123396
+     CP           :  4m10.76s CPU time,     4m23.60s wall time
+
+     iteration = 352  eff iteration = 352   Etot (Ha) =     -0.14192813303520 delta_E=  0.60767715331922E-07
+     Ekin (Ha) =       3.91658013911779 Enl (Ha) =      -0.71043678157144 Eloc (Ha) =     -3.55205740944044
+ Fake EODD (Ha) =       0.20398591885888
+     CP           :  4m11.46s CPU time,     4m24.34s wall time
+
+     iteration = 353  eff iteration = 353   Etot (Ha) =     -0.14192818156021 delta_E=  0.61116427779728E-07
+     Ekin (Ha) =       3.91621616592075 Enl (Ha) =      -0.71037282500855 Eloc (Ha) =     -3.55172216353153
+ Fake EODD (Ha) =       0.20395064105912
+     CP           :  4m12.18s CPU time,     4m25.08s wall time
+
+     iteration = 354  eff iteration = 354   Etot (Ha) =     -0.14192821817350 delta_E=  0.48525004847644E-07
+     Ekin (Ha) =       3.91601058259615 Enl (Ha) =      -0.71034196677535 Eloc (Ha) =     -3.55152341885799
+ Fake EODD (Ha) =       0.20392658486369
+     CP           :  4m12.87s CPU time,     4m25.82s wall time
+
+     iteration = 355  eff iteration = 355   Etot (Ha) =     -0.14192825443447 delta_E=  0.36613286236165E-07
+     Ekin (Ha) =       3.91586984032796 Enl (Ha) =      -0.71031897441130 Eloc (Ha) =     -3.55138866496514
+ Fake EODD (Ha) =       0.20390954461401
+     CP           :  4m13.57s CPU time,     4m26.55s wall time
+
+     iteration = 356  eff iteration = 356   Etot (Ha) =     -0.14192829274920 delta_E=  0.36260971142399E-07
+     Ekin (Ha) =       3.91577772496334 Enl (Ha) =      -0.71029829003116 Eloc (Ha) =     -3.55130784433394
+ Fake EODD (Ha) =       0.20390011665256
+     CP           :  4m14.28s CPU time,     4m27.29s wall time
+
+     iteration = 357  eff iteration = 357   Etot (Ha) =     -0.14192833403234 delta_E=  0.38314733830092E-07
+     Ekin (Ha) =       3.91575946061091 Enl (Ha) =      -0.71029074610433 Eloc (Ha) =     -3.55129484647838
+ Fake EODD (Ha) =       0.20389779793947
+     CP           :  4m14.97s CPU time,     4m28.02s wall time
+
+     iteration = 358  eff iteration = 358   Etot (Ha) =     -0.14192838422024 delta_E=  0.41283134522008E-07
+     Ekin (Ha) =       3.91585040713864 Enl (Ha) =      -0.71030915552228 Eloc (Ha) =     -3.55137160938936
+ Fake EODD (Ha) =       0.20390197355277
+     CP           :  4m15.67s CPU time,     4m28.75s wall time
+
+     iteration = 359  eff iteration = 359   Etot (Ha) =     -0.14192843908640 delta_E=  0.50187907385535E-07
+     Ekin (Ha) =       3.91602595985247 Enl (Ha) =      -0.71034745334343 Eloc (Ha) =     -3.55151851458905
+ Fake EODD (Ha) =       0.20391156899361
+     CP           :  4m16.37s CPU time,     4m29.49s wall time
+
+     iteration = 360  eff iteration = 360   Etot (Ha) =     -0.14192849140515 delta_E=  0.54866162529921E-07
+     Ekin (Ha) =       3.91619215936985 Enl (Ha) =      -0.71038034808870 Eloc (Ha) =     -3.55166438964347
+ Fake EODD (Ha) =       0.20392408695717
+
+     CP           :  4m17.06s CPU time,     4m30.22s wall time
+
+     iteration = 361  eff iteration = 361   Etot (Ha) =     -0.14192853262252 delta_E=  0.52318746585067E-07
+     Ekin (Ha) =       3.91616755624299 Enl (Ha) =      -0.71037328655071 Eloc (Ha) =     -3.55164750606989
+ Fake EODD (Ha) =       0.20392470375509
+     CP           :  4m17.77s CPU time,     4m30.96s wall time
+
+     iteration = 362  eff iteration = 362   Etot (Ha) =     -0.14192857366574 delta_E=  0.41217364993296E-07
+     Ekin (Ha) =       3.91611056149565 Enl (Ha) =      -0.71035736508702 Eloc (Ha) =     -3.55160854747987
+ Fake EODD (Ha) =       0.20392677740550
+     CP           :  4m18.47s CPU time,     4m31.69s wall time
+
+     iteration = 363  eff iteration = 363   Etot (Ha) =     -0.14192861006840 delta_E=  0.41043222848147E-07
+     Ekin (Ha) =       3.91608675005059 Enl (Ha) =      -0.71035118545230 Eloc (Ha) =     -3.55159444174063
+ Fake EODD (Ha) =       0.20393026707394
+     CP           :  4m19.17s CPU time,     4m32.43s wall time
+
+     iteration = 364  eff iteration = 364   Etot (Ha) =     -0.14192864273404 delta_E=  0.36402659636670E-07
+     Ekin (Ha) =       3.91612721908259 Enl (Ha) =      -0.71036132571807 Eloc (Ha) =     -3.55163054612432
+ Fake EODD (Ha) =       0.20393601002575
+     CP           :  4m19.86s CPU time,     4m33.16s wall time
+
+     iteration = 365  eff iteration = 365   Etot (Ha) =     -0.14192867852616 delta_E=  0.32665645799401E-07
+     Ekin (Ha) =       3.91621690175009 Enl (Ha) =      -0.71038095987685 Eloc (Ha) =     -3.55171022577873
+ Fake EODD (Ha) =       0.20394560537933
+     CP           :  4m20.56s CPU time,     4m33.90s wall time
+
+     iteration = 366  eff iteration = 366   Etot (Ha) =     -0.14192871491746 delta_E=  0.35792118185940E-07
+     Ekin (Ha) =       3.91631641118449 Enl (Ha) =      -0.71039784901790 Eloc (Ha) =     -3.55180584963525
+ Fake EODD (Ha) =       0.20395857255120
+     WARNING cg_sub: missed minimum, case 1, iteration  366      1.735378374365
+     CP           :  4m21.60s CPU time,     4m34.98s wall time
+
+     iteration = 367  eff iteration = 367   Etot (Ha) =     -0.14192875124145 delta_E=  0.36391297086880E-07
+     Ekin (Ha) =       3.91642448159009 Enl (Ha) =      -0.71041284209192 Eloc (Ha) =     -3.55191414536286
+ Fake EODD (Ha) =       0.20397375462325
+     CP           :  4m22.30s CPU time,     4m35.72s wall time
+
+     iteration = 368  eff iteration = 368   Etot (Ha) =     -0.14192877172465 delta_E=  0.36323985846964E-07
+     Ekin (Ha) =       3.91644355262599 Enl (Ha) =      -0.71041779830126 Eloc (Ha) =     -3.55192850069799
+ Fake EODD (Ha) =       0.20397397464861
+     CP           :  4m23.01s CPU time,     4m36.45s wall time
+
+     iteration = 369  eff iteration = 369   Etot (Ha) =     -0.14192879321137 delta_E=  0.20483201634836E-07
+     Ekin (Ha) =       3.91648204361869 Enl (Ha) =      -0.71042713087008 Eloc (Ha) =     -3.55195818568698
+ Fake EODD (Ha) =       0.20397447972700
+     CP           :  4m23.71s CPU time,     4m37.19s wall time
+
+     iteration = 370  eff iteration = 370   Etot (Ha) =     -0.14192881434273 delta_E=  0.21486727341813E-07
+     Ekin (Ha) =       3.91651115387045 Enl (Ha) =      -0.71043244185105 Eloc (Ha) =     -3.55198232136318
+ Fake EODD (Ha) =       0.20397479500104
+
+     CP           :  4m24.40s CPU time,     4m37.92s wall time
+
+     iteration = 371  eff iteration = 371   Etot (Ha) =     -0.14192883402589 delta_E=  0.21131359106974E-07
+     Ekin (Ha) =       3.91652441748299 Enl (Ha) =      -0.71043274713709 Eloc (Ha) =     -3.55199463934497
+ Fake EODD (Ha) =       0.20397413497317
+     CP           :  4m25.09s CPU time,     4m38.66s wall time
+
+     iteration = 372  eff iteration = 372   Etot (Ha) =     -0.14192885287740 delta_E=  0.19683160185080E-07
+     Ekin (Ha) =       3.91653185975730 Enl (Ha) =      -0.71043296929145 Eloc (Ha) =     -3.55199919885145
+ Fake EODD (Ha) =       0.20397145550820
+     CP           :  4m25.80s CPU time,     4m39.39s wall time
+
+     iteration = 373  eff iteration = 373   Etot (Ha) =     -0.14192887504092 delta_E=  0.18851507882500E-07
+     Ekin (Ha) =       3.91653035054063 Enl (Ha) =      -0.71043516555895 Eloc (Ha) =     -3.55198888523174
+ Fake EODD (Ha) =       0.20396482520914
+     CP           :  4m26.50s CPU time,     4m40.12s wall time
+
+     iteration = 374  eff iteration = 374   Etot (Ha) =     -0.14192889715459 delta_E=  0.22163513302420E-07
+     Ekin (Ha) =       3.91648529540285 Enl (Ha) =      -0.71043114816895 Eloc (Ha) =     -3.55193757249657
+ Fake EODD (Ha) =       0.20395452810808
+     CP           :  4m27.20s CPU time,     4m40.86s wall time
+
+     iteration = 375  eff iteration = 375   Etot (Ha) =     -0.14192898249847 delta_E=  0.22113673003865E-07
+     Ekin (Ha) =       3.91612844995383 Enl (Ha) =      -0.71037542251752 Eloc (Ha) =     -3.55158958300329
+ Fake EODD (Ha) =       0.20390757306851
+     CP           :  4m27.90s CPU time,     4m41.59s wall time
+
+     iteration = 376  eff iteration = 376   Etot (Ha) =     -0.14192909055621 delta_E=  0.85343885319888E-07
+     Ekin (Ha) =       3.91553697161867 Enl (Ha) =      -0.71026494015205 Eloc (Ha) =     -3.55104950074152
+ Fake EODD (Ha) =       0.20384837871869
+     CP           :  4m28.60s CPU time,     4m42.33s wall time
+
+     iteration = 377  eff iteration = 377   Etot (Ha) =     -0.14192923185702 delta_E=  0.10805774022793E-06
+     Ekin (Ha) =       3.91471423601619 Enl (Ha) =      -0.71010252502986 Eloc (Ha) =     -3.55031730480253
+ Fake EODD (Ha) =       0.20377636195919
+     CP           :  4m29.29s CPU time,     4m43.06s wall time
+
+     iteration = 378  eff iteration = 378   Etot (Ha) =     -0.14192938477405 delta_E=  0.14130080477903E-06
+     Ekin (Ha) =       3.91399086381134 Enl (Ha) =      -0.70996826937458 Eloc (Ha) =     -3.54966232338001
+ Fake EODD (Ha) =       0.20371034416919
+     CP           :  4m29.99s CPU time,     4m43.79s wall time
+
+     iteration = 379  eff iteration = 379   Etot (Ha) =     -0.14192952189253 delta_E=  0.15291703153730E-06
+     Ekin (Ha) =       3.91356192386606 Enl (Ha) =      -0.70989892510891 Eloc (Ha) =     -3.54926037155016
+ Fake EODD (Ha) =       0.20366785090049
+     CP           :  4m30.69s CPU time,     4m44.53s wall time
+
+     iteration = 380  eff iteration = 380   Etot (Ha) =     -0.14192964926425 delta_E=  0.13711848084741E-06
+     Ekin (Ha) =       3.91344041301166 Enl (Ha) =      -0.70988364013347 Eloc (Ha) =     -3.54914357136748
+ Fake EODD (Ha) =       0.20365714922504
+
+     CP           :  4m31.39s CPU time,     4m45.26s wall time
+
+     iteration = 381  eff iteration = 381   Etot (Ha) =     -0.14192974431131 delta_E=  0.12737171870003E-06
+     Ekin (Ha) =       3.91361700460839 Enl (Ha) =      -0.70990908024925 Eloc (Ha) =     -3.54931473374429
+ Fake EODD (Ha) =       0.20367706507384
+     CP           :  4m32.10s CPU time,     4m45.99s wall time
+
+     iteration = 382  eff iteration = 382   Etot (Ha) =     -0.14192982568423 delta_E=  0.95047060527653E-07
+     Ekin (Ha) =       3.91409063190237 Enl (Ha) =      -0.70998728621600 Eloc (Ha) =     -3.54975921380899
+ Fake EODD (Ha) =       0.20372604243839
+     CP           :  4m32.79s CPU time,     4m46.73s wall time
+
+     iteration = 383  eff iteration = 383   Etot (Ha) =     -0.14192991224965 delta_E=  0.81372917265510E-07
+     Ekin (Ha) =       3.91487980186830 Enl (Ha) =      -0.71013240322521 Eloc (Ha) =     -3.55047799769552
+ Fake EODD (Ha) =       0.20380068680278
+     CP           :  4m33.50s CPU time,     4m47.46s wall time
+
+     iteration = 384  eff iteration = 384   Etot (Ha) =     -0.14192999692101 delta_E=  0.86565424495255E-07
+     Ekin (Ha) =       3.91583269095873 Enl (Ha) =      -0.71031687223708 Eloc (Ha) =     -3.55133327600208
+ Fake EODD (Ha) =       0.20388746035942
+     CP           :  4m34.20s CPU time,     4m48.19s wall time
+
+     iteration = 385  eff iteration = 385   Etot (Ha) =     -0.14193006854796 delta_E=  0.84671354344534E-07
+     Ekin (Ha) =       3.91661182144423 Enl (Ha) =      -0.71046171327112 Eloc (Ha) =     -3.55204481548554
+ Fake EODD (Ha) =       0.20396463876447
+     CP           :  4m34.91s CPU time,     4m48.93s wall time
+
+     iteration = 386  eff iteration = 386   Etot (Ha) =     -0.14193012897313 delta_E=  0.71626952230508E-07
+     Ekin (Ha) =       3.91714422791770 Enl (Ha) =      -0.71054968841424 Eloc (Ha) =     -3.55255135131247
+ Fake EODD (Ha) =       0.20402668283589
+     CP           :  4m35.61s CPU time,     4m49.66s wall time
+
+     iteration = 387  eff iteration = 387   Etot (Ha) =     -0.14193015349279 delta_E=  0.60425171005685E-07
+     Ekin (Ha) =       3.91726016467665 Enl (Ha) =      -0.71056501526821 Eloc (Ha) =     -3.55266947349926
+ Fake EODD (Ha) =       0.20404417059802
+     CP           :  4m36.30s CPU time,     4m50.39s wall time
+
+     iteration = 388  eff iteration = 388   Etot (Ha) =     -0.14193019456733 delta_E=  0.24519663577305E-07
+     Ekin (Ha) =       3.91730972041584 Enl (Ha) =      -0.71056965358191 Eloc (Ha) =     -3.55272706549770
+ Fake EODD (Ha) =       0.20405680409644
+     CP           :  4m37.01s CPU time,     4m51.13s wall time
+
+     iteration = 389  eff iteration = 389   Etot (Ha) =     -0.14193023446588 delta_E=  0.41074532441954E-07
+     Ekin (Ha) =       3.91728260094983 Enl (Ha) =      -0.71056847177245 Eloc (Ha) =     -3.55270045370401
+ Fake EODD (Ha) =       0.20405609006075
+     CP           :  4m37.70s CPU time,     4m51.86s wall time
+
+     iteration = 390  eff iteration = 390   Etot (Ha) =     -0.14193026990236 delta_E=  0.39898552878226E-07
+     Ekin (Ha) =       3.91718107317919 Enl (Ha) =      -0.71055538663480 Eloc (Ha) =     -3.55260062046748
+ Fake EODD (Ha) =       0.20404466402072
+
+     WARNING cg_sub: missed minimum, case 1, iteration  390      1.633722436372
+     CP           :  4m38.72s CPU time,     4m52.95s wall time
+
+     iteration = 391  eff iteration = 391   Etot (Ha) =     -0.14193030025568 delta_E=  0.35436480860795E-07
+     Ekin (Ha) =       3.91699909359655 Enl (Ha) =      -0.71052227161318 Eloc (Ha) =     -3.55243376339508
+ Fake EODD (Ha) =       0.20402664115603
+     CP           :  4m39.43s CPU time,     4m53.68s wall time
+
+     iteration = 392  eff iteration = 392   Etot (Ha) =     -0.14193031389270 delta_E=  0.30353316471388E-07
+     Ekin (Ha) =       3.91695515670654 Enl (Ha) =      -0.71051233810151 Eloc (Ha) =     -3.55239641147584
+ Fake EODD (Ha) =       0.20402327897811
+     CP           :  4m40.12s CPU time,     4m54.42s wall time
+
+     iteration = 393  eff iteration = 393   Etot (Ha) =     -0.14193032604072 delta_E=  0.13637024731672E-07
+     Ekin (Ha) =       3.91685292178843 Enl (Ha) =      -0.71049096565689 Eloc (Ha) =     -3.55230635769314
+ Fake EODD (Ha) =       0.20401407552089
+     CP           :  4m40.84s CPU time,     4m55.16s wall time
+
+     iteration = 394  eff iteration = 394   Etot (Ha) =     -0.14193034667201 delta_E=  0.12148021699687E-07
+     Ekin (Ha) =       3.91663242903257 Enl (Ha) =      -0.71044991325620 Eloc (Ha) =     -3.55210323069880
+ Fake EODD (Ha) =       0.20399036825042
+     CP           :  4m41.53s CPU time,     4m55.89s wall time
+
+     iteration = 395  eff iteration = 395   Etot (Ha) =     -0.14193035927880 delta_E=  0.20631290009732E-07
+     Ekin (Ha) =       3.91649228107641 Enl (Ha) =      -0.71042797260342 Eloc (Ha) =     -3.55196693935673
+ Fake EODD (Ha) =       0.20397227160494
+     CP           :  4m42.23s CPU time,     4m56.62s wall time
+
+     iteration = 396  eff iteration = 396   Etot (Ha) =     -0.14193036598452 delta_E=  0.12606789639991E-07
+     Ekin (Ha) =       3.91640196362720 Enl (Ha) =      -0.71041443297481 Eloc (Ha) =     -3.55187835172099
+ Fake EODD (Ha) =       0.20396045508408
+     CP           :  4m42.93s CPU time,     4m57.35s wall time
+
+     iteration = 397  eff iteration = 397   Etot (Ha) =     -0.14193038493374 delta_E=  0.67057140118454E-08
+     Ekin (Ha) =       3.91608810957038 Enl (Ha) =      -0.71036149452760 Eloc (Ha) =     -3.55158181568315
+ Fake EODD (Ha) =       0.20392481570662
+     CP           :  4m43.64s CPU time,     4m58.09s wall time
+
+     iteration = 398  eff iteration = 398   Etot (Ha) =     -0.14193040833917 delta_E=  0.18949226798792E-07
+     Ekin (Ha) =       3.91566810030790 Enl (Ha) =      -0.71028391308682 Eloc (Ha) =     -3.55119774662541
+ Fake EODD (Ha) =       0.20388315106516
+     CP           :  4m44.33s CPU time,     4m58.82s wall time
+
+     iteration = 399  eff iteration = 399   Etot (Ha) =     -0.14193043752949 delta_E=  0.23405431981427E-07
+     Ekin (Ha) =       3.91517641182081 Enl (Ha) =      -0.71018819977368 Eloc (Ha) =     -3.55075781123279
+ Fake EODD (Ha) =       0.20383916165618
+     CP           :  4m45.03s CPU time,     4m59.55s wall time
+
+     iteration = 400  eff iteration = 400   Etot (Ha) =     -0.14193047339809 delta_E=  0.29190312333949E-07
+     Ekin (Ha) =       3.91474958285160 Enl (Ha) =      -0.71010878559402 Eloc (Ha) =     -3.55037038412542
+ Fake EODD (Ha) =       0.20379911346975
+
+     CP           :  4m45.74s CPU time,     5m 0.29s wall time
+
+     iteration = 401  eff iteration = 401   Etot (Ha) =     -0.14193049359218 delta_E=  0.35868601311329E-07
+     Ekin (Ha) =       3.91484894889645 Enl (Ha) =      -0.71013008840739 Eloc (Ha) =     -3.55045618147600
+ Fake EODD (Ha) =       0.20380682739475
+     CP           :  4m46.44s CPU time,     5m 1.02s wall time
+
+     iteration = 402  eff iteration = 402   Etot (Ha) =     -0.14193051324592 delta_E=  0.20194087319014E-07
+     Ekin (Ha) =       3.91513077590845 Enl (Ha) =      -0.71018713936347 Eloc (Ha) =     -3.55070513351334
+ Fake EODD (Ha) =       0.20383098372244
+     CP           :  4m47.14s CPU time,     5m 1.75s wall time
+
+     iteration = 403  eff iteration = 403   Etot (Ha) =     -0.14193054334390 delta_E=  0.19653743243975E-07
+     Ekin (Ha) =       3.91569478873835 Enl (Ha) =      -0.71029137978247 Eloc (Ha) =     -3.55122010004617
+ Fake EODD (Ha) =       0.20388614774639
+     CP           :  4m47.85s CPU time,     5m 2.49s wall time
+
+     iteration = 404  eff iteration = 404   Etot (Ha) =     -0.14193056420388 delta_E=  0.30097983549915E-07
+     Ekin (Ha) =       3.91609873049173 Enl (Ha) =      -0.71035929932653 Eloc (Ha) =     -3.55160042042968
+ Fake EODD (Ha) =       0.20393042506060
+     CP           :  4m48.55s CPU time,     5m 3.22s wall time
+
+     iteration = 405  eff iteration = 405   Etot (Ha) =     -0.14193057491555 delta_E=  0.20859977356569E-07
+     Ekin (Ha) =       3.91630950635026 Enl (Ha) =      -0.71039392585795 Eloc (Ha) =     -3.55180053747832
+ Fake EODD (Ha) =       0.20395438207045
+     CP           :  4m49.25s CPU time,     5m 3.96s wall time
+
+     iteration = 406  eff iteration = 406   Etot (Ha) =     -0.14193058738464 delta_E=  0.10711673187336E-07
+     Ekin (Ha) =       3.91656049914757 Enl (Ha) =      -0.71043902174761 Eloc (Ha) =     -3.55203283314834
+ Fake EODD (Ha) =       0.20398076836374
+     CP           :  4m49.94s CPU time,     5m 4.69s wall time
+
+     iteration = 407  eff iteration = 407   Etot (Ha) =     -0.14193059764223 delta_E=  0.12469086513311E-07
+     Ekin (Ha) =       3.91674740180747 Enl (Ha) =      -0.71047538651949 Eloc (Ha) =     -3.55220157498093
+ Fake EODD (Ha) =       0.20399896205071
+     CP           :  4m50.63s CPU time,     5m 5.43s wall time
+
+     iteration = 408  eff iteration = 408   Etot (Ha) =     -0.14193060915113 delta_E=  0.10257587668150E-07
+     Ekin (Ha) =       3.91689747541578 Enl (Ha) =      -0.71050472487107 Eloc (Ha) =     -3.55233736715049
+ Fake EODD (Ha) =       0.20401400745465
+
+   writing empty state DFT Hamiltonian file: hamiltonian0_emp
+
+   writing empty state KC  Hamiltonian file: hamiltonian_emp
+
+
+ -----------------------------------------
+ Projectability EMP states on OCC manifold
+ -----------------------------------------
+
+    orbital #    1 :   0.00000000
+
+      Total projectability =   0.00000000
+
+
+
+                total energy =     -47.6416260510 Hartree a.u.
+              kinetic energy =      32.5105900706 Hartree a.u.
+        electrostatic energy =     -42.4430966985 Hartree a.u.
+                         esr =       0.4876308156 Hartree a.u.
+                       eself =      43.0857662834 Hartree a.u.
+      pseudopotential energy =     -25.9420435111 Hartree a.u.
+  n-l pseudopotential energy =      -1.5518340160 Hartree a.u.
+ exchange-correlation energy =     -10.2152418961 Hartree a.u.
+           average potential =       0.0000000000 Hartree a.u.
+                  odd energy =       0.0000000000 Hartree a.u.
+        van der waals energy =       0.0000000000 Hartree a.u.
+
+
+
+   HOMO Eigenvalue (eV)
+
+  -13.1652
+
+   LUMO Eigenvalue (eV)
+
+   -1.9311
+
+   Electronic Gap (eV) =    11.2342
+
+
+   Eigenvalues (eV), kp =   1 , spin =  1
+
+  -39.8124  -32.7877  -24.7701  -20.1315  -19.9123  -19.8373  -14.3377  -13.2161  -13.1652
+
+   Empty States Eigenvalues (eV), kp =   1 , spin =  1
+
+   -1.9311
+
+   Orb -- Charge  ---   Centers xyz (Bohr)  ---  Spreads (Bohr^2) - SH(eV), kp =   1 , spin =  1
+
+OCC    1 --    1.00   ---   -0.56   -1.58   -0.96   ---   2.619   9.216   0.000   0.615
+OCC    2 --    1.00   ---    2.40   -1.60    0.04   ---   1.798  11.834   0.000   0.523
+OCC    3 --    1.00   ---   -1.89   -1.51   -0.95   ---   1.872  11.797   0.000   0.519
+OCC    4 --    1.00   ---   -0.60   -1.53   -1.08   ---   2.479   9.428   0.000   0.608
+OCC    5 --    1.00   ---    1.56   -1.58   -0.96   ---   2.628   9.203   0.000   0.615
+OCC    6 --    1.00   ---    0.50   -1.56   -2.37   ---   1.401  12.904   0.000   0.551
+OCC    7 --    1.00   ---    1.59   -1.52   -1.08   ---   2.473   9.435   0.000   0.608
+OCC    8 --    1.00   ---    2.89   -1.51   -0.94   ---   1.863  11.797   0.000   0.519
+OCC    9 --    1.00   ---   -1.40   -1.60    0.04   ---   1.806  11.832   0.000   0.524
+
+   Orb -- Empty Charge  ---   Centers xyz (Bohr)  ---  Spreads (Bohr^2) - SH(eV), kp =   1 , spin =  1
+
+EMP    1 --    1.00   ---    0.46   -0.64   -0.38   ---  52.002   4.245   5.552   0.754
+ 
+ 
+   CELL_PARAMETERS
+    2.67846001E+01    0.00000000E+00    0.00000000E+00
+    0.00000000E+00    2.26767135E+01    0.00000000E+00
+    0.00000000E+00    0.00000000E+00    2.39239327E+01
+
+   System Density [g/cm^3] :     0.0370
+
+
+   Center of mass square displacement (a.u.):   0.000000
+
+   ATOMIC_POSITIONS
+   O    1.339230E+01  1.133836E+01  1.113049E+01
+   O    1.544624E+01  1.133836E+01  1.237771E+01
+   O    1.133836E+01  1.133836E+01  1.237771E+01
+ 
+   ATOMIC_VELOCITIES
+   O    0.000000E+00  0.000000E+00  0.000000E+00
+   O    0.000000E+00  0.000000E+00  0.000000E+00
+   O    0.000000E+00  0.000000E+00  0.000000E+00
+ 
+
+
+   Partial temperatures (for each ionic specie) 
+   Species  Temp (K)   Mean Square Displacement (a.u.)
+        1       0.00     0.0000
+ 
+  nfi    ekinc  temph  tempp        etot      enthal       econs       econt    vnhh   xnhh0    vnhp   xnhp0
+ 
+       nfi   tempp            E -T.S-mu.nbsp         +K_p #Iter
+Step     2       0    -47.64163    -47.64163    -47.64163   409
+ tnosep= F thdyn= F
+
+   writing restart file: /scratch/elinscott/materials_cloud_archive/ozone/ki_pz/TMP-CP//kc_98.save
+   restart file written in    0.388 sec.
+
+
+
+   Averaged Physical Quantities
+                      accomulated      this run
+   ekinc         :        0.00000       0.00000 (AU)
+   ekin          :       85.92262      32.51059 (AU)
+   epot          :      -27.58554     -78.60038 (AU)
+   total energy  :       57.56117     -47.64163 (AU)
+   temperature   :        0.00000       0.00000 (K )
+   enthalpy      :        0.00000       0.00000 (AU)
+   econs         :       57.56117     -47.64163 (AU)
+   pressure      :        0.00000       0.00000 (Gpa)
+   volume        :    14531.07864   14531.07864 (AU)
+
+
+     initialize   :     1.02s CPU
+     total_time   :   290.34s CPU
+     formf        :     0.02s CPU
+     rhoofr       :     8.05s CPU (     826 calls,   0.010 s avg)
+     vofrho       :     0.08s CPU
+     vofrho1      :     0.08s CPU
+     dforce       :     3.30s CPU (     414 calls,   0.008 s avg)
+     dforce2      :   289.10s CPU
+     calphi       :     0.01s CPU (     410 calls,   0.000 s avg)
+     gram         :     0.00s CPU
+     newd         :     0.00s CPU
+     calbec       :     0.01s CPU (       4 calls,   0.001 s avg)
+     prefor       :     0.00s CPU (       5 calls,   0.001 s avg)
+     strucf       :     0.00s CPU
+     nlfl         :     0.00s CPU
+     nlsm1        :     1.67s CPU (    3712 calls,   0.000 s avg)
+     fft          :    79.82s CPU (   26570 calls,   0.003 s avg)
+     ffts         :     2.36s CPU (     827 calls,   0.003 s avg)
+     fftw         :     3.50s CPU (    2490 calls,   0.001 s avg)
+     cft3s        :    85.57s CPU (   29887 calls,   0.003 s avg)
+     fft_scatter  :    38.20s CPU (   29887 calls,   0.001 s avg)
+
+     nk_eforce    :     6.30s CPU (     414 calls,   0.015 s avg)
+     nk_corr      :   240.46s CPU (     834 calls,   0.288 s avg)
+     nk_corr_h    :     8.69s CPU (     834 calls,   0.010 s avg)
+     nk_corr_vxc  :   231.41s CPU (     834 calls,   0.277 s avg)
+
+
+     outer_loop   :   290.30s CPU (     408 calls,   0.712 s avg)
+     runcg_uspp   :   290.32s CPU (       2 calls, 145.159 s avg)
+     xminus1      :     0.01s CPU (     816 calls,   0.000 s avg)
+     emass_p_tpa  :     0.00s CPU (       2 calls,   0.000 s avg)
+ 
+ 
+     CP           :  4m51.67s CPU time,     5m 6.64s wall time
+
+ 
+   This run was terminated on:  17: 9:53  15Dec2022            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=
