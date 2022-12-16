@@ -1,0 +1,195 @@
+  _
+ | | _____   ___  _ __  _ __ ___   __ _ _ __  ___
+ | |/ / _ \ / _ \| '_ \| '_ ` _ \ / _` | '_ \/ __|
+ |   < (_) | (_) | |_) | | | | | | (_| | | | \__ \ 
+ |_|\_\___/ \___/| .__/|_| |_| |_|\__,_|_| |_|___/
+                 |_|
+
+ Koopmans spectral functional calculations with Quantum ESPRESSO
+
+ version 1.0.0b6
+
+ Written by Edward Linscott, Riccardo De Gennaro, and Nicola Colonna
+
+ Please cite the papers listed in ozone.bib in work involving this calculation
+
+ 
+ KI calculation
+ ===============
+
+  Initialization of density and variational orbitals
+  ==================================================
+   Running init/dft_init_nspin1... done
+   Running init/dft_init_nspin2_dummy... done
+   Running init/dft_init_nspin2... done
+   Overwriting the variational orbitals with Kohn-Sham orbitals
+   Copying the spin-up variational orbitals over to the spin-down channel
+
+  Calculating screening parameters
+  ================================
+   Running calc_alpha/ki... done
+
+  Orbital 1
+  ---------
+   Running calc_alpha/orbital_1/dft_n-1... done
+
+  Orbital 2
+  ---------
+   Running calc_alpha/orbital_2/dft_n-1... done
+
+  Orbital 3
+  ---------
+   Running calc_alpha/orbital_3/dft_n-1... done
+
+  Orbital 4
+  ---------
+   Running calc_alpha/orbital_4/dft_n-1... done
+
+  Orbital 5
+  ---------
+   Running calc_alpha/orbital_5/dft_n-1... done
+
+  Orbital 6
+  ---------
+   Running calc_alpha/orbital_6/dft_n-1... done
+
+  Orbital 7
+  ---------
+   Running calc_alpha/orbital_7/dft_n-1... done
+
+  Orbital 8
+  ---------
+   Running calc_alpha/orbital_8/dft_n-1... done
+
+  Orbital 9
+  ---------
+   Running calc_alpha/orbital_9/dft_n-1... done
+
+  Orbital 10
+  ----------
+   Running calc_alpha/orbital_10/pz_print... done
+   Running calc_alpha/orbital_10/dft_n+1_dummy... done
+   Running calc_alpha/orbital_10/dft_n+1... done
+   
+   alpha
+            1         2         3        4   ...        7       8         9         10
+   0  0.600000  0.600000  0.600000  0.60000  ...  0.600000  0.6000  0.600000  0.600000
+   1  0.655689  0.727571  0.783859  0.66386  ...  0.729888  0.7419  0.779264  0.717389
+   
+   [2 rows x 10 columns]
+   
+   Delta E_i - epsilon_i (eV)
+            1         2         3   ...        8         9         10
+   0 -0.477344 -0.920497 -1.124088  ... -0.888608 -1.050159  0.711209
+   
+   [1 rows x 10 columns]
+
+   Screening parameters have been determined but are not necessarily converged
+
+  Final KI calculation
+  ====================
+   Running final/ki_final... done
+
+ 
+ pKIPZ calculation
+ ==================
+
+  Initialization of density and variational orbitals
+  ==================================================
+   Not running init/dft_init_nspin1 as it is already complete
+   Not running init/dft_init_nspin2_dummy as it is already complete
+   Not running init/dft_init_nspin2 as it is already complete
+   Overwriting the variational orbitals with Kohn-Sham orbitals
+
+  Calculating screening parameters
+  ================================
+   Skipping calculation of screening parameters
+   
+   alpha
+            1         2         3        4   ...        7       8         9         10
+   0  0.655689  0.727571  0.783859  0.66386  ...  0.729888  0.7419  0.779264  0.717389
+   
+   [1 rows x 10 columns]
+
+
+  Final pKIPZ calculation
+  =======================
+   Not running final/ki_final as it is already complete
+   Running final/pkipz_final... done
+
+ 
+ KIPZ calculation
+ =================
+
+  Initialization of density and variational orbitals
+  ==================================================
+   Copying the density and orbitals from a pre-existing KI calculation
+
+  Calculating screening parameters
+  ================================
+   Running calc_alpha/kipz...UserWarning: Spin-up and spin-down eigenvalues differ substantially
+ done
+
+  Orbital 1
+  ---------
+   Running calc_alpha/orbital_1/kipz_n-1... done
+
+  Orbital 2
+  ---------
+   Running calc_alpha/orbital_2/kipz_n-1... done
+
+  Orbital 3
+  ---------
+   Running calc_alpha/orbital_3/kipz_n-1... done
+
+  Orbital 4
+  ---------
+   Running calc_alpha/orbital_4/kipz_n-1... done
+
+  Orbital 5
+  ---------
+   Running calc_alpha/orbital_5/kipz_n-1... done
+
+  Orbital 6
+  ---------
+   Running calc_alpha/orbital_6/kipz_n-1... done
+
+  Orbital 7
+  ---------
+   Running calc_alpha/orbital_7/kipz_n-1... done
+
+  Orbital 8
+  ---------
+   Running calc_alpha/orbital_8/kipz_n-1... done
+
+  Orbital 9
+  ---------
+   Running calc_alpha/orbital_9/kipz_n-1... done
+
+  Orbital 10
+  ----------
+   Running calc_alpha/orbital_10/kipz_print... done
+   Running calc_alpha/orbital_10/dft_n+1_dummy... done
+   Running calc_alpha/orbital_10/kipz_n+1... done
+   
+   alpha
+            1         2         3   ...        8         9         10
+   0  0.655689  0.727571  0.783859  ...  0.741900  0.779264  0.717389
+   1  0.511213  0.557862  0.458780  ...  0.550108  0.463700  0.796806
+   
+   [2 rows x 10 columns]
+   
+   Delta E_i - epsilon_i (eV)
+            1         2         3   ...        8         9         10
+   0  1.255251  1.653213  3.170393  ...  1.867717  3.073857  0.132306
+   
+   [1 rows x 10 columns]
+
+   Screening parameters have been determined but are not necessarily converged
+
+  Final KIPZ calculation
+  ======================
+   Running final/kipz_final...UserWarning: Spin-up and spin-down eigenvalues differ substantially
+ done
+
+ Workflow complete
