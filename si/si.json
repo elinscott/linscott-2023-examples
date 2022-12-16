@@ -1,11 +1,14 @@
 {
   "workflow": {
     "functional": "ki",
-    "periodic": true,
+    "base_functional": "pbe",
     "method": "dscf",
     "init_orbitals": "mlwfs",
+    "alpha_guess": 0.1,
+    "eps_inf": 13.02,
     "orbital_groups_self_hartree_tol": 0.1,
-    "pseudo_library": "sg15"
+    "pseudo_library": "sg15",
+    "mp_correction": false
   },
   "atoms": {
     "atomic_positions": {
@@ -13,27 +16,26 @@
       "positions": [["Si", 0.00, 0.00, 0.00],
               ["Si", 0.25, 0.25, 0.25]]
     },
-    "k_points": {
-      "kgrid": [2, 2, 2],
-      "koffset": [0, 0, 0],
-      "kpath": "GXWKGLUWLK"
-    },
     "cell_parameters": {
       "periodic": true,
       "ibrav": 2,
-      "celldms": {"1": 10.262}
+      "celldms": {"1": 10.2622}
     }
+  },
+  "kpoints": {
+    "grid": [4, 4, 4]
   },
   "calculator_parameters": {
     "ecutwfc": 60.0,
-    "nbnd": 20,
+    "pw": {
+      "nbnd": 20
+    },
     "w90": {
       "projections": [
-        [{"fsite": [0.125, 0.125, 0.125], "ang_mtm": "sp3"}]
-        [{"fsite": [0.125, 0.125, 0.125], "ang_mtm": "sp3"}]],
-      "dis_froz_max": 11.5,
-      "dis_win_max": 17.0
-      }
+        [{"fsite": [0.25, 0.25, 0.25], "ang_mtm": "sp3"}],
+        [{"fsite": [0.25, 0.25, 0.25], "ang_mtm": "sp3"}]],
+      "dis_froz_max": 11.0,
+      "dis_win_max": 16.5
     },
     "ui": {
       "smooth_int_factor": 2
