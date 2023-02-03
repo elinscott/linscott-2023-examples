@@ -19,4 +19,4 @@ Provided that the ``koopmans`` package is installed, the calculations can be rer
 
 License
 -------
-MIT
+Creative Commons Attribution 4.0 International
