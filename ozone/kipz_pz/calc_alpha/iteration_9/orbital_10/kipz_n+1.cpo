@@ -1,0 +1,1329 @@
+=------------------------------------------------------------------------------=
+
+     CP: variable-cell Car-Parrinello molecular dynamics
+     using norm-conserving and ultrasoft Vanderbilt pseudopotentials
+
+     Version: 4.1 - Fr 25 Nov 2022 17:36:04 CET                           
+     Authors: Alfredo Pasquarello, Kari Laasonen, Andrea Trave, Roberto Car,
+       Paolo Giannozzi, Nicola Marzari, Carlo Cavazzoni, Guido Chiarotti,
+       Sandro Scandolo, Paolo Focher, Gerardo Ballabio, and others
+
+=------------------------------------------------------------------------------=
+
+   This run was started on:   5:52: 9  25Jan2023               
+
+   MPI Parallel Build
+   Tasks =   16  This task id =    0
+     Message from routine  system_checkin     :
+      starting_magnetization is not used in CP 
+
+   Job Title: MD Simulation
+
+
+   Atomic Pseudopotentials Parameters
+   ----------------------------------
+
+   Reading pseudopotential for specie #  1 from file :
+   /home/elinscott/code/koopmans/src/koopmans/pseudopotentials/sg15_v1.2/pbe/O_ONCV_PBE-1.2.upf
+   file type is 20: UPF
+ read_nonlocal
+
+
+   Main Simulation Parameters (from input)
+   ---------------------------------------
+   ion_nstepe or cell_nstepe have no effects 
+   Restart Mode       =       1   restart        
+   Number of MD Steps =      50
+   Print out every            1 MD Steps
+   Reads from unit    =      65
+   Writes to unit     =      68
+   MD Simulation time step            =       1.00
+   Electronic fictitious mass (emass) =     400.00
+   emass cut-off                      =       2.50
+
+   Simulation Cell Parameters (from input)
+   external pressure       =            0.00 [GPa]
+   wmass (calculated)      =         6648.68 [AU]
+   initial cell from CELL_PARAMETERS card
+      14.17380000    0.00000000    0.00000000
+       0.00000000   12.00000000    0.00000000
+       0.00000000    0.00000000   12.66000000
+   ibrav =    0
+   alat  =    26.78460015
+   a1    =    26.78460015    0.00000000    0.00000000
+   a2    =     0.00000000   22.67671350    0.00000000
+   a3    =     0.00000000    0.00000000   23.92393274
+ 
+   b1    =     0.03733489    0.00000000    0.00000000
+   b2    =     0.00000000    0.04409810    0.00000000
+   b3    =     0.00000000    0.00000000    0.04179915
+   omega = 14531.07864238
+ nbeg           1
+
+    ========================================
+    |  CONJUGATE GRADIENT                  |
+    ========================================
+    | iterations   =           300         |
+    | conv_thr     = 0.00000180000 a.u.    |
+    | passop       =       2.00000 a.u.    |
+    | niter_cg_restart =  20      |
+    ========================================
+
+   Energy Cut-offs
+   ---------------
+   Ecutwfc =   65.0 Ry,      Ecutrho =  260.0 Ry,      Ecuts =  260.0 Ry
+   Gcutwfc =   34.4     ,    Gcutrho =   68.7          Gcuts =   68.7
+   NOTA BENE: refg, mmx =   0.050000 10400
+   Orthog. with Gram-Schmidt
+   Electron dynamics with conjugate gradient
+   Electron dynamics : the temperature is not controlled
+
+   Electronic states
+   -----------------
+   Local Spin Density calculation
+   Number of Electron =    19
+   Spins up   =    10, occupations: 
+   1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00
+   Spins down =     9, occupations: 
+   1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00
+
+   WARNING: system charge =    -1.000000
+
+
+   Exchange and correlations functionals
+   -------------------------------------
+   Using Local Density Approximation with
+     Exchange functional: SLATER                                                      
+     Correlation functional: PERDEW AND WANG                                             
+   Using Generalized Gradient Corrections with
+     Exchange functional: PERDEW BURKE ERNZERHOF                                      
+     Correlation functional: PERDEW BURKE ERNZERHOF                                      
+     Exchange-correlation      = PBE (1434)
+   Wavefunctions will be written to file as Kohn-Sham states
+
+
+   Ions Simulation Parameters
+   --------------------------
+   Ions are not allowed to move
+   Ionic position (from input)
+   sorted by specie, and converted to real a.u. coordinates
+   Species   1 atoms =    3 mass =     29164.39 (a.u.),        16.00 (amu) rcmax =   1.00 (a.u.)
+       13.392300    11.338357    11.130487
+       15.446243    11.338357    12.377706
+       11.338357    11.338357    12.377706
+   Ionic position will be re-read from restart file
+
+
+   Cell Dynamics Parameters (from STDIN)
+   -------------------------------------
+   Starting cell generated from CELLDM
+   Cell parameters will be re-read from restart file
+   Constant VOLUME Molecular dynamics
+   cell parameters are not allowed to move
+
+   Verbosity: iprsta =  1
+
+ nbeg           1
+
+
+   Simulation dimensions initialization
+   ------------------------------------
+
+   unit vectors of full simulation cell
+   in real space:                         in reciprocal space (units 2pi/alat):
+   1    26.7846    0.0000    0.0000              1.0000    0.0000    0.0000
+   2     0.0000   22.6767    0.0000              0.0000    1.1811    0.0000
+   3     0.0000    0.0000   23.9239              0.0000    0.0000    1.1196
+ 
+   Stick Mesh
+   ----------
+   nst =  6287,  nstw =  1574, nsts =  6287
+        PEs    n.st   n.stw   n.sts    n.g    n.gw   n.gs
+          1     786     196     786   64302    8044   64302
+          2     786     196     786   64298    8044   64298
+          3     786     196     786   64298    8044   64298
+          4     786     196     786   64294    8044   64294
+          5     786     196     786   64294    8044   64294
+          6     786     198     786   64294    8046   64294
+          7     786     198     786   64294    8046   64294
+          8     784     198     784   64292    8046   64292
+          9     786     198     786   64298    8046   64298
+         10     786     198     786   64298    8042   64298
+         11     786     198     786   64298    8042   64298
+         12     786     196     786   64298    8044   64298
+         13     786     196     786   64298    8044   64298
+         14     785     195     785   64299    8043   64299
+         15     786     196     786   64298    8040   64298
+         16     786     196     786   64298    8040   64298
+          0   12573    3147   12573 1028751  128699 1028751
+ 
+ 
+   Real Mesh
+   ---------
+   Global Dimensions   Local  Dimensions   Processor Grid
+   .X.   .Y.   .Z.     .X.   .Y.   .Z.     .X.   .Y.   .Z.
+   144   120   125     144   120     8       1     1    16
+   Array leading dimensions ( nr1x, nr2x, nr3x )   =    144   120   125
+   Local number of cell to store the grid ( nnrx ) =     138240
+   Number of x-y planes for each processors: 
+   nr3l =     8    8    8    8    8    8    8    8    8    8
+   nr3l =     8    8    8    7    7    7
+ 
+   Smooth Real Mesh
+   ----------------
+   Global Dimensions   Local  Dimensions   Processor Grid
+   .X.   .Y.   .Z.     .X.   .Y.   .Z.     .X.   .Y.   .Z.
+   144   120   125     144   120     8       1     1    16
+   Array leading dimensions ( nr1x, nr2x, nr3x )   =    144   120   125
+   Local number of cell to store the grid ( nnrx ) =     138240
+   Number of x-y planes for each processors: 
+   nr3sl =     8    8    8    8    8    8    8    8    8    8
+   nr3sl =     8    8    8    7    7    7
+ 
+   Reciprocal Space Mesh
+   ---------------------
+                Large Mesh
+   PE   Global(ngmt)     Local(ngm) MaxLocal(ngmx)
+    1        1028751          64302          64302
+    2        1028751          64298          64302
+    3        1028751          64298          64302
+    4        1028751          64294          64302
+    5        1028751          64294          64302
+    6        1028751          64294          64302
+    7        1028751          64294          64302
+    8        1028751          64292          64302
+    9        1028751          64298          64302
+   10        1028751          64298          64302
+   11        1028751          64298          64302
+   12        1028751          64298          64302
+   13        1028751          64298          64302
+   14        1028751          64299          64302
+   15        1028751          64298          64302
+   16        1028751          64298          64302
+                Smooth Mesh
+   PE   Global(ngst)     Local(ngs) MaxLocal(ngsx)
+    1        1028751          64302          64302
+    2        1028751          64298          64302
+    3        1028751          64298          64302
+    4        1028751          64294          64302
+    5        1028751          64294          64302
+    6        1028751          64294          64302
+    7        1028751          64294          64302
+    8        1028751          64292          64302
+    9        1028751          64298          64302
+   10        1028751          64298          64302
+   11        1028751          64298          64302
+   12        1028751          64298          64302
+   13        1028751          64298          64302
+   14        1028751          64299          64302
+   15        1028751          64298          64302
+   16        1028751          64298          64302
+                Wave function Mesh
+   PE   Global(ngwt)     Local(ngw) MaxLocal(ngwx)
+    1         128699           8044           8046
+    2         128699           8044           8046
+    3         128699           8044           8046
+    4         128699           8044           8046
+    5         128699           8044           8046
+    6         128699           8046           8046
+    7         128699           8046           8046
+    8         128699           8046           8046
+    9         128699           8046           8046
+   10         128699           8042           8046
+   11         128699           8042           8046
+   12         128699           8044           8046
+   13         128699           8044           8046
+   14         128699           8043           8046
+   15         128699           8040           8046
+   16         128699           8040           8046
+
+
+   System geometry initialization
+   ------------------------------
+ 
+   Scaled positions from standard input
+   O    5.000000E-01  5.000000E-01  4.652449E-01
+   O    5.766837E-01  5.000000E-01  5.173776E-01
+   O    4.233163E-01  5.000000E-01  5.173776E-01
+   ibrav =    0       cell parameters 
+
+      26.78460       0.00000       0.00000
+       0.00000      22.67671       0.00000
+       0.00000       0.00000      23.92393
+ 
+
+   Matrix Multiplication Performances
+   ortho mmul, time for parallel driver      =   0.00000 with    1 procs
+
+   Constraints matrixes will be distributed block like on
+   ortho sub-group =    1*   1 procs
+
+
+
+   Pseudopotentials initialization
+   -------------------------------
+
+
+   Common initialization
+
+   Specie:     1
+   1  indv=  1   ang. mom=  0
+   2  indv=  2   ang. mom=  0
+   3  indv=  3   ang. mom=  1
+   4  indv=  3   ang. mom=  1
+   5  indv=  3   ang. mom=  1
+   6  indv=  4   ang. mom=  1
+   7  indv=  4   ang. mom=  1
+   8  indv=  4   ang. mom=  1
+ 
+                        dion 
+      9.757151948500      0.000000000000      0.000000000000      0.000000000000
+      0.000000000000      1.376126720650      0.000000000000      0.000000000000
+      0.000000000000      0.000000000000     -4.806858824850      0.000000000000
+      0.000000000000      0.000000000000      0.000000000000     -1.616239702250
+ 
+   Short Legend and Physical Units in the Output
+   ---------------------------------------------
+   NFI    [int]          - step index
+   EKINC  [HARTREE A.U.] - kinetic energy of the fictitious electronic dynamics
+   TEMPH  [K]            - Temperature of the fictitious cell dynamics
+   TEMP   [K]            - Ionic temperature
+   ETOT   [HARTREE A.U.] - Scf total energy (Kohn-Sham hamiltonian)
+   ENTHAL [HARTREE A.U.] - Enthalpy ( ETOT + P * V )
+   ECONS  [HARTREE A.U.] - Enthalpy + kinetic energy of ions and cell
+   ECONT  [HARTREE A.U.] - Constant of motion for the CP lagrangian
+ 
+   NK sic with integral ref =    F
+
+   NK background density factor =  1.0000
+   NK scaling factor =  1.0000
+   rhothr =  0.1E-11
+   NK memusage =     42.313 MB
+
+
+   f_cutoff =  1.0000
+   do_spinsym   =    F
+   EE with periodic-image correction method = tcc                 
+ USING TCC FOR ODD T
+
+   reading restart file: /scratch/elinscott/materials_cloud_archive/ozone/kipz_pz/calc_alpha/TMP-CP/orbital_10//kc_65.save
+ here should be iotk first error
+ here should be iotk first error
+   restart file read in    1.211 sec.
+
+ nprint_nfi=           -2
+ nprint_nfi=            1
+
+   formf: eself=  43.08577
+   formf:     vps(g=0)=  -0.0010501     rhops(g=0)=  -0.0004073
+   formf:     vps(g=0)=  -0.0010501     rhops(g=0)=  -0.0004073
+   formf: sum_g vps(g)=  -8.7417284 sum_g rhops(g)=  -1.0775227
+   Delta V(G=0):   0.003891Ry,    0.105874eV
+ in init_run from wannier start Linh
+ in init_run from wannier end Linh
+
+ * Physical Quantities at step:     2
+
+PERFORMING CONJUGATE GRADIENT MINIMIZATION OF EL. STATES
+
+     CP           :     6.26s CPU time,    7.67s wall time
+
+     iteration =   1  eff iteration =   1   Etot (Ha) =    -47.47943860770246
+ norm dgrad           1  1.826293794880051E-003
+ norm dgrad           2  3.705058843419321E-005
+ norm dgrad           3  9.262647108548357E-006
+ norm dgrad           4  2.315661777137086E-006
+ norm dgrad           5  5.789154442842706E-007
+ norm dgrad           6  1.447288610710687E-007
+ norm dgrad           7  3.618221526776696E-008
+ norm dgrad           8  9.045553816942287E-009
+ norm dgrad           9  2.261388454235435E-009
+ norm dgrad          10  5.653471135589043E-010
+ norm dgrad          11  1.413367783896929E-010
+ norm dgrad          12  3.533419459742428E-011
+ norm dgrad          13  8.833548649353492E-012
+ norm dgrad          14  2.208387162342168E-012
+ norm dgrad          15  5.520967905867378E-013
+ norm dgrad           1  5.520967904886015E-013
+ norm dgrad           1  2.614518491585579E-007
+ norm dgrad           2  6.536295375714143E-008
+ norm dgrad           3  1.634073843928542E-008
+ norm dgrad           4  4.085184609821311E-009
+ norm dgrad           5  1.021296152455336E-009
+ norm dgrad           6  2.553240381138488E-010
+ norm dgrad           7  6.383100952845685E-011
+ norm dgrad           8  1.595775238211342E-011
+ norm dgrad           9  3.989438095528271E-012
+ norm dgrad          10  9.973595238816434E-013
+ norm dgrad           1  9.973595238703482E-013
+     CP           :    16.02s CPU time,   17.57s wall time
+
+     iteration =   2  eff iteration =   2   Etot (Ha) =    -47.48403531606419
+ norm dgrad           1  8.910135316175200E-004
+ norm dgrad           2  3.634361755611324E-005
+ norm dgrad           3  9.085904347457223E-006
+ norm dgrad           4  2.271476076471531E-006
+ norm dgrad           5  5.678690165197015E-007
+ norm dgrad           6  1.419672534803796E-007
+ norm dgrad           7  3.549181320770792E-008
+ norm dgrad           8  8.872953261330748E-009
+ norm dgrad           9  2.218238305183598E-009
+ norm dgrad          10  5.545595737586267E-010
+ norm dgrad          11  1.386398928053187E-010
+ norm dgrad          12  3.465997304276419E-011
+ norm dgrad          13  8.664993221041585E-012
+ norm dgrad          14  2.166248295354371E-012
+ norm dgrad          15  5.415620713610164E-013
+ norm dgrad           1  5.415686451731882E-013
+ norm dgrad           1  3.289515318904886E-008
+ norm dgrad           2  8.223779421986511E-009
+ norm dgrad           3  2.055944715797458E-009
+ norm dgrad           4  5.139861440245666E-010
+ norm dgrad           5  1.284965272749446E-010
+ norm dgrad           6  3.212412963593767E-011
+ norm dgrad           7  8.031031863285451E-012
+ norm dgrad           8  2.007757829396223E-012
+ norm dgrad           9  5.019394232429147E-013
+ norm dgrad           1  5.901117012068662E-013
+     CP           :    25.74s CPU time,   27.43s wall time
+
+     iteration =   3  eff iteration =   3   Etot (Ha) =    -47.48497497163756 delta_E=  0.45967083617313E-02
+ norm dgrad           1  7.633169846682594E-004
+ norm dgrad           2  3.607005969660194E-005
+ norm dgrad           3  9.017514684713660E-006
+ norm dgrad           4  2.254378611319201E-006
+ norm dgrad           5  5.635946378650041E-007
+ norm dgrad           6  1.408986557250519E-007
+ norm dgrad           7  3.522466299596353E-008
+ norm dgrad           8  8.806165515165741E-009
+ norm dgrad           9  2.201541320335339E-009
+ norm dgrad          10  5.503853154698166E-010
+ norm dgrad          11  1.375963252139291E-010
+ norm dgrad          12  3.439908039007606E-011
+ norm dgrad          13  8.599769869191611E-012
+ norm dgrad          14  2.149942410205479E-012
+ norm dgrad          15  5.374855882806560E-013
+ norm dgrad           1  5.374849767302207E-013
+ norm dgrad           1  2.120568469809826E-008
+ norm dgrad           2  5.301412685095153E-009
+ norm dgrad           3  1.325353106543035E-009
+ norm dgrad           4  3.313382604530781E-010
+ norm dgrad           5  8.283456106760067E-011
+ norm dgrad           6  2.070863925548165E-011
+ norm dgrad           7  5.177159561016345E-012
+ norm dgrad           8  1.294289827040429E-012
+ norm dgrad           9  3.235724409568842E-013
+ norm dgrad           1  5.841158643523098E-013
+     CP           :    35.51s CPU time,   37.31s wall time
+
+     iteration =   4  eff iteration =   4   Etot (Ha) =    -47.48524779821446 delta_E=  0.93965557336873E-03
+ norm dgrad           1  7.357261454279028E-004
+ norm dgrad           2  3.588690773811773E-005
+ norm dgrad           3  8.971727179631425E-006
+ norm dgrad           4  2.242931856183352E-006
+ norm dgrad           5  5.607329793647219E-007
+ norm dgrad           6  1.401832486709007E-007
+ norm dgrad           7  3.504581312515505E-008
+ norm dgrad           8  8.761453520646149E-009
+ norm dgrad           9  2.190363440001213E-009
+ norm dgrad          10  5.475908749600315E-010
+ norm dgrad          11  1.368977224800052E-010
+ norm dgrad          12  3.422443155499892E-011
+ norm dgrad          13  8.556108122502398E-012
+ norm dgrad          14  2.139027089054240E-012
+ norm dgrad          15  5.347567868746935E-013
+ norm dgrad           1  5.347647440012201E-013
+ norm dgrad           1  1.399860778981739E-008
+ norm dgrad           2  3.499643915119319E-009
+ norm dgrad           3  8.749110138828345E-010
+ norm dgrad           4  2.187277622464628E-010
+ norm dgrad           5  5.468194275555341E-011
+ norm dgrad           6  1.367048623737398E-011
+ norm dgrad           7  3.417621696464308E-012
+ norm dgrad           8  8.544054583963667E-013
+ norm dgrad           1  1.319914574744085E-012
+ norm dgrad           2  3.299780637567573E-013
+     CP           :    45.23s CPU time,   47.20s wall time
+
+     iteration =   5  eff iteration =   5   Etot (Ha) =    -47.48535316373049 delta_E=  0.27282657689653E-03
+ norm dgrad           1  7.293362214458071E-004
+ norm dgrad           2  3.575459271187412E-005
+ norm dgrad           3  8.938648077844341E-006
+ norm dgrad           4  2.234661994430058E-006
+ norm dgrad           5  5.586654923497544E-007
+ norm dgrad           6  1.396663715229996E-007
+ norm dgrad           7  3.491659248964067E-008
+ norm dgrad           8  8.729148024632468E-009
+ norm dgrad           9  2.182286981713969E-009
+ norm dgrad          10  5.455717393173840E-010
+ norm dgrad          11  1.363929333016248E-010
+ norm dgrad          12  3.409823294343606E-011
+ norm dgrad          13  8.524558140368457E-012
+ norm dgrad          14  2.131139511222342E-012
+ norm dgrad          15  5.327848718418594E-013
+ norm dgrad           1  5.327599225119518E-013
+ norm dgrad           1  8.761904796773086E-009
+ norm dgrad           2  2.190468135872779E-009
+ norm dgrad           3  5.476170520674200E-010
+ norm dgrad           4  1.369042675416618E-010
+ norm dgrad           5  3.422606801661653E-011
+ norm dgrad           6  8.556517286954735E-012
+ norm dgrad           7  2.139129392438738E-012
+ norm dgrad           8  5.347823657847463E-013
+ norm dgrad           1  1.041790798778214E-012
+ norm dgrad           2  2.604475271258036E-013
+     CP           :    54.95s CPU time,   57.06s wall time
+
+     iteration =   6  eff iteration =   6   Etot (Ha) =    -47.48541608444165 delta_E=  0.10536551602769E-03
+ norm dgrad           1  7.255493934835569E-004
+ norm dgrad           2  3.560470147999979E-005
+ norm dgrad           3  8.901175677534120E-006
+ norm dgrad           4  2.225293996267097E-006
+ norm dgrad           5  5.563235182876629E-007
+ norm dgrad           6  1.390808843771392E-007
+ norm dgrad           7  3.477022229559131E-008
+ norm dgrad           8  8.692555874224678E-009
+ norm dgrad           9  2.173139043637797E-009
+ norm dgrad          10  5.432847796797481E-010
+ norm dgrad          11  1.358211996125921E-010
+ norm dgrad          12  3.395530107629026E-011
+ norm dgrad          13  8.488825562366594E-012
+ norm dgrad          14  2.122206463911736E-012
+ norm dgrad          15  5.305516343079415E-013
+ norm dgrad           1  5.305600088657377E-013
+ norm dgrad           1  6.523502769894722E-009
+ norm dgrad           2  1.630867663557637E-009
+ norm dgrad           3  4.077169334592110E-010
+ norm dgrad           4  1.019292377572544E-010
+ norm dgrad           5  2.548231053742605E-011
+ norm dgrad           6  6.370577908884828E-012
+ norm dgrad           7  1.592644545853333E-012
+ norm dgrad           8  3.981611536213092E-013
+ norm dgrad           1  9.041830640317910E-013
+     CP           :  1m 4.71s CPU time,     1m 6.93s wall time
+
+     iteration =   7  eff iteration =   7   Etot (Ha) =    -47.48546403998851 delta_E=  0.62920711165759E-04
+ norm dgrad           1  7.217461738698895E-004
+ norm dgrad           2  3.542799526234884E-005
+ norm dgrad           3  8.856999102965554E-006
+ norm dgrad           4  2.214249847585992E-006
+ norm dgrad           5  5.535624798576514E-007
+ norm dgrad           6  1.383906244547029E-007
+ norm dgrad           7  3.459765723624819E-008
+ norm dgrad           8  8.649414589705218E-009
+ norm dgrad           9  2.162353717587166E-009
+ norm dgrad          10  5.405884469369748E-010
+ norm dgrad          11  1.351471161193193E-010
+ norm dgrad          12  3.378678012608496E-011
+ norm dgrad          13  8.446695305588939E-012
+ norm dgrad          14  2.111673894911257E-012
+ norm dgrad          15  5.279184908565682E-013
+ norm dgrad           1  5.279588250941389E-013
+ norm dgrad           1  3.692516757090731E-009
+ norm dgrad           2  9.231211141441432E-010
+ norm dgrad           3  2.307802743833159E-010
+ norm dgrad           4  5.769506755764879E-011
+ norm dgrad           5  1.442376662986798E-011
+ norm dgrad           6  3.605941592580730E-012
+ norm dgrad           7  9.014853819237863E-013
+ norm dgrad           1  2.822648500585245E-012
+ norm dgrad           2  7.056608347387484E-013
+     CP           :  1m14.45s CPU time,     1m16.78s wall time
+
+     iteration =   8  eff iteration =   8   Etot (Ha) =    -47.48550755553485 delta_E=  0.47955546861544E-04
+ norm dgrad           1  7.197336943552606E-004
+ norm dgrad           2  3.524027574524200E-005
+ norm dgrad           3  8.810068539704725E-006
+ norm dgrad           4  2.202517035774751E-006
+ norm dgrad           5  5.506292341558314E-007
+ norm dgrad           6  1.376573023419958E-007
+ norm dgrad           7  3.441432403625832E-008
+ norm dgrad           8  8.603580621754315E-009
+ norm dgrad           9  2.150895058610946E-009
+ norm dgrad          10  5.377237404459043E-010
+ norm dgrad          11  1.344309290597548E-010
+ norm dgrad          12  3.360773075200443E-011
+ norm dgrad          13  8.401932309770740E-012
+ norm dgrad          14  2.100482982882506E-012
+ norm dgrad          15  5.251207220815832E-013
+ norm dgrad           1  5.250745327687540E-013
+ norm dgrad           1  1.483142068574342E-009
+ norm dgrad           2  3.707774926707343E-010
+ norm dgrad           3  9.269437139131874E-011
+ norm dgrad           4  2.317359240373843E-011
+ norm dgrad           5  5.793397989911975E-012
+ norm dgrad           6  1.448349469722304E-012
+ norm dgrad           7  3.620873604917048E-013
+ norm dgrad           1  1.273490043728873E-012
+ norm dgrad           2  3.183719762354944E-013
+     CP           :  1m24.22s CPU time,     1m26.65s wall time
+
+     iteration =   9  eff iteration =   9   Etot (Ha) =    -47.48554577999749 delta_E=  0.43515546337858E-04
+ norm dgrad           1  7.178637851298385E-004
+ norm dgrad           2  3.508078316126828E-005
+ norm dgrad           3  8.770195453394235E-006
+ norm dgrad           4  2.192548779117865E-006
+ norm dgrad           5  5.481371737217914E-007
+ norm dgrad           6  1.370342881660286E-007
+ norm dgrad           7  3.425857072540302E-008
+ norm dgrad           8  8.564642352324897E-009
+ norm dgrad           9  2.141160505824623E-009
+ norm dgrad          10  5.352901058920461E-010
+ norm dgrad          11  1.338225213319994E-010
+ norm dgrad          12  3.345562904773622E-011
+ norm dgrad          13  8.363906940624702E-012
+ norm dgrad          14  2.090976654828488E-012
+ norm dgrad          15  5.227441436224651E-013
+ norm dgrad           1  5.226935600302323E-013
+ norm dgrad           1  2.351913571113547E-009
+ norm dgrad           2  5.879703990787425E-010
+ norm dgrad           3  1.469925971842859E-010
+ norm dgrad           4  3.674814864972128E-011
+ norm dgrad           5  9.187037000842869E-012
+ norm dgrad           6  2.296759209814023E-012
+ norm dgrad           7  5.741897923542211E-013
+ norm dgrad           1  6.972799688314064E-013
+     CP           :  1m33.97s CPU time,     1m36.52s wall time
+
+     iteration =  10  eff iteration =  10   Etot (Ha) =    -47.48557181993756 delta_E=  0.38224462635128E-04
+
+ norm dgrad           1  7.149708739916968E-004
+ norm dgrad           2  3.500681678991436E-005
+ norm dgrad           3  8.751704173312620E-006
+ norm dgrad           4  2.187926037286682E-006
+ norm dgrad           5  5.469815078113044E-007
+ norm dgrad           6  1.367453765752358E-007
+ norm dgrad           7  3.418634404941171E-008
+ norm dgrad           8  8.546585988753574E-009
+ norm dgrad           9  2.136646491288607E-009
+ norm dgrad          10  5.341616213471737E-010
+ norm dgrad          11  1.335404049680808E-010
+ norm dgrad          12  3.338510114982617E-011
+ norm dgrad          13  8.346275264416083E-012
+ norm dgrad          14  2.086568810340329E-012
+ norm dgrad          15  5.216422011455786E-013
+ norm dgrad           1  5.216404066592702E-013
+ norm dgrad           1  4.623650714823360E-009
+ norm dgrad           2  1.155904716613770E-009
+ norm dgrad           3  2.889761808177325E-010
+ norm dgrad           4  7.224404562050597E-011
+ norm dgrad           5  1.806101150914447E-011
+ norm dgrad           6  4.515252903290828E-012
+ norm dgrad           7  1.128813232323913E-012
+ norm dgrad           8  2.822033097062539E-013
+ norm dgrad           1  8.609617182455023E-013
+     CP           :  1m43.73s CPU time,     1m46.38s wall time
+
+     iteration =  11  eff iteration =  11   Etot (Ha) =    -47.48558846983394 delta_E=  0.26039940074440E-04
+ norm dgrad           1  7.137946144089824E-004
+ norm dgrad           2  3.501803356363697E-005
+ norm dgrad           3  8.754508007624336E-006
+ norm dgrad           4  2.188626906084847E-006
+ norm dgrad           5  5.471567025659022E-007
+ norm dgrad           6  1.367891696526499E-007
+ norm dgrad           7  3.419729091595605E-008
+ norm dgrad           8  8.549322354687575E-009
+ norm dgrad           9  2.137330495096503E-009
+ norm dgrad          10  5.343326003802992E-010
+ norm dgrad          11  1.335831442466287E-010
+ norm dgrad          12  3.339578459953053E-011
+ norm dgrad          13  8.348945784359386E-012
+ norm dgrad          14  2.087236354705918E-012
+ norm dgrad          15  5.218090658311404E-013
+ norm dgrad           1  5.217596469370190E-013
+ norm dgrad           1  5.220319548750610E-009
+ norm dgrad           2  1.305071885056412E-009
+ norm dgrad           3  3.262679642903807E-010
+ norm dgrad           4  8.156698932916338E-011
+ norm dgrad           5  2.039174689643383E-011
+ norm dgrad           6  5.097936615143902E-012
+ norm dgrad           7  1.274484126544995E-012
+ norm dgrad           8  3.186210248259130E-013
+ norm dgrad           1  1.195935444878166E-012
+ norm dgrad           2  2.989837117145642E-013
+     CP           :  1m53.45s CPU time,     1m56.21s wall time
+
+     iteration =  12  eff iteration =  12   Etot (Ha) =    -47.48560012668084 delta_E=  0.16649896380727E-04
+ norm dgrad           1  7.134118331390332E-004
+ norm dgrad           2  3.509476144004834E-005
+ norm dgrad           3  8.773690415175221E-006
+ norm dgrad           4  2.193422617584592E-006
+ norm dgrad           5  5.483556578438517E-007
+ norm dgrad           6  1.370889153228891E-007
+ norm dgrad           7  3.427222904620438E-008
+ norm dgrad           8  8.568057315421280E-009
+ norm dgrad           9  2.142014342323036E-009
+ norm dgrad          10  5.355035889476581E-010
+ norm dgrad          11  1.338758980786673E-010
+ norm dgrad          12  3.346897473009405E-011
+ norm dgrad          13  8.367243735130090E-012
+ norm dgrad          14  2.091810946931033E-012
+ norm dgrad          15  5.229527400216099E-013
+ norm dgrad           1  5.229538083611552E-013
+ norm dgrad           1  3.249470369746772E-009
+ norm dgrad           2  8.123596032372647E-010
+ norm dgrad           3  2.030899020825544E-010
+ norm dgrad           4  5.077247583894803E-011
+ norm dgrad           5  1.269311903931451E-011
+ norm dgrad           6  3.173279779722957E-012
+ norm dgrad           7  7.933199499042705E-013
+ norm dgrad           1  1.590884471657676E-012
+ norm dgrad           2  3.977210867230785E-013
+     WARNING cg_sub: missed minimum, case 1, iteration   12      1.173437555850
+     CP           :  2m 7.85s CPU time,     2m10.78s wall time
+
+     iteration =  13  eff iteration =  13   Etot (Ha) =    -47.48560882430925 delta_E=  0.11656846893970E-04
+ norm dgrad           1  7.123450546519161E-004
+ norm dgrad           2  3.521671512435968E-005
+ norm dgrad           3  8.804179225250535E-006
+ norm dgrad           4  2.201044917352798E-006
+ norm dgrad           5  5.502612570982394E-007
+ norm dgrad           6  1.375653212145704E-007
+ norm dgrad           7  3.439133203864587E-008
+ norm dgrad           8  8.597833443412220E-009
+ norm dgrad           9  2.149458469290676E-009
+ norm dgrad          10  5.373646444321006E-010
+ norm dgrad          11  1.343411678853803E-010
+ norm dgrad          12  3.358529366568398E-011
+ norm dgrad          13  8.396323840005633E-012
+ norm dgrad          14  2.099081065897539E-012
+ norm dgrad          15  5.247702929489725E-013
+ norm dgrad           1  5.248246450823873E-013
+ norm dgrad           1  1.342005132099975E-009
+ norm dgrad           2  3.354932639923963E-010
+ norm dgrad           3  8.387331702976585E-011
+ norm dgrad           4  2.096832951535850E-011
+ norm dgrad           5  5.242082443318674E-012
+ norm dgrad           6  1.310520626949493E-012
+ norm dgrad           7  3.276301607673542E-013
+ norm dgrad           1  3.276299006334810E-013
+     CP           :  2m17.54s CPU time,     2m20.61s wall time
+
+     iteration =  14  eff iteration =  14   Etot (Ha) =    -47.48561284001228 delta_E=  0.86976284165985E-05
+ norm dgrad           1  7.124902866108638E-004
+ norm dgrad           2  3.525011063655378E-005
+ norm dgrad           3  8.812527757957053E-006
+ norm dgrad           4  2.203131964193936E-006
+ norm dgrad           5  5.507829972246532E-007
+ norm dgrad           6  1.376957508502048E-007
+ norm dgrad           7  3.442393809856192E-008
+ norm dgrad           8  8.605984621143245E-009
+ norm dgrad           9  2.151496179411568E-009
+ norm dgrad          10  5.378740508842372E-010
+ norm dgrad          11  1.344685142289640E-010
+ norm dgrad          12  3.361712893419146E-011
+ norm dgrad          13  8.404282327781757E-012
+ norm dgrad          14  2.101070605506732E-012
+ norm dgrad          15  5.252676572674005E-013
+ norm dgrad           1  5.252861821034239E-013
+ norm dgrad           1  9.828048309805291E-010
+ norm dgrad           2  2.456931880329825E-010
+ norm dgrad           3  6.142329966629443E-011
+ norm dgrad           4  1.535582558108582E-011
+ norm dgrad           5  3.838956561399492E-012
+ norm dgrad           6  9.597391818819206E-013
+ norm dgrad           1  1.671297842274437E-012
+ norm dgrad           2  4.178244765492474E-013
+     CP           :  2m27.27s CPU time,     2m30.43s wall time
+
+     iteration =  15  eff iteration =  15   Etot (Ha) =    -47.48561732036073 delta_E=  0.40157030269938E-05
+ norm dgrad           1  7.123824239044638E-004
+ norm dgrad           2  3.534233612652545E-005
+ norm dgrad           3  8.835584364974449E-006
+ norm dgrad           4  2.208896174579406E-006
+ norm dgrad           5  5.522240644787943E-007
+ norm dgrad           6  1.380560213281864E-007
+ norm dgrad           7  3.451400663416861E-008
+ norm dgrad           8  8.628501984072565E-009
+ norm dgrad           9  2.157125577400777E-009
+ norm dgrad          10  5.392814146958309E-010
+ norm dgrad          11  1.348203587604079E-010
+ norm dgrad          12  3.370509096169286E-011
+ norm dgrad          13  8.426273058328089E-012
+ norm dgrad          14  2.106568344058340E-012
+ norm dgrad          15  5.266421058833090E-013
+ norm dgrad           1  5.266706620620997E-013
+ norm dgrad           1  4.007702569209907E-010
+ norm dgrad           2  1.001845161775980E-010
+ norm dgrad           3  2.504612964453689E-011
+ norm dgrad           4  6.261532561168554E-012
+ norm dgrad           5  1.565383177800711E-012
+ norm dgrad           6  3.913458038273405E-013
+ norm dgrad           1  1.597033419943171E-012
+ norm dgrad           2  3.992583246201197E-013
+     WARNING cg_sub: missed minimum, case 1, iteration   15      1.418652845188
+     CP           :  2m41.72s CPU time,     2m45.04s wall time
+
+     iteration =  16  eff iteration =  16   Etot (Ha) =    -47.48562196094004 delta_E=  0.44803484513523E-05
+ norm dgrad           1  7.124470140376709E-004
+ norm dgrad           2  3.547956680513973E-005
+ norm dgrad           3  8.869892101588859E-006
+ norm dgrad           4  2.217473125473220E-006
+ norm dgrad           5  5.543683063873028E-007
+ norm dgrad           6  1.385920828515763E-007
+ norm dgrad           7  3.464802227658162E-008
+ norm dgrad           8  8.662005960067272E-009
+ norm dgrad           9  2.165501587747452E-009
+ norm dgrad          10  5.413754213694573E-010
+ norm dgrad          11  1.353438614505410E-010
+ norm dgrad          12  3.383596688965500E-011
+ norm dgrad          13  8.458992104178789E-012
+ norm dgrad          14  2.114748121483136E-012
+ norm dgrad          15  5.286870542300863E-013
+ norm dgrad           1  5.287388855528179E-013
+ norm dgrad           1  1.476145888139745E-010
+ norm dgrad           2  3.689556726597284E-011
+ norm dgrad           3  9.223892159911384E-012
+ norm dgrad           4  2.305973125832406E-012
+ norm dgrad           5  5.764933029217600E-013
+ norm dgrad           1  5.764929659354600E-013
+     CP           :  2m51.42s CPU time,     2m54.87s wall time
+
+     iteration =  17  eff iteration =  17   Etot (Ha) =    -47.48562405388007 delta_E=  0.46405793057147E-05
+ norm dgrad           1  7.127967367737725E-004
+ norm dgrad           2  3.549183255470280E-005
+ norm dgrad           3  8.872957787383259E-006
+ norm dgrad           4  2.218239359022698E-006
+ norm dgrad           5  5.545598177999057E-007
+ norm dgrad           6  1.386399489610318E-007
+ norm dgrad           7  3.465998586802279E-008
+ norm dgrad           8  8.664996123946757E-009
+ norm dgrad           9  2.166248945221910E-009
+ norm dgrad          10  5.415622148644127E-010
+ norm dgrad          11  1.353905483557877E-010
+ norm dgrad          12  3.384763574887872E-011
+ norm dgrad          13  8.461908602194380E-012
+ norm dgrad          14  2.115477066791326E-012
+ norm dgrad          15  5.288692457601371E-013
+ norm dgrad           1  5.288240974797218E-013
+ norm dgrad           1  1.064246582557970E-010
+ norm dgrad           2  2.659807946628486E-011
+ norm dgrad           3  6.649519781513803E-012
+ norm dgrad           4  1.662379924114114E-012
+ norm dgrad           5  4.155949757124353E-013
+ norm dgrad           1  1.153842778791192E-012
+ norm dgrad           2  2.884606869630869E-013
+     CP           :  3m 1.12s CPU time,     3m 4.69s wall time
+
+     iteration =  18  eff iteration =  18   Etot (Ha) =    -47.48562615688409 delta_E=  0.20929400363912E-05
+ norm dgrad           1  7.130056329435491E-004
+ norm dgrad           2  3.553878450591274E-005
+ norm dgrad           3  8.884696521945614E-006
+ norm dgrad           4  2.221174229353276E-006
+ norm dgrad           5  5.552935820550412E-007
+ norm dgrad           6  1.388234016929404E-007
+ norm dgrad           7  3.470585196802963E-008
+ norm dgrad           8  8.676463378206181E-009
+ norm dgrad           9  2.169115941101380E-009
+ norm dgrad          10  5.422790094128207E-010
+ norm dgrad          11  1.355697583875765E-010
+ norm dgrad          12  3.389244110546767E-011
+ norm dgrad          13  8.473110653510585E-012
+ norm dgrad          14  2.118277757666877E-012
+ norm dgrad          15  5.295694629887075E-013
+ norm dgrad           1  5.296025600745517E-013
+ norm dgrad           1  5.154695366077542E-011
+ norm dgrad           2  1.287864183441889E-011
+ norm dgrad           3  3.219660600091672E-012
+ norm dgrad           4  8.049151853946759E-013
+ norm dgrad           1  3.076567204973233E-012
+ norm dgrad           2  7.691417282577631E-013
+     CP           :  3m10.80s CPU time,     3m14.51s wall time
+
+     iteration =  19  eff iteration =  19   Etot (Ha) =    -47.48562757357193 delta_E=  0.21030040215919E-05
+ norm dgrad           1  7.130338369737235E-004
+ norm dgrad           2  3.558522681695274E-005
+ norm dgrad           3  8.896306555649817E-006
+ norm dgrad           4  2.224076601765382E-006
+ norm dgrad           5  5.560191411545788E-007
+ norm dgrad           6  1.390047829669527E-007
+ norm dgrad           7  3.475119516131564E-008
+ norm dgrad           8  8.687798645222901E-009
+ norm dgrad           9  2.171949625029438E-009
+ norm dgrad          10  5.429873971882881E-010
+ norm dgrad          11  1.357468470298222E-010
+ norm dgrad          12  3.393671119063168E-011
+ norm dgrad          13  8.484177655945725E-012
+ norm dgrad          14  2.121044378561913E-012
+ norm dgrad          15  5.302610857836110E-013
+ norm dgrad           1  5.302452458858023E-013
+ norm dgrad           1  7.901063510105146E-011
+ norm dgrad           2  1.974455071039270E-011
+ norm dgrad           3  4.936137850749441E-012
+ norm dgrad           4  1.234034505975171E-012
+ norm dgrad           5  3.085086373157582E-013
+ norm dgrad           1  1.115128472821114E-012
+ norm dgrad           2  2.787821052783152E-013
+     CP           :  3m20.50s CPU time,     3m24.32s wall time
+
+     iteration =  20  eff iteration =  20   Etot (Ha) =    -47.48563113064620 delta_E=  0.14166878372635E-05
+
+ norm dgrad           1  7.131007794494919E-004
+ norm dgrad           2  3.566300165455774E-005
+ norm dgrad           3  8.915750422411331E-006
+ norm dgrad           4  2.228937607795820E-006
+ norm dgrad           5  5.572344024971973E-007
+ norm dgrad           6  1.393086007613631E-007
+ norm dgrad           7  3.482715022460622E-008
+ norm dgrad           8  8.706787564717685E-009
+ norm dgrad           9  2.176696893320955E-009
+ norm dgrad          10  5.441742238657195E-010
+ norm dgrad          11  1.360435561002802E-010
+ norm dgrad          12  3.401088905854025E-011
+ norm dgrad          13  8.502722272999785E-012
+ norm dgrad          14  2.125680570336653E-012
+ norm dgrad          15  5.314201431095888E-013
+ norm dgrad           1  5.314161040541894E-013
+ norm dgrad           1  8.637229851173738E-011
+ norm dgrad           2  2.158494672863530E-011
+ norm dgrad           3  5.396236463356825E-012
+ norm dgrad           4  1.349059061138702E-012
+ norm dgrad           5  3.372647516095624E-013
+ norm dgrad           1  3.372649652960811E-013
+     CP           :  3m30.24s CPU time,     3m34.15s wall time
+
+     iteration =  21  eff iteration =  21   Etot (Ha) =    -47.48563418816089 delta_E=  0.35570742653590E-05
+ norm dgrad           1  7.131009364345670E-004
+ norm dgrad           2  3.566469953073835E-005
+ norm dgrad           3  8.916174959144521E-006
+ norm dgrad           4  2.229043758901117E-006
+ norm dgrad           5  5.572609445040349E-007
+ norm dgrad           6  1.393152373206961E-007
+ norm dgrad           7  3.482880962884643E-008
+ norm dgrad           8  8.707202481879770E-009
+ norm dgrad           9  2.176800639136937E-009
+ norm dgrad          10  5.442001644511017E-010
+ norm dgrad          11  1.360500422794166E-010
+ norm dgrad          12  3.401251086154235E-011
+ norm dgrad          13  8.503127788304719E-012
+ norm dgrad          14  2.125781965302004E-012
+ norm dgrad          15  5.314454958828550E-013
+ norm dgrad           1  5.314398295543963E-013
+ norm dgrad           1  6.342341554652737E-011
+ norm dgrad           2  1.584772735514935E-011
+ norm dgrad           3  3.961932011630910E-012
+ norm dgrad           4  9.904830461186153E-013
+ norm dgrad           1  1.234888566894745E-012
+ norm dgrad           2  3.087221547074893E-013
+     CP           :  3m39.95s CPU time,     3m43.96s wall time
+
+     iteration =  22  eff iteration =  22   Etot (Ha) =    -47.48563614996272 delta_E=  0.30575146894307E-05
+ norm dgrad           1  7.130941275440089E-004
+ norm dgrad           2  3.567166636528356E-005
+ norm dgrad           3  8.917916021899798E-006
+ norm dgrad           4  2.229478863119718E-006
+ norm dgrad           5  5.573696801911193E-007
+ norm dgrad           6  1.393424111505797E-007
+ norm dgrad           7  3.483560056334525E-008
+ norm dgrad           8  8.708899584761545E-009
+ norm dgrad           9  2.177224757171714E-009
+ norm dgrad          10  5.443061545382758E-010
+ norm dgrad          11  1.360765299458931E-010
+ norm dgrad          12  3.401913031430231E-011
+ norm dgrad          13  8.504782035538439E-012
+ norm dgrad          14  2.126195373123799E-012
+ norm dgrad          15  5.315488093416863E-013
+ norm dgrad           1  5.314921139765601E-013
+ norm dgrad           1  2.516054444057696E-011
+ norm dgrad           2  6.282007515170648E-012
+ norm dgrad           3  1.570501813795443E-012
+ norm dgrad           4  3.926254371995576E-013
+ norm dgrad           1  7.870660858007588E-013
+     CP           :  3m49.70s CPU time,     3m53.78s wall time
+
+     iteration =  23  eff iteration =  23   Etot (Ha) =    -47.48563719189594 delta_E=  0.19618018285428E-05
+ norm dgrad           1  7.132237104294802E-004
+ norm dgrad           2  3.568121914344460E-005
+ norm dgrad           3  8.920304650267020E-006
+ norm dgrad           4  2.230076128668226E-006
+ norm dgrad           5  5.575190236924256E-007
+ norm dgrad           6  1.393797538044491E-007
+ norm dgrad           7  3.484493792144786E-008
+ norm dgrad           8  8.711234347945712E-009
+ norm dgrad           9  2.177808553882497E-009
+ norm dgrad          10  5.444521301946626E-010
+ norm dgrad          11  1.361130304796438E-010
+ norm dgrad          12  3.402825710266148E-011
+ norm dgrad          13  8.507064146353196E-012
+ norm dgrad          14  2.126766004258764E-012
+ norm dgrad          15  5.316914929834281E-013
+ norm dgrad           1  5.316782984285201E-013
+ norm dgrad           1  4.263434824874137E-011
+ norm dgrad           2  1.065045660791272E-011
+ norm dgrad           3  2.662614184204374E-012
+ norm dgrad           4  6.656535541076381E-013
+ norm dgrad           1  1.966501275767636E-012
+ norm dgrad           2  4.916252982301547E-013
+     CP           :  3m59.43s CPU time,     4m 3.61s wall time
+
+     iteration =  24  eff iteration =  24   Etot (Ha) =    -47.48563981177450 delta_E=  0.10419332241440E-05
+ norm dgrad           1  7.142337147933114E-004
+ norm dgrad           2  3.571938791259210E-005
+ norm dgrad           3  8.929847230126169E-006
+ norm dgrad           4  2.232461870526083E-006
+ norm dgrad           5  5.581154833801593E-007
+ norm dgrad           6  1.395288747822010E-007
+ norm dgrad           7  3.488221967984066E-008
+ norm dgrad           8  8.720555166032973E-009
+ norm dgrad           9  2.180138853026488E-009
+ norm dgrad          10  5.450347286361563E-010
+ norm dgrad          11  1.362586860039226E-010
+ norm dgrad          12  3.406467246219286E-011
+ norm dgrad          13  8.516168355851251E-012
+ norm dgrad          14  2.129042149040383E-012
+ norm dgrad          15  5.322605522795879E-013
+ norm dgrad           1  5.322734616479516E-013
+ norm dgrad           1  8.228951998588632E-011
+ norm dgrad           2  2.056424008054534E-011
+ norm dgrad           3  5.141060170964027E-012
+ norm dgrad           4  1.285265080447935E-012
+ norm dgrad           5  3.213162795387130E-013
+ norm dgrad           1  9.641570805694923E-012
+ norm dgrad           2  2.410392409651555E-012
+ norm dgrad           3  6.025981177583132E-013
+     CP           :  4m 9.18s CPU time,     4m13.47s wall time
+
+     iteration =  25  eff iteration =  25   Etot (Ha) =    -47.48564465745693 delta_E=  0.26198785576526E-05
+ norm dgrad           1  7.161157666461496E-004
+ norm dgrad           2  3.579694422185718E-005
+ norm dgrad           3  8.949235952831897E-006
+ norm dgrad           4  2.237308962549880E-006
+ norm dgrad           5  5.593272342229471E-007
+ norm dgrad           6  1.398318069521043E-007
+ norm dgrad           7  3.495795133711843E-008
+ norm dgrad           8  8.739487734053065E-009
+ norm dgrad           9  2.184871908456426E-009
+ norm dgrad          10  5.462179708499435E-010
+ norm dgrad          11  1.365544911464597E-010
+ norm dgrad          12  3.413862239509097E-011
+ norm dgrad          13  8.534655500894413E-012
+ norm dgrad          14  2.133663850756138E-012
+ norm dgrad          15  5.334159565711745E-013
+ norm dgrad           1  5.334107900954319E-013
+ norm dgrad           1  2.776785235186819E-010
+ norm dgrad           2  6.941146635249578E-011
+ norm dgrad           3  1.735286559932667E-011
+ norm dgrad           4  4.338216152632354E-012
+ norm dgrad           5  1.084553976358271E-012
+ norm dgrad           6  2.711384786396200E-013
+ norm dgrad           1  1.110694385223536E-012
+ norm dgrad           2  2.776735213601190E-013
+     WARNING cg_sub: missed minimum, case 1, iteration   25      1.748109207702
+     CP           :  4m23.66s CPU time,     4m28.11s wall time
+
+     iteration =  26  eff iteration =  26   Etot (Ha) =    -47.48565083223836 delta_E=  0.48456824330856E-05
+ norm dgrad           1  7.128537682451266E-004
+ norm dgrad           2  3.587324840406025E-005
+ norm dgrad           3  8.968312319009553E-006
+ norm dgrad           4  2.242078134251033E-006
+ norm dgrad           5  5.605195471874190E-007
+ norm dgrad           6  1.401298902030216E-007
+ norm dgrad           7  3.503247340229683E-008
+ norm dgrad           8  8.758118563459605E-009
+ norm dgrad           9  2.189529694086335E-009
+ norm dgrad          10  5.473824368269037E-010
+ norm dgrad          11  1.368456125330286E-010
+ norm dgrad          12  3.421140396486043E-011
+ norm dgrad          13  8.552851199112397E-012
+ norm dgrad          14  2.138212851753185E-012
+ norm dgrad          15  5.345532259302729E-013
+ norm dgrad           1  5.345728566221858E-013
+ norm dgrad           1  2.659376447281209E-010
+ norm dgrad           2  6.647623622422779E-011
+ norm dgrad           3  1.661906013215444E-011
+ norm dgrad           4  4.154765302063031E-012
+ norm dgrad           5  1.038691392771891E-012
+ norm dgrad           6  2.596728650069864E-013
+ norm dgrad           1  2.596723317012085E-013
+     CP           :  4m33.34s CPU time,     4m37.95s wall time
+
+     iteration =  27  eff iteration =  27   Etot (Ha) =    -47.48565290386173 delta_E=  0.61747814257274E-05
+ norm dgrad           1  7.096106567452062E-004
+ norm dgrad           2  3.587311312976519E-005
+ norm dgrad           3  8.968278068803383E-006
+ norm dgrad           4  2.242069463791379E-006
+ norm dgrad           5  5.605173525954881E-007
+ norm dgrad           6  1.401293348107793E-007
+ norm dgrad           7  3.503233286817255E-008
+ norm dgrad           8  8.758083008412716E-009
+ norm dgrad           9  2.189520699945636E-009
+ norm dgrad          10  5.473801619469281E-010
+ norm dgrad          11  1.368450372268935E-010
+ norm dgrad          12  3.421125849176078E-011
+ norm dgrad          13  8.552814419197007E-012
+ norm dgrad          14  2.138203553863749E-012
+ norm dgrad          15  5.345508757344941E-013
+ norm dgrad           1  5.345149486156855E-013
+ norm dgrad           1  2.136966472292271E-010
+ norm dgrad           2  5.341598103845478E-011
+ norm dgrad           3  1.335399484426214E-011
+ norm dgrad           4  3.338498607227672E-012
+ norm dgrad           5  8.346246258474624E-013
+ norm dgrad           1  1.186337958024990E-012
+ norm dgrad           2  2.965844804752916E-013
+     CP           :  4m43.05s CPU time,     4m47.78s wall time
+
+     iteration =  28  eff iteration =  28   Etot (Ha) =    -47.48565439293318 delta_E=  0.20716233777307E-05
+ norm dgrad           1  7.095890007660374E-004
+ norm dgrad           2  3.588457496906290E-005
+ norm dgrad           3  8.971143824031148E-006
+ norm dgrad           4  2.242785976449166E-006
+ norm dgrad           5  5.606964992226378E-007
+ norm dgrad           6  1.401741260832463E-007
+ norm dgrad           7  3.504353184020888E-008
+ norm dgrad           8  8.760883039901420E-009
+ norm dgrad           9  2.190220779937816E-009
+ norm dgrad          10  5.475551999750024E-010
+ norm dgrad          11  1.368888012413917E-010
+ norm dgrad          12  3.422220062228046E-011
+ norm dgrad          13  8.555550233546246E-012
+ norm dgrad          14  2.138887577880569E-012
+ norm dgrad          15  5.347218993417715E-013
+ norm dgrad           1  5.347370022097913E-013
+ norm dgrad           1  5.385247667459869E-011
+ norm dgrad           2  1.345493690776412E-011
+ norm dgrad           3  3.363734227172851E-012
+ norm dgrad           4  8.409335568511653E-013
+ norm dgrad           1  2.498960531951255E-012
+ norm dgrad           2  6.247401027399363E-013
+     CP           :  4m52.74s CPU time,     4m57.59s wall time
+
+     iteration =  29  eff iteration =  29   Etot (Ha) =    -47.48565500709125 delta_E=  0.14890714510329E-05
+ norm dgrad           1  7.112948781248139E-004
+ norm dgrad           2  3.589513489360659E-005
+ norm dgrad           3  8.973783607616083E-006
+ norm dgrad           4  2.243445872957634E-006
+ norm dgrad           5  5.608614610028177E-007
+ norm dgrad           6  1.402153634415564E-007
+ norm dgrad           7  3.505384040810205E-008
+ norm dgrad           8  8.763459988954139E-009
+ norm dgrad           9  2.190864968970418E-009
+ norm dgrad          10  5.477162351756029E-010
+ norm dgrad          11  1.369290570271919E-010
+ norm dgrad          12  3.423226381511262E-011
+ norm dgrad          13  8.558065843358487E-012
+ norm dgrad          14  2.139516433238857E-012
+ norm dgrad          15  5.348791014046776E-013
+ norm dgrad           1  5.348632967571750E-013
+ norm dgrad           1  4.348692529072331E-011
+ norm dgrad           2  1.086354635017547E-011
+ norm dgrad           3  2.715886660937901E-012
+ norm dgrad           4  6.789716835829856E-013
+ norm dgrad           1  9.140384704361131E-013
+     CP           :  5m 2.44s CPU time,     5m 7.40s wall time
+
+     iteration =  30  eff iteration =  30   Etot (Ha) =    -47.48565532921545 delta_E=  0.61415806129617E-06
+
+ norm dgrad           1  7.119456257404472E-004
+ norm dgrad           2  3.590113331614752E-005
+ norm dgrad           3  8.975283335972150E-006
+ norm dgrad           4  2.243820835726861E-006
+ norm dgrad           5  5.609552093651725E-007
+ norm dgrad           6  1.402388024496583E-007
+ norm dgrad           7  3.505970063950570E-008
+ norm dgrad           8  8.764925166649529E-009
+ norm dgrad           9  2.191231293355609E-009
+ norm dgrad          10  5.478078237622170E-010
+ norm dgrad          11  1.369519560463524E-010
+ norm dgrad          12  3.423798903805654E-011
+ norm dgrad          13  8.559497266128322E-012
+ norm dgrad          14  2.139874318182278E-012
+ norm dgrad          15  5.349685799589307E-013
+ norm dgrad           1  5.349639815994666E-013
+ norm dgrad           1  4.588170180227497E-011
+ norm dgrad           2  1.146223908894997E-011
+ norm dgrad           3  2.865559922901110E-012
+ norm dgrad           4  7.163900183911825E-013
+ norm dgrad           1  1.923139815368460E-012
+ norm dgrad           2  4.807849752683342E-013
+     WARNING cg_sub: missed minimum, case 1, iteration   30      0.329457302564
+     CP           :  5m16.83s CPU time,     5m21.98s wall time
+
+     iteration =  31  eff iteration =  31   Etot (Ha) =    -47.48565545045331 delta_E=  0.32212420819633E-06
+ norm dgrad           1  7.121850535914747E-004
+ norm dgrad           2  3.590747883723533E-005
+ norm dgrad           3  8.976869693460169E-006
+ norm dgrad           4  2.244217419402883E-006
+ norm dgrad           5  5.610543538601805E-007
+ norm dgrad           6  1.402635882174101E-007
+ norm dgrad           7  3.506589699244422E-008
+ norm dgrad           8  8.766474232634247E-009
+ norm dgrad           9  2.191618554289165E-009
+ norm dgrad          10  5.479046376049200E-010
+ norm dgrad          11  1.369761591594390E-010
+ norm dgrad          12  3.424403972940188E-011
+ norm dgrad          13  8.561009917229945E-012
+ norm dgrad          14  2.140252475537703E-012
+ norm dgrad          15  5.350631179379301E-013
+ norm dgrad           1  5.350527539752483E-013
+ norm dgrad           1  4.279934441250923E-011
+ norm dgrad           2  1.069164690703800E-011
+ norm dgrad           3  2.672911603856161E-012
+ norm dgrad           4  6.682278702382181E-013
+ norm dgrad           1  6.682280978921443E-013
+
+
+ -----------------------
+ MAKOV-PAYNE CORRECTIONS
+ -----------------------
+
+ EXX : q-grid dimensions are    1   1   1
+ EXX : Gamma Extrapolation      F
+ EXX : q->0 term not estimated
+ EXX : Coulomb G0    -3.35398E+03
+
+
+   Makov-Payne 1-order energy :       5.77035700E-02
+
+
+                total energy =     -47.4856557981 Hartree a.u.
+              kinetic energy =      32.5539461651 Hartree a.u.
+        electrostatic energy =     -42.4043814126 Hartree a.u.
+                         esr =       0.4876308156 Hartree a.u.
+                       eself =      43.0857662834 Hartree a.u.
+      pseudopotential energy =     -25.8600181753 Hartree a.u.
+  n-l pseudopotential energy =      -1.5929681477 Hartree a.u.
+ exchange-correlation energy =     -10.3648935747 Hartree a.u.
+           average potential =       0.0000000000 Hartree a.u.
+                  odd energy =       0.1826593471 Hartree a.u.
+        van der waals energy =       0.0000000000 Hartree a.u.
+
+
+
+   HOMO Eigenvalue (eV)
+
+   -0.1335
+
+   Eigenvalues (eV), kp =   1 , spin =  1
+
+  -34.5916  -27.5507  -19.1647  -14.6224  -14.1775  -13.9812   -8.2355   -7.4340   -7.2843   -0.1335
+
+   Eigenvalues (eV), kp =   1 , spin =  2
+
+  -34.4056  -27.4274  -18.9417  -14.1715  -14.0400  -13.8596   -7.9245   -7.3330   -7.1581
+
+   Orb -- Charge  ---   Centers xyz (Bohr)  ---  Spreads (Bohr^2) - SH(eV), kp =   1 , spin =  1
+
+OCC    1 --    1.00   ---    2.95   -1.55   -0.95   ---   1.767  11.931   0.097   0.470
+OCC    2 --    1.00   ---   -1.90   -1.55   -0.97   ---   1.855  11.752   0.103   0.471
+OCC    3 --    1.00   ---    2.44   -1.55    0.06   ---   1.779  11.750   0.106   0.475
+OCC    4 --    1.00   ---    1.60   -1.55   -0.87   ---   2.705   9.043   0.422   0.566
+OCC    5 --    1.00   ---   -0.71   -1.55   -0.77   ---   3.069   8.574   0.471   0.569
+OCC    6 --    1.00   ---    1.54   -1.55   -1.21   ---   2.224   9.932   0.290   0.528
+OCC    7 --    1.00   ---   -0.49   -1.55   -1.21   ---   1.929  10.660   0.227   0.529
+OCC    8 --    1.00   ---    0.50   -1.55   -2.35   ---   1.485  12.607   0.065   0.425
+OCC    9 --    1.00   ---   -1.46   -1.55    0.04   ---   1.889  11.494   0.126   0.476
+OCC   10 --    1.00   ---    0.53   -0.37   -0.20   ---  93.488   1.931   1.164   1.029
+
+   Orb -- Charge  ---   Centers xyz (Bohr)  ---  Spreads (Bohr^2) - SH(eV), kp =   1 , spin =  2
+
+OCC    1 --    1.00   ---    2.95   -1.55   -0.95   ---   1.777  11.929   0.101   0.470
+OCC    2 --    1.00   ---   -1.90   -1.55   -0.97   ---   1.868  11.723   0.106   0.471
+OCC    3 --    1.00   ---    2.44   -1.55    0.06   ---   1.787  11.772   0.111   0.475
+OCC    4 --    1.00   ---    1.61   -1.55   -0.88   ---   2.683   9.057   0.410   0.566
+OCC    5 --    1.00   ---   -0.74   -1.55   -0.77   ---   3.037   8.597   0.456   0.569
+OCC    6 --    1.00   ---    1.57   -1.55   -1.19   ---   2.238   9.887   0.290   0.528
+OCC    7 --    1.00   ---   -0.51   -1.55   -1.19   ---   1.926  10.661   0.227   0.529
+OCC    8 --    1.00   ---    0.50   -1.55   -2.36   ---   1.480  12.660   0.067   0.425
+OCC    9 --    1.00   ---   -1.45   -1.55    0.04   ---   1.905  11.484   0.131   0.476
+ 
+ 
+   CELL_PARAMETERS
+    2.67846001E+01    0.00000000E+00    0.00000000E+00
+    0.00000000E+00    2.26767135E+01    0.00000000E+00
+    0.00000000E+00    0.00000000E+00    2.39239327E+01
+
+   System Density [g/cm^3] :     0.0370
+
+
+   Center of mass square displacement (a.u.):   0.000000
+
+   ATOMIC_POSITIONS
+   O    1.339230E+01  1.133836E+01  1.113049E+01
+   O    1.544624E+01  1.133836E+01  1.237771E+01
+   O    1.133836E+01  1.133836E+01  1.237771E+01
+ 
+   ATOMIC_VELOCITIES
+   O    0.000000E+00  0.000000E+00  0.000000E+00
+   O    0.000000E+00  0.000000E+00  0.000000E+00
+   O    0.000000E+00  0.000000E+00  0.000000E+00
+ 
+
+
+   Partial temperatures (for each ionic specie) 
+   Species  Temp (K)   Mean Square Displacement (a.u.)
+        1       0.00     0.0000
+ 
+  nfi    ekinc  temph  tempp        etot      enthal       econs       econt    vnhh   xnhh0    vnhp   xnhp0
+ 
+       nfi   tempp            E -T.S-mu.nbsp         +K_p #Iter
+Step     2       0    -47.48566    -47.48566    -47.48566    32
+ tnosep= F thdyn= F
+
+   writing restart file: /scratch/elinscott/materials_cloud_archive/ozone/kipz_pz/calc_alpha/TMP-CP/orbital_10//kc_68.save
+   restart file written in    0.666 sec.
+
+ 
+                              lambda   nudx, spin =   10   1
+ fixed_lambda           10          10 -7.381807447604870E-003
+                              lambda   nudx, spin =   10   2
+ fixed_lambda           10          10  0.000000000000000E+000
+
+
+   Averaged Physical Quantities
+                      accomulated      this run
+   ekinc         :        0.00000       0.00000 (AU)
+   ekin          :       89.81673      32.55395 (AU)
+   epot          :      -27.64502     -78.62929 (AU)
+   total energy  :       61.46777     -47.48566 (AU)
+   temperature   :        0.00000       0.00000 (K )
+   enthalpy      :        0.00000       0.00000 (AU)
+   econs         :       61.46777     -47.48566 (AU)
+   pressure      :        0.00000       0.00000 (Gpa)
+   volume        :    14531.07864   14531.07864 (AU)
+
+
+     initialize   :     1.47s CPU
+     total_time   :   325.43s CPU
+     formf        :     0.02s CPU
+     rhoofr       :     2.75s CPU (      67 calls,   0.041 s avg)
+     vofrho       :     9.94s CPU (      67 calls,   0.148 s avg)
+     vofrho1      :     0.73s CPU (       5 calls,   0.146 s avg)
+     vofrho2      :     4.60s CPU (      31 calls,   0.148 s avg)
+     vofrho3      :     4.61s CPU (      31 calls,   0.149 s avg)
+     dforce       :     2.70s CPU (     320 calls,   0.008 s avg)
+     dforce1      :     2.62s CPU (     310 calls,   0.008 s avg)
+     dforce2      :     0.83s CPU
+     calphi       :     0.02s CPU (      32 calls,   0.001 s avg)
+     newd         :     0.00s CPU (      32 calls,   0.000 s avg)
+     calbec       :     0.70s CPU (     268 calls,   0.003 s avg)
+     prefor       :     0.02s CPU (      34 calls,   0.001 s avg)
+     strucf       :     0.00s CPU
+     nlfl         :     0.00s CPU
+     nlsm1        :     0.70s CPU (     268 calls,   0.003 s avg)
+     fft          :   123.80s CPU (   35987 calls,   0.003 s avg)
+     ffts         :     0.40s CPU (     134 calls,   0.003 s avg)
+     fftw         :     3.68s CPU (    2553 calls,   0.001 s avg)
+     cft3s        :   127.71s CPU (   38674 calls,   0.003 s avg)
+     fft_scatter  :    67.35s CPU (   38674 calls,   0.002 s avg)
+
+     nk_eforce    :     4.86s CPU (     320 calls,   0.015 s avg)
+     nk_corr      :   268.15s CPU (    2546 calls,   0.105 s avg)
+     nk_corr_h    :    25.89s CPU (    2546 calls,   0.010 s avg)
+     nk_corr_vxc  :   133.93s CPU (    1273 calls,   0.105 s avg)
+
+
+     outer_loop   :   325.17s CPU (      31 calls,  10.489 s avg)
+     runcg_uspp   :   325.43s CPU
+     xminus1      :     0.01s CPU (      62 calls,   0.000 s avg)
+     emass_p_tpa  :     0.00s CPU
+ 
+ 
+     CP           :  5m27.49s CPU time,     5m32.85s wall time
+
+ 
+   This run was terminated on:   5:57:42  25Jan2023            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=
