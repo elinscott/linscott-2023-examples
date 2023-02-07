@@ -53,7 +53,7 @@ ax.text((x_cbm + x_vbm) / 2, (y_cbm + y_vbm) / 2,
 
 # Tweak the figure aesthetics
 ax.legend(loc='lower right', ncol=2, bbox_to_anchor=(1, 1))
-ax.set_ylim([-5, 10])
+ax.set_ylim([-5, 7.5])
 
 # Display or save the figure (uncomment as desired)
 plt.savefig('si_bandstructures.png', dpi=600)
