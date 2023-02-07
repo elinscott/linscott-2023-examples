@@ -52,5 +52,5 @@ ax.legend(loc='lower right', ncol=2, bbox_to_anchor=(1, 1))
 ax.set_ylim([-10, 15])
 
 # Display or save the figure (uncomment as desired)
-plt.savefig('zno_bandstructures.png')
+plt.savefig('zno_bandstructures.png', dpi=600)
 # plt.show()

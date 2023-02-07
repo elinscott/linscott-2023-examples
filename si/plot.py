@@ -56,5 +56,5 @@ ax.legend(loc='lower right', ncol=2, bbox_to_anchor=(1, 1))
 ax.set_ylim([-5, 10])
 
 # Display or save the figure (uncomment as desired)
-plt.savefig('si_bandstructures.png')
+plt.savefig('si_bandstructures.png', dpi=600)
 # plt.show()
