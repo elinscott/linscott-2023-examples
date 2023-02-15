@@ -2,7 +2,7 @@ Supporting files for Linscott et al. (2023)
 ===========================================
 Description
 -------
-This archive contains files that accompany the article "``koopmans``: an open-source package for accurately and efficiently predicting spectral properties with Koopmans spectral functionals" (Linscott et al., 2023).
+This archive contains files that accompany the article "``koopmans``: an open-source package for accurately and efficiently predicting spectral properties with Koopmans functionals" (Linscott et al., 2023).
 
 Contents
 --------
